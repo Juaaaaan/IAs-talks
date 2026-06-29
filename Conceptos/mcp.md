@@ -59,7 +59,7 @@ El MCP es el **arnés de integración**: lo que permite a la IA salir de la conv
       "command": "npx",
       "args": [
         "mcp-remote",
-        "https://mcp.atlassian.com/v1/sse"
+        "https://mcp.atlassian.com/v1/mcp"
       ]
     }
   }
@@ -68,7 +68,7 @@ El MCP es el **arnés de integración**: lo que permite a la IA salir de la conv
 
 Autenticación vía OAuth con cuenta de Atlassian. No requiere API token en el config.
 
-> ⚠️ **Pendiente**: El endpoint `/v1/sse` está siendo deprecado. Migrar a `https://mcp.atlassian.com/v1/mcp` antes o durante la serie.
+> ✅ Endpoint actualizado a `/v1/mcp`. El endpoint `/v1/sse` fue deprecado el 30 de junio de 2026.
 
 ---
 
@@ -77,7 +77,7 @@ Autenticación vía OAuth con cuenta de Atlassian. No requiere API token en el c
 |MCP|Herramienta|Charla|
 |---|---|---|
 |Atlassian oficial|Jira Cloud (`da-ju-ia-talks.atlassian.net`)|7|
-|Figma MCP|Figma|9|
+|Figma MCP|Figma|Futura|
 
 ---
 
@@ -86,6 +86,7 @@ Autenticación vía OAuth con cuenta de Atlassian. No requiere API token en el c
 - Tras configurar, la conexión a Jira aparece en Claude Desktop bajo "connectors", no como icono de herramienta
 - El paquete `@cosmix/jira-mcp` devuelve 404 en npm — no usar
 - Para proyectos sin sprint creado, usar JQL: `project = RCA ORDER BY created ASC`
+- Demo usada en Charla 7: cuenta personal de Atlassian (`da-ju-ia-talks.atlassian.net`) — el entorno corporativo tiene restricciones de acceso
 
 ---
 
@@ -93,14 +94,14 @@ Autenticación vía OAuth con cuenta de Atlassian. No requiere API token en el c
 
 - **[[sdd]]** — El MCP permite actuar sobre el spec directamente (crear issues desde un `spec.md`)
 - **[[skills]]** — Skills + MCPs completan el arnés que SDD inicia
-- **[[arnes-completo]]** — El MCP es la tercera y última pieza del arnés
+- **[[arnes-completo]]** — El MCP es la tercera pieza del arnés
+- **[[copilot-instructions]]** — Las instrucciones persistentes son la cuarta pieza
 
 ---
 
 ## Dónde aparece en la serie
 
-| Charla | Rol de los MCPs                               |
-| ------ | --------------------------------------------- |
-| 7      | Introducción del concepto + demo Jira en vivo |
-| 9      | Figma/Stitch MCP para flujos de diseño        |
-| 10     | Parte del ciclo completo                      |
+| Charla | Rol de los MCPs |
+| ------ | --------------- |
+| 7 | Introducción del concepto + demo Jira en vivo |
+| Futura | GitHub Actions + Copilot coding agent |
