@@ -10,12 +10,11 @@
 | Bloque 1 | El problema: la IA sin contexto | 3 min |
 | Bloque 2 | La solución: ficheros de instrucciones | 5 min |
 | Bloque 3 | `.github/` para Copilot — estructura completa | 5 min |
-| Demo Acto 1 | El antes: Copilot sin instrucciones | 5 min |
-| Demo Acto 2 | Crear instrucciones en vivo | 5 min |
-| Demo Acto 3 | El después: Copilot con instrucciones | 5 min |
-| Demo Acto 4 | AGENTS.md, frontmatter e instructions/ | 5 min |
-| Demo Acto 5 | Múltiples agentes: developer y reviewer | 8 min |
-| Bonus | `.claude/` + hook Graphify + RCA-20 | opcional |
+| Demo Acto 1 | Tour por el `.github/` completo | 8 min |
+| Demo Acto 2 | Prompts en vivo: modificaciones reales | 7 min |
+| Demo Acto 3 | AGENTS.md en acción: developer y reviewer | 10 min |
+| Demo Acto 4 | ¿Cómo confiar en el resultado? | 5 min |
+| Bonus | `.claude/` + hook Graphify | opcional |
 | Cierre | 3 ideas + dónde empezar | 3 min |
 
 ---
@@ -96,106 +95,117 @@
 
 ## Demo — 20-25 min
 
-### Acto 1 — El antes: Copilot sin instrucciones (5 min)
+### Acto 1 — El `.github/` completo: tour por las instrucciones (8 min)
 
-> *"Voy a empezar con el repositorio tal como está ahora — sin ningún fichero de instrucciones. Para que veáis la diferencia."*
+> *"En lugar de construir esto desde cero delante de vosotros, os voy a enseñar el `.github/` ya configurado del proyecto RCA — porque lo importante no es verme escribir, sino entender qué contiene cada pieza y por qué."*
 
-Con `.github/` vacío, abrir Copilot Chat en VS Code y escribir:
+Abrir el explorador de ficheros en VS Code y mostrar la carpeta `.github/` completa:
 
 ```
-Crea el componente app-navbar para el proyecto
+.github/
+├── copilot-instructions.md
+├── AGENTS.md
+├── instructions/
+│   ├── testing.instructions.md
+│   └── components.instructions.md
+└── agents/
+    ├── developer.agent.md
+    └── reviewer.agent.md
 ```
 
-Dejar que Copilot responda. Va a generar código genérico — sin Signals, sin el sistema de diseño del RCA, sin las convenciones del proyecto.
+**Mostrar `copilot-instructions.md`:**
+> *"Esto es lo primero que lee Copilot en cada sesión. Stack, convenciones de Angular, sistema de diseño. Y recordad cómo se generó — no lo escribí desde cero. Le di a Claude el contexto del proyecto y me lo generó. Lo revisé y lo ajusté. Ese es el flujo real: vosotros tenéis el conocimiento, la IA lo organiza."*
 
-> *"¿Veis lo que ha generado? Angular estándar. No sabe que usamos standalone components, no sabe que usamos Signals, no conoce nuestro sistema de diseño ni nuestra paleta de colores. Tendríamos que corregirlo todo."*
+**Mostrar `instructions/testing.instructions.md` y `components.instructions.md`:**
+> *"Estas son instrucciones que solo se activan en contextos concretos. Fijaos en este bloque al inicio del fichero, entre los tres guiones — se llama frontmatter, son metadatos sobre el fichero. El `applyTo: '**/*.spec.ts'` le dice a Copilot que solo cargue estas instrucciones cuando trabaja con ficheros de test."*
+
+**Mostrar `AGENTS.md`:**
+> *"Este es el manual de comportamiento autónomo. Le dice qué leer antes de tocar código, qué verificar antes de terminar, qué nunca debe hacer."*
+
+**Frase que debe quedar:**
+> *"Cinco ficheros de texto. Eso es todo lo que separa a Copilot de conocer vuestro proyecto de verdad."*
+
+**Anécdota rápida (30 segundos):**
+> *"Una anécdota rápida de esta semana: probé una extensión de terceros llamada Superpowers, instalada en mi VS Code. Sin yo saberlo, estaba interceptando mis prompts y generando su propia estructura de carpetas para specs — una que no tenía nada que ver con la nuestra. Tuve que desactivarla. Y esto es exactamente el problema del que hablamos: si no controláis explícitamente qué contexto sigue la IA, algo más lo va a decidir por vosotros. A veces ese 'algo' es una extensión que ni recordáis haber instalado."*
 
 ---
 
-### Acto 2 — Crear las instrucciones en vivo (5 min)
+### Acto 2 — Prompts en vivo: modificaciones reales con contexto (7 min)
 
-> *"Ahora voy a crear el fichero de instrucciones. Para que veáis exactamente qué contiene y por qué."*
+> *"Ahora vamos a verlo funcionar. No voy a crear un componente entero — vamos a hacer cambios pequeños y reales, como los que hacéis vosotros cada día."*
 
-Crear `.github/copilot-instructions.md` en pantalla — pegarlo en vivo:
+Abrir el Copilot CLI en el proyecto RCA con el `.github/` ya configurado.
 
-> *"Le estoy diciendo: qué stack usa el proyecto, qué convenciones seguimos, cómo se generan los componentes, cómo es el sistema de diseño. Todo lo que le explicaríais a un desarrollador nuevo el primer día."*
->
-> *"Y recordad lo de antes — este fichero no lo escribí desde cero. Le di el contexto a Claude y me lo generó. Lo revisé y lo ajusté. Ese es el flujo."*
-
-Guardar el fichero.
-
-> *"Listo. Un fichero de texto. Vamos a ver qué cambia."*
-
----
-
-### Acto 3 — El después: Copilot con instrucciones (5 min)
-
-Misma pregunta en Copilot Chat:
-
+**Prompt 1 — Cambio de texto:**
 ```
-Crea el componente app-navbar para el proyecto
+Cambia el texto del botón principal del footer a "Contáctanos"
 ```
 
-> *"Fijaos en la diferencia. Ahora sabe que usamos standalone components, Signals, OnPush change detection. Conoce los tokens de diseño — `bg-surface`, `text-on-surface`, `border-outline-variant`. Usa `inject()` en lugar de constructor injection. Sigue nuestras convenciones."*
->
-> *"Mismo prompt. Fichero de instrucciones mediante. Resultado completamente distinto."*
+> *"Fijaos en el resultado — usa los tokens de diseño correctos, no toca nada que no debía, respeta la estructura del componente."*
+
+**Prompt 2 — Añadir un elemento pequeño:**
+```
+Añade un botón secundario en el header que ponga "Suscríbete" y no haga nada, solo mostrar el botón
+```
+
+> *"Mismo patrón: botón secundario con `border border-outline-variant`, transición de 300ms, exactamente como dicta nuestro sistema de diseño. Esto no lo ha adivinado — lo sabe porque se lo dijimos una vez, en `copilot-instructions.md`."*
+
+**Frase que debe quedar:**
+> *"No hace falta repetir las convenciones en cada prompt. Las dice una vez el fichero, las respeta Copilot siempre."*
 
 ---
 
-### Acto 4 — AGENTS.md e instructions/: el nivel siguiente (5 min)
+### Acto 3 — AGENTS.md en acción: developer y reviewer trabajando (10 min)
 
-> *"Hay un paso más. Cuando Copilot trabaja en modo agente — de forma autónoma, sin que vosotros estéis guiándole paso a paso — podéis darle instrucciones aún más específicas con el `AGENTS.md`."*
+> *"Hasta ahora hemos visto un agente que responde a prompts sueltos. Pero hay un patrón más potente: agentes especializados, invocados explícitamente, cada uno con una responsabilidad concreta."*
 
-Mostrar el `AGENTS.md` del RCA:
+**Invocar al developer:**
+```
+@developer Añade un badge que muestre el número de items en el carrito
+```
 
-> *"Aquí le digo cómo tiene que comportarse cuando trabaja solo: que lea el `task.md` antes de tocar código, que siga la estructura de carpetas del proyecto, que ejecute los tests antes de dar algo por terminado, que use la convención de commits del proyecto."*
->
-> *"La diferencia con `copilot-instructions.md` es el nivel de detalle operacional. Las instrucciones globales le dicen cómo escribir código. El `AGENTS.md` le dice cómo trabajar."*
+> *"El `@developer` lee sus propias instrucciones del fichero `developer.agent.md` — analiza la arquitectura, identifica componentes reutilizables, implementa siguiendo las convenciones."*
 
-Mostrar la carpeta `instructions/` con los dos ficheros:
+**Invocar al reviewer:**
+```
+@reviewer Revisa la implementación del badge
+```
 
-> *"Y luego están las instrucciones por contexto. Fijaos en este bloque al inicio del fichero — entre los tres guiones. Esto se llama frontmatter: son metadatos sobre el fichero en sí, no contenido. En este caso le dice a Copilot cuándo tiene que leer este fichero y cuándo no."*
->
-> *"Este `applyTo: '**/*.spec.ts'` significa que Copilot solo carga estas instrucciones cuando está trabajando con ficheros de test. Si está editando un componente, no las lee. Si está editando un test, sí. Las instrucciones correctas, en el momento correcto."*
+> *"El reviewer solo tiene acceso de lectura. No puede modificar nada — solo leer y reportar. Verifica los criterios, las convenciones, la cobertura de tests, y genera un informe."*
 
----
+⚠️ **Nota de preparación:** Si en el ensayo el reviewer encuentra un fallo real (como ocurrió en las pruebas — un test de regresión fallido), mostradlo tal cual. Es el momento más potente de la demo.
 
-### Acto 5 — Múltiples agentes: developer y reviewer (8 min)
-
-> *"Hasta ahora hemos visto un solo agente que hace todo. Pero hay un patrón mucho más potente: varios agentes especializados, cada uno con una responsabilidad concreta."*
->
-> *"En cualquier equipo de desarrollo hay dos roles fundamentales: el que implementa y el que revisa. ¿Por qué no hacer lo mismo con la IA?"*
-
-Mostrar la carpeta `.github/agents/` con los dos ficheros:
-
-> *"Tenemos un `developer.agent.md` y un `reviewer.agent.md`. Son dos agentes distintos, con instrucciones distintas y acceso a herramientas distintas."*
-
-Abrir `developer.agent.md` en pantalla:
-
-> *"El developer lee el `task.md`, analiza la arquitectura, implementa siguiendo las convenciones, pasa los tests y hace el commit. Su trabajo es construir."*
->
-> *"Fijaos en el frontmatter — tiene un `tools:` que define exactamente a qué herramientas tiene acceso. No puede hacer más de lo que le permitimos."*
-
-Abrir `reviewer.agent.md` en pantalla:
-
-> *"El reviewer solo tiene acceso de lectura. No puede modificar nada — solo leer y reportar. Verifica los criterios de aceptación del `task.md` uno a uno, comprueba las convenciones, revisa la cobertura de tests y genera un informe."*
->
-> *"Si el reviewer dice que algo no está bien, el developer vuelve a trabajar. Si aprueba, se crea la Pull Request."*
->
-> *"Esto es lo mismo que hacéis en vuestro equipo hoy — pero automatizado. Y lo bueno es que el reviewer nunca se cansa, nunca tiene prisa y nunca se le pasa nada por alto."*
+> *"Mirad esto — el reviewer ha encontrado un fallo real. No le dijimos qué buscar en este caso concreto, simplemente está siguiendo los criterios que le dimos. Esto es el valor real de un segundo agente: pilla cosas que se nos escapan."*
 
 Mostrar brevemente los equivalentes en `.claude/agents/`:
 
-> *"Y los mismos agentes existen para Claude Code — mismo concepto, mismo patrón, diferente herramienta. El conocimiento que estáis adquiriendo hoy aplica a las dos."*
+> *"Y los mismos agentes existen para Claude Code — mismo concepto, mismo patrón, diferente herramienta."*
 
 **Frase que debe quedar:**
 > *"Un agente construye. Otro verifica. Ninguno de los dos trabaja sin contexto. Eso es un equipo de IA."*
 
 ---
 
+### Acto 4 — ¿Cómo sabemos si podemos confiar en el resultado? (5 min)
+
+> *"Una pregunta que seguro tenéis en la cabeza: ¿cómo sabemos si podemos fiarnos del código que genera la IA?"*
+
+> *"No hay un número mágico de confianza. Pero sí señales que se pueden combinar."*
+
+**Señales automatizables:**
+> *"Tests que pasan y cobertura suficiente. Build sin errores. Linter limpio. Y la que acabáis de ver — un segundo agente, el reviewer, que verifica de forma objetiva contra los criterios del `task.md`."*
+
+**Señales humanas:**
+> *"La lógica de negocio solo la valida una persona que conoce el dominio. Y toda Pull Request, por mucho que el reviewer la apruebe, pasa por una persona antes de mergear — al menos mientras el equipo gana confianza con el flujo."*
+
+**Frase que debe quedar:**
+> *"La confianza se construye en capas. La IA no sustituye la verificación humana — la hace más rápida porque ya ha filtrado la mayoría de los problemas antes de que lleguen a vosotros."*
+
+---
+
 ### Bonus — `.claude/` y el hook de Graphify (3 min)
 
-> *"Os prometí tres minutos sobre cómo está configurado esto en Claude. Y hay algo que va un paso más allá."*
+> *"Os prometí unos minutos sobre cómo está configurado esto en Claude. Y hay algo que va un paso más allá."*
 
 Mostrar el `CLAUDE.md` del RCA brevemente:
 
@@ -206,20 +216,6 @@ Mostrar el hook de Graphify en `settings.json`:
 > *"Este hook hace que antes de cada sesión, Claude lea automáticamente el grafo de conocimiento del proyecto — generado por una herramienta que se llama Graphify. No solo sabe cómo escribir código con nuestras convenciones, sino que entiende la arquitectura completa: qué ficheros dependen de cuáles, qué módulos existen, cómo está estructurado el proyecto."*
 >
 > *"Esto lo veremos en detalle en la próxima charla. Pero quería que lo vieseis porque es el siguiente nivel de lo que hemos visto hoy."*
-
----
-
-### Bonus opcional — Lanzar la RCA-20 (si el tiempo acompaña)
-
-> *"Y ahora sí. Con todo esto configurado — las instrucciones, el agente, el contexto del proyecto — vamos a lanzar el prompt que dejamos pendiente la semana pasada."*
-
-```
-Implementa la RCA-20: app-navbar y app-footer definitivos con SSR e i18n
-```
-
-> *"Lo dejamos trabajar."*
-
-⚠️ Solo lanzar si el tiempo acompaña y la demo ha ido fluida. Si no, cerrar aquí.
 
 ---
 
@@ -251,18 +247,19 @@ Implementa la RCA-20: app-navbar y app-footer definitivos con SSR e i18n
 ## Checklist antes del miércoles
 
 ### Esta semana
-- [ ] Crear `.github/copilot-instructions.md` en el RCA con el contenido de la demo
-- [ ] Crear `AGENTS.md` en la raíz del RCA
-- [ ] Probar el antes/después en vivo — que la diferencia sea visible y clara
-- [ ] Tener el `task.md` de la RCA-20 listo por si lanzas el bonus
+- [ ] Verificar que `.github/copilot-instructions.md`, `AGENTS.md`, `instructions/` y `agents/` están completos en el RCA
+- [ ] Desactivar cualquier extensión/plugin de terceros (ej. Superpowers) que pueda interferir en la demo
+- [ ] Ensayar los dos prompts del Acto 2 (cambio de texto + botón secundario) y confirmar que el resultado es rápido y limpio
+- [ ] Ensayar la invocación de `@developer` y `@reviewer` en el Copilot CLI
+- [ ] Si el reviewer encuentra un fallo real en el ensayo, decidir si se deja para mostrarlo en directo
 
 ### Lunes/martes
 - [ ] Ensayo completo cronometrado en el portátil corporativo
-- [ ] Verificar que Copilot está conectado y funcionando en VS Code
+- [ ] Verificar que Copilot CLI funciona con fluidez (sin tiempos de espera largos)
 - [ ] Prueba de proyección con un compañero
 
 ### El día de la charla
-- [ ] VS Code abierto con el proyecto RCA
-- [ ] `.github/` vacío preparado para el Acto 1
-- [ ] `copilot-instructions.md` y `AGENTS.md` listos para pegar en vivo
-- [ ] `task.md` de RCA-20 copiado y listo por si hay tiempo para el bonus
+- [ ] VS Code y Copilot CLI abiertos con el proyecto RCA
+- [ ] `.github/` completo y verificado
+- [ ] Prompts del Acto 2 y Acto 3 copiados y listos para pegar
+- [ ] `CLAUDE.md` y hook de Graphify en `settings.json` listos para el bonus
