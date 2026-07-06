@@ -1,7 +1,19 @@
+---
+type: Recurso
+title: "components.instructions.md — Proyecto RCA"
+description: "Instrucciones de componentes para GitHub Copilot en el proyecto RCA. Se activa solo con ficheros *.component.ts mediante frontmatter applyTo."
+tags: [recurso, componentes, copilot, rca, angular, signals, instrucciones]
+related: [copilot-instructions, frontmatter, charla-08-copilot-instrucciones]
+charla: "Charla 8"
+estado: "✅ Publicado"
+timestamp: "2026-07-02"
+---
+
 # components.instructions.md — Proyecto RCA
 
 > Fichero de referencia usado en la demo de la Charla 8.
 > Vive en `.github/instructions/components.instructions.md` del proyecto Resin Craft Art.
+> Se activa solo cuando Copilot trabaja con ficheros `*.component.ts`.
 
 ---
 

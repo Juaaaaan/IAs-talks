@@ -1,8 +1,20 @@
+---
+type: Recurso
+title: "developer.md — Agente developer para Claude Code (RCA)"
+description: "Agente especializado en implementación para Claude Code. Equivalente al developer.agent.md de Copilot. Usa Graphify para entender la arquitectura. Vive en .claude/agents/developer.md."
+tags: [recurso, agente, developer, claude, rca, implementacion, graphify]
+related: [agentes-multiples, reviewer-agent-claude-rca, copilot-instructions, graphify]
+charla: "Charla 8"
+estado: "✅ Publicado"
+timestamp: "2026-07-02"
+---
+
 # developer.md — Agente developer para Claude Code (RCA)
 
 > Fichero de referencia de la Charla 8.
 > Vive en `.claude/agents/developer.md` del proyecto Resin Craft Art.
-> Equivalente al developer.agent.md de Copilot, adaptado para Claude Code.
+> Equivalente al `developer.agent.md` de Copilot, adaptado para Claude Code.
+> A diferencia del de Copilot, incluye los comandos de Graphify y `graphify update .` al terminar.
 
 ---
 
@@ -15,17 +27,15 @@ tools: Read, Write, Edit, Bash, Glob, Grep
 
 # Developer Agent — Resin Craft Art
 
-Tu única responsabilidad es implementar la tarea descrita en el task.md asignado.
-
 ## Antes de escribir código
 
 1. Leer el task.md completo
 2. Leer CLAUDE.md y AGENTS.md
-3. Comprobar graphify-out/graph.json — si existe:
+3. Comprobar graphify-out/graph.json:
    - graphify query "<pregunta>"
    - graphify path "<A>" "<B>"
    - graphify explain "<concepto>"
-4. Analizar estructura del proyecto e identificar componentes reutilizables
+4. Analizar estructura e identificar componentes reutilizables
 5. Preguntar ante dudas de lógica de negocio
 
 ## Antes de terminar
@@ -43,6 +53,5 @@ Tu única responsabilidad es implementar la tarea descrita en el task.md asignad
 - Modificar CLAUDE.md, AGENTS.md o ficheros de contexto
 - Modificar src/styles.scss o src/tailwind.css
 - Actualizar dependencias sin confirmación
-- Borrar ficheros sin confirmar
 - Commit directo a main o develop
 ```

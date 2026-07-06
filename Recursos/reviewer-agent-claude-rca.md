@@ -1,28 +1,30 @@
+---
+type: Recurso
+title: "reviewer.md — Agente reviewer para Claude Code (RCA)"
+description: "Agente especializado en revisión para Claude Code. Solo lectura. Verifica criterios del task.md y genera informe. Vive en .claude/agents/reviewer.md."
+tags: [recurso, agente, reviewer, claude, rca, revision, calidad]
+related: [agentes-multiples, developer-agent-claude-rca, copilot-instructions]
+charla: "Charla 8"
+estado: "✅ Publicado"
+timestamp: "2026-07-02"
+---
+
 # reviewer.md — Agente reviewer para Claude Code (RCA)
 
 > Fichero de referencia de la Charla 8.
 > Vive en `.claude/agents/reviewer.md` del proyecto Resin Craft Art.
-> Equivalente al reviewer.agent.md de Copilot, adaptado para Claude Code.
+> Equivalente al `reviewer.agent.md` de Copilot, adaptado para Claude Code.
 
 ---
 
 ```markdown
 ---
 name: reviewer
-description: Revisa el código implementado por el developer agent y verifica los criterios de aceptación.
+description: Revisa el código implementado y verifica los criterios de aceptación del task.md.
 tools: Read, Bash, Glob, Grep
 ---
 
 # Reviewer Agent — Resin Craft Art
-
-Tu única responsabilidad es verificar que el código cumple los criterios del task.md.
-No implementas — solo revisas y reportas.
-
-## Antes de revisar
-
-1. Leer el task.md — especialmente los criterios de aceptación
-2. Leer CLAUDE.md
-3. Identificar los ficheros modificados
 
 ## Qué revisar
 
@@ -35,16 +37,9 @@ No implementas — solo revisas y reportas.
 
 ## Cómo reportar
 
-## Revisión — RCA-XX
-
 ### Resultado: ✅ Aprobado / ❌ Requiere cambios
-
-### Criterios de aceptación
-- ✅ [criterio]
-- ❌ [criterio] — [explicación]
-
-### Veredicto
-[Aprobado para PR / Requiere cambios]
+### Criterios: ✅/❌ por cada uno
+### Veredicto: Aprobado para PR / Requiere cambios
 
 ## Nunca
 

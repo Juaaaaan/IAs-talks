@@ -1,7 +1,19 @@
+---
+type: Recurso
+title: "testing.instructions.md — Proyecto RCA"
+description: "Instrucciones de testing para GitHub Copilot en el proyecto RCA. Se activa solo con ficheros *.spec.ts mediante frontmatter applyTo."
+tags: [recurso, testing, copilot, rca, karma, jasmine, cobertura, instrucciones]
+related: [copilot-instructions, frontmatter, charla-08-copilot-instrucciones]
+charla: "Charla 8"
+estado: "✅ Publicado"
+timestamp: "2026-07-02"
+---
+
 # testing.instructions.md — Proyecto RCA
 
 > Fichero de referencia usado en la demo de la Charla 8.
 > Vive en `.github/instructions/testing.instructions.md` del proyecto Resin Craft Art.
+> Se activa solo cuando Copilot trabaja con ficheros `*.spec.ts`.
 
 ---
 
