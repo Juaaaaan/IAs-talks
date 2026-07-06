@@ -1,3 +1,14 @@
+---
+type: Concepto
+title: "Agentes múltiples — Patrón developer/reviewer"
+description: "Patrón de agentes especializados donde un agente implementa y otro verifica. Aplica la separación de responsabilidades al trabajo autónomo de la IA."
+tags: [agentes, copilot, claude, developer, reviewer, calidad, patron]
+related: [copilot-instructions, frontmatter, sdd, arnes-completo]
+charla: "Charla 8"
+estado: "✅ Publicado"
+timestamp: "2026-07-02"
+---
+
 # Agentes múltiples — Patrón developer/reviewer
 
 > _"Un agente construye. Otro verifica. Ninguno de los dos trabaja sin contexto. Eso es un equipo de IA."_
@@ -11,8 +22,6 @@ Un agente que implementa y verifica al mismo tiempo tiende a aprobar su propio t
 ---
 
 ## La solución: agentes especializados
-
-El patrón de agentes múltiples divide el trabajo entre agentes con responsabilidades distintas y acceso a herramientas distintas:
 
 **Developer** → implementa la tarea
 **Reviewer** → verifica que la implementación es correcta
@@ -56,57 +65,37 @@ tools: herramientas permitidas
 Instrucciones de comportamiento...
 ```
 
-El `description` le dice al sistema cuándo invocar este agente automáticamente o cómo describirlo para invocación manual. El `tools` define exactamente a qué herramientas tiene acceso — no puede hacer más de lo que le permitimos.
+El [[frontmatter]] `tools:` define exactamente a qué herramientas tiene acceso — no puede hacer más de lo que le permitimos.
 
 ---
 
 ## El agente developer
 
 **Responsabilidad:** Implementar la tarea descrita en el `task.md`.
-
-**Acceso:** Lectura, escritura, ejecución de comandos, búsqueda en ficheros.
-
-**Flujo:**
-1. Leer el `task.md` completo
-2. Analizar la arquitectura del proyecto
-3. Identificar componentes reutilizables
-4. Implementar siguiendo las convenciones
-5. Pasar tests, lint y build
-6. Hacer commit y crear Pull Request
-
----
+**Acceso:** Lectura, escritura, ejecución de comandos.
+**Flujo:** Leer task.md → analizar arquitectura → implementar → tests + lint + build → commit + PR.
 
 ## El agente reviewer
 
 **Responsabilidad:** Verificar que la implementación cumple los criterios de aceptación.
-
 **Acceso:** Solo lectura. No puede modificar ningún fichero.
-
-**Flujo:**
-1. Leer el `task.md` y los criterios de aceptación
-2. Revisar el código implementado
-3. Verificar convenciones, tests, cobertura y build
-4. Generar informe de revisión
-
-**Resultado posible:**
-- ✅ Aprobado → se crea la Pull Request
-- ❌ Requiere cambios → el developer corrige y el reviewer vuelve a revisar
+**Resultado:** Informe con ✅/❌ por criterio + veredicto (Aprobado / Requiere cambios).
 
 ---
 
 ## Por qué funciona
 
-- **Separación de responsabilidades** — cada agente tiene un único objetivo
-- **Control de acceso** — el reviewer no puede modificar código aunque quisiera
-- **Objetividad** — el reviewer aplica los criterios del `task.md` sin sesgo
-- **Trazabilidad** — el informe del reviewer documenta qué se verificó y cómo
+- Separación de responsabilidades
+- El reviewer no puede modificar código aunque quisiera
+- Aplica los criterios del `task.md` sin sesgo
+- Documenta qué se verificó y cómo
 
 ---
 
 ## Relación con otras piezas
 
-- **[[copilot-instructions]]** — Los agentes heredan el contexto del proyecto definido en copilot-instructions
-- **[[frontmatter]]** — El frontmatter define las herramientas y descripción de cada agente
+- **[[copilot-instructions]]** — Los agentes heredan el contexto del proyecto
+- **[[frontmatter]]** — Define las herramientas y descripción de cada agente
 - **[[sdd]]** — El `task.md` es la fuente de verdad que ambos agentes leen
 
 ---
@@ -115,4 +104,4 @@ El `description` le dice al sistema cuándo invocar este agente automáticamente
 
 | Charla | Rol |
 |---|---|
-| 8 | Acto 5 de la demo — patrón developer/reviewer |
+| 8 | Acto 3 de la demo — patrón developer/reviewer en vivo |

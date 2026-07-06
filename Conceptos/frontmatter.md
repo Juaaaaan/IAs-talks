@@ -1,3 +1,14 @@
+---
+type: Concepto
+title: "Frontmatter"
+description: "Bloque de metadatos YAML al inicio de ficheros Markdown que controla cuándo y cómo los carga la IA. Base del estándar OKF."
+tags: [frontmatter, yaml, metadatos, copilot, claude, okf, instrucciones]
+related: [copilot-instructions, agentes-multiples, okf]
+charla: "Charla 8"
+estado: "✅ Publicado"
+timestamp: "2026-07-02"
+---
+
 # Frontmatter
 
 > _"Son metadatos sobre el fichero en sí, no contenido. Le dicen a la IA cuándo tiene que leer este fichero y cuándo no."_
@@ -35,6 +46,7 @@ En el contexto de ficheros de instrucciones para Copilot y Claude, el frontmatte
 | `excludeAgent` | Excluir un agente específico de leer este fichero |
 
 **Ejemplo con `applyTo:`**
+
 ```markdown
 ---
 applyTo: "**/*.spec.ts"
@@ -42,16 +54,9 @@ applyTo: "**/*.spec.ts"
 ```
 Solo se carga cuando Copilot trabaja con ficheros `.spec.ts`.
 
-```markdown
----
-applyTo: "src/app/**/*.component.ts"
----
-```
-Solo se carga cuando trabaja con componentes Angular.
-
 ---
 
-## Propiedades disponibles en agentes de Copilot
+## Propiedades en agentes
 
 En ficheros `.agent.md` dentro de `.github/agents/`:
 
@@ -62,40 +67,11 @@ tools: read_file, write_file, run_command, search_files
 ---
 ```
 
-| Propiedad | Para qué sirve |
-|---|---|
-| `description` | Cuándo debe invocarse este agente |
-| `tools` | Herramientas a las que tiene acceso |
-
 ---
 
-## Propiedades disponibles en agentes de Claude Code
+## Relación con OKF
 
-En ficheros `.md` dentro de `.claude/agents/`:
-
-```markdown
----
-name: developer
-description: Implementa tareas del proyecto RCA
-tools: Read, Write, Edit, Bash, Glob, Grep
----
-```
-
----
-
-## Equivalente en Claude Code
-
-En `.claude/rules/*.md` se usa el frontmatter `paths:` en lugar de `applyTo:`:
-
-```markdown
----
-paths:
-  - "**/*.spec.ts"
-  - "**/*.test.ts"
----
-```
-
-El concepto es idéntico — instrucciones que se cargan solo cuando el contexto lo requiere.
+El frontmatter es también el mecanismo que implementa el estándar [[okf]] en este vault. El campo `type:` es el único obligatorio en OKF.
 
 ---
 
@@ -103,6 +79,7 @@ El concepto es idéntico — instrucciones que se cargan solo cuando el contexto
 
 - **[[copilot-instructions]]** — El fichero principal que usa frontmatter en las instrucciones por ruta
 - **[[agentes-multiples]]** — Los agentes usan frontmatter para definir herramientas y descripción
+- **[[okf]]** — OKF formaliza el frontmatter como estándar de conocimiento para agentes
 
 ---
 
@@ -110,4 +87,5 @@ El concepto es idéntico — instrucciones que se cargan solo cuando el contexto
 
 | Charla | Rol |
 |---|---|
-| 8 | Concepto explicado en el Acto 4 de la demo |
+| 8 | Explicado en el Acto 1 de la demo |
+| 11 | Base del estándar OKF para el Wiki LLM |
