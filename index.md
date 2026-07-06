@@ -29,10 +29,11 @@ IAs-talks/
 
 ## Charlas
 
-| Fichero | Charla | Estado |
-|---|---|---|
-| [[charla-07-skills-mcps]] | Charla 7 — Skills, MCPs y el Arnés Completo | ✅ Impartida |
-| [[charla-08-copilot-instrucciones]] | Charla 8 — Instruyendo a la IA | ✅ Impartida |
+| Fichero                             | Charla                                      | Estado      |
+| ----------------------------------- | ------------------------------------------- | ----------- |
+| [[charla-07-skills-mcps]]           | Charla 7 — Skills, MCPs y el Arnés Completo | ✅ Impartida |
+| [[charla-08-copilot-instrucciones]] | Charla 8 — Instruyendo a la IA              | ✅ Impartida |
+| [[GUION-CHARLA-8-COPILOT-CLAUDE]]   | Charla 8 — Guión charla 8                   | ✅ Impartida |
 
 ---
 
