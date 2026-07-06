@@ -1,3 +1,14 @@
+---
+type: Concepto
+title: "MCP — Model Context Protocol"
+description: "Protocolo estándar abierto que permite a la IA conectarse a herramientas externas como Jira, GitHub, Notion con permisos controlados"
+tags: [mcp, protocolo, integracion, jira, github, arnes, atlassian]
+related: [arnes-completo, sdd, skills, copilot-instructions]
+charla: "Charla 7"
+estado: "✅ Publicado"
+timestamp: "2026-06-17"
+---
+
 # MCP — Model Context Protocol
 
 > _"Un MCP es un enchufe estándar entre la IA y el mundo real. Vosotros controláis qué enchufáis."_
@@ -33,20 +44,12 @@ MCP es el USB de la IA: un estándar que funciona con cualquier herramienta que 
 
 ## MCP vs API
 
-Una pregunta habitual al introducir el concepto:
-
 |API|MCP|
 |---|---|
 |Es la puerta|Es el traductor universal que conoce todas las puertas|
 |Tú pones toda la lógica|Claude sabe cómo llamar, qué endpoint usar, cómo formatear|
 |Requiere programar la integración|No requiere programar nada|
 |La fontanería|El grifo estándar que cualquier IA puede usar|
-
----
-
-## En la metáfora del arnés
-
-El MCP es el **arnés de integración**: lo que permite a la IA salir de la conversación y actuar en el mundo real con los permisos que el equipo decide.
 
 ---
 
@@ -72,21 +75,11 @@ Autenticación vía OAuth con cuenta de Atlassian. No requiere API token en el c
 
 ---
 
-## MCPs usados en la serie
-
-|MCP|Herramienta|Charla|
-|---|---|---|
-|Atlassian oficial|Jira Cloud (`da-ju-ia-talks.atlassian.net`)|7|
-|Figma MCP|Figma|Futura|
-
----
-
 ## Notas técnicas
 
-- Tras configurar, la conexión a Jira aparece en Claude Desktop bajo "connectors", no como icono de herramienta
+- Tras configurar, la conexión a Jira aparece en Claude Desktop bajo "connectors"
 - El paquete `@cosmix/jira-mcp` devuelve 404 en npm — no usar
-- Para proyectos sin sprint creado, usar JQL: `project = RCA ORDER BY created ASC`
-- Demo usada en Charla 7: cuenta personal de Atlassian (`da-ju-ia-talks.atlassian.net`) — el entorno corporativo tiene restricciones de acceso
+- Demo usada en Charla 7 con cuenta personal de Atlassian (`da-ju-ia-talks.atlassian.net`)
 
 ---
 
@@ -95,7 +88,7 @@ Autenticación vía OAuth con cuenta de Atlassian. No requiere API token en el c
 - **[[sdd]]** — El MCP permite actuar sobre el spec directamente (crear issues desde un `spec.md`)
 - **[[skills]]** — Skills + MCPs completan el arnés que SDD inicia
 - **[[arnes-completo]]** — El MCP es la tercera pieza del arnés
-- **[[copilot-instructions]]** — Las instrucciones persistentes son la cuarta pieza
+- **[[copilot-instructions]]** — Las instrucciones del proyecto son la cuarta pieza
 
 ---
 

@@ -1,3 +1,14 @@
+---
+type: Concepto
+title: "El Arnés Completo"
+description: "Metáfora central de la serie: SDD + Skills + MCPs + Instrucciones como arnés que canaliza la IA hacia el trabajo real"
+tags: [arnes, sdd, skills, mcp, instrucciones, metafora, serie]
+related: [sdd, skills, mcp, copilot-instructions]
+charla: "Charlas 7-8"
+estado: "✅ Publicado"
+timestamp: "2026-06-17"
+---
+
 # El Arnés Completo
 
 > _"El arnés documental le dice qué hacer. Los Skills le dicen cómo comportarse. Los MCPs le permiten actuar. Los tres juntos son el arnés completo."_ — Charla 7
@@ -17,12 +28,13 @@ La serie construye ese arnés pieza a pieza:
 │  [[sdd]]       →  qué construir                 │
 │  [[skills]]    →  cómo comportarse              │
 │  [[mcp]]       →  cómo actuar en el mundo real  │
+│  [[copilot-instructions]] → conocer el proyecto │
 └─────────────────────────────────────────────────┘
 ```
 
 ---
 
-## Las tres piezas
+## Las cuatro piezas
 
 ### [[sdd|SDD — Arnés documental]]
 
@@ -36,6 +48,10 @@ Contexto persistente que define cómo trabaja la empresa: tono, procedimientos, 
 
 El estándar que permite a la IA actuar fuera de la conversación: leer el Jira real, crear issues, consultar documentos. El puente deja de ser el usuario y pasa a ser el protocolo.
 
+### [[copilot-instructions|Instrucciones — Arnés del proyecto]]
+
+Ficheros en `.github/` y `.claude/` que le dan a la IA el contexto persistente del proyecto: stack, convenciones, sistema de diseño, reglas del equipo.
+
 ---
 
 ## Por qué esta metáfora funciona
@@ -43,7 +59,7 @@ El estándar que permite a la IA actuar fuera de la conversación: leer el Jira 
 - Es visual e intuitiva para audiencias no técnicas
 - Permite construir la narrativa de forma acumulativa charla a charla
 - Transmite control (el arnés lo lleva el jinete, no el caballo)
-- Escala bien hacia el cierre del arco en [[charla-10]]
+- Escala bien hacia el cierre del arco
 
 ---
 
@@ -53,7 +69,8 @@ El estándar que permite a la IA actuar fuera de la conversación: leer el Jira 
 |---|---|
 |6|Arnés documental (SDD) — introducción de la metáfora|
 |7|Skills + MCPs — cierre del arnés completo|
-|10|Ciclo completo — demostración de las tres piezas juntas|
+|8|Instrucciones persistentes — cuarta pieza|
+|11|Wiki LLM — el conocimiento como quinta pieza|
 
 ---
 
@@ -62,3 +79,5 @@ El estándar que permite a la IA actuar fuera de la conversación: leer el Jira 
 > _"SDD os dio el arnés documental. Hoy completamos el arnés."_ — Apertura Charla 7
 
 > _"La semana pasada os dieron las riendas. Hoy habéis visto cómo engancharlas al caballo."_ — Cierre Charla 7
+
+> _"La IA nunca se olvida de leerlo."_ — Cierre Charla 8

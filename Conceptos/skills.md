@@ -1,3 +1,14 @@
+---
+type: Concepto
+title: "Skills — El Arnés de Comportamiento"
+description: "Contexto persistente que define cómo trabaja la empresa: tono, procedimientos, documentos de referencia. No es un prompt — es lo que la IA ya sabe antes de que le pidas nada."
+tags: [skills, contexto, arnes, claude, projects, comportamiento]
+related: [arnes-completo, mcp, sdd, copilot-instructions]
+charla: "Charla 7"
+estado: "✅ Publicado"
+timestamp: "2026-06-17"
+---
+
 # Skills — El Arnés de Comportamiento
 
 > _"El Skill no es lo que le pedís a la IA. Es lo que la IA ya sabe sobre cómo trabajáis antes de que le pidáis nada."_
@@ -36,20 +47,7 @@ En Claude, los Skills se implementan a través de **Projects** (`claude.ai`):
 2. Se adjuntan documentos de referencia (procedimientos, guías de estilo, estructuras de datos)
 3. Se define el comportamiento esperado
 
-A partir de ahí, cada conversación dentro del proyecto arranca con ese contexto ya cargado, para cualquier persona del equipo que lo use.
-
----
-
-## Ejemplo práctico — Equipo de siniestros
-
-Un Skill configurado para el equipo de siniestros sabría:
-
-- Cómo se estructura una póliza en la empresa
-- Los procedimientos internos de tramitación
-- El tono adecuado para comunicaciones con clientes
-- Los criterios de escalado según tipo de siniestro
-
-Cualquier persona del equipo obtendría respuestas consistentes sin tener que explicar nada.
+A partir de ahí, cada conversación dentro del proyecto arranca con ese contexto ya cargado.
 
 ---
 
@@ -58,6 +56,7 @@ Cualquier persona del equipo obtendría respuestas consistentes sin tener que ex
 - **[[sdd]]** — El SDD define qué construir en un proyecto concreto; el Skill define cómo comportarse siempre
 - **[[mcp]]** — Los MCPs son el paso siguiente: permiten que la IA actúe fuera de la conversación
 - **[[arnes-completo]]** — El Skill es la segunda pieza del arnés
+- **[[copilot-instructions]]** — El equivalente a los Skills en el ecosistema GitHub Copilot
 
 ---
 

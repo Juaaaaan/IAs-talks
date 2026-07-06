@@ -1,3 +1,14 @@
+---
+type: Concepto
+title: "SDD — Specification-Driven Development"
+description: "Metodología donde los requisitos se expresan en ficheros markdown estructurados antes de que la IA genere código"
+tags: [sdd, spec, documentacion, arnes, desarrollo, task, plan]
+related: [arnes-completo, skills, mcp, copilot-instructions]
+charla: "Charlas 7-8"
+estado: "✅ Publicado"
+timestamp: "2026-06-17"
+---
+
 # SDD — Specification-Driven Development
 
 > _"El arnés documental le dice qué hacer."_
@@ -43,6 +54,7 @@ Se diferencia de [[skills]] en que el SDD es específico por proyecto o feature,
 - **[[skills]]** — El SDD define el qué; los Skills definen el cómo comportarse siempre
 - **[[mcp]]** — Los MCPs permiten que la IA actúe sobre el `spec.md` directamente (ej: crear issues en Jira a partir del spec)
 - **[[arnes-completo]]** — El SDD es la primera pieza del arnés
+- **[[copilot-instructions]]** — Las instrucciones del proyecto complementan el SDD con el contexto técnico
 
 ---
 
@@ -52,11 +64,10 @@ Se diferencia de [[skills]] en que el SDD es específico por proyecto o feature,
 |---|---|
 |6|Concepto central — introducción completa|
 |7|Pieza de base sobre la que se añaden Skills y MCPs|
-|8|Aplicación práctica sobre proyecto Angular (RCA)|
-|10|Parte del ciclo completo|
+|8|El `task.md` como fuente de verdad para los agentes developer y reviewer|
 
 ---
 
 ## Ejemplo de spec.md
 
-Ver [[demo-spec-consulta-polizas]] — el spec usado en la demo de Charla 7.
+Ver `Recursos/task-rca-20.md` — el task usado en la demo de Charla 8.

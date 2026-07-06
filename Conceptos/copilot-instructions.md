@@ -1,6 +1,17 @@
+---
+type: Concepto
+title: "copilot-instructions.md — Instrucciones persistentes para Copilot"
+description: "Fichero en .github/ que da contexto persistente a GitHub Copilot: stack, convenciones, sistema de diseño. El manual de bienvenida de la IA."
+tags: [copilot, instrucciones, github, contexto, arnes, onboarding]
+related: [agentes-multiples, frontmatter, arnes-completo, sdd, skills]
+charla: "Charla 8"
+estado: "✅ Publicado"
+timestamp: "2026-07-02"
+---
+
 # copilot-instructions.md — Instrucciones persistentes para Copilot
 
-> _"El onboarding que le harías a un desarrollador nuevo, escríbeselo a la IA en un fichero. Solo una vez."_
+> _"El onboarding que le harías a un desarrollador nuevo, escríbselo a la IA en un fichero. Solo una vez."_
 
 ---
 
@@ -37,15 +48,6 @@ No se escribe desde cero. El flujo correcto es:
 
 ---
 
-## Dónde vive
-
-```
-.github/
-└── copilot-instructions.md    # Instrucciones globales del proyecto
-```
-
----
-
 ## La diferencia con el prompt
 
 | Sin instrucciones | Con instrucciones |
@@ -53,26 +55,18 @@ No se escribe desde cero. El flujo correcto es:
 | Cada sesión empieza desde cero | Cada sesión arranca con el contexto cargado |
 | Copilot usa convenciones genéricas | Copilot usa las convenciones del equipo |
 | Resultados inconsistentes | Resultados consistentes |
-| Hay que explicar el contexto cada vez | El contexto ya está ahí |
 
 ---
 
 ## Instrucciones por ruta — `instructions/`
 
-Para instrucciones que solo aplican a ciertos ficheros, se usa la carpeta `.github/instructions/` con ficheros `.instructions.md` y frontmatter `applyTo:`:
-
 ```markdown
 ---
 applyTo: "**/*.spec.ts"
 ---
-
-# Testing conventions
-...
 ```
 
-El frontmatter `applyTo:` define el glob de ficheros que activan la instrucción. Si Copilot está trabajando con un fichero que no coincide, la instrucción no se carga.
-
-Ver [[frontmatter]] para más detalle sobre el frontmatter.
+El [[frontmatter]] `applyTo:` define el glob de ficheros que activan la instrucción. Ver [[frontmatter]] para más detalle.
 
 ---
 
@@ -81,15 +75,16 @@ Ver [[frontmatter]] para más detalle sobre el frontmatter.
 | GitHub Copilot | Claude Code |
 |---|---|
 | `.github/copilot-instructions.md` | `CLAUDE.md` en la raíz del proyecto |
-| `.github/instructions/*.instructions.md` | `.claude/rules/*.md` con frontmatter `paths:` |
+| `.github/instructions/*.instructions.md` | `.claude/rules/*.md` |
 
 ---
 
 ## Relación con otras piezas
 
-- **[[agentes-multiples]]** — Los agentes tienen su propio mecanismo de instrucciones (`AGENTS.md` y `.github/agents/`)
+- **[[agentes-multiples]]** — Los agentes tienen su propio mecanismo (`AGENTS.md` y `.github/agents/`)
 - **[[frontmatter]]** — El sistema de metadatos que controla cuándo se cargan las instrucciones
-- **[[sdd]]** — Las instrucciones de Copilot son el equivalente al CLAUDE.md dentro del arnés documental
+- **[[sdd]]** — Las instrucciones del proyecto complementan los documentos SDD
+- **[[arnes-completo]]** — La cuarta pieza del arnés
 
 ---
 
