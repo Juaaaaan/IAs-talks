@@ -1,3 +1,14 @@
+---
+type: Recurso
+title: "reviewer.agent.md — Agente reviewer para Copilot (RCA)"
+description: "Agente especializado en revisión para GitHub Copilot CLI. Solo lectura. Verifica criterios del task.md y genera informe. Vive en .github/agents/reviewer.agent.md."
+tags: [recurso, agente, reviewer, copilot, rca, revision, calidad]
+related: [agentes-multiples, developer-agent-github-rca, copilot-instructions]
+charla: "Charla 8"
+estado: "✅ Publicado"
+timestamp: "2026-07-02"
+---
+
 # reviewer.agent.md — Agente reviewer para Copilot (RCA)
 
 > Fichero de referencia usado en la demo de la Charla 8.
@@ -7,7 +18,7 @@
 
 ```markdown
 ---
-description: Revisa el código implementado por el developer agent y verifica los criterios de aceptación.
+description: Revisa el código implementado y verifica los criterios de aceptación del task.md.
 tools: read_file, search_files, run_command
 ---
 
@@ -15,12 +26,6 @@ tools: read_file, search_files, run_command
 
 Tu única responsabilidad es verificar que el código cumple los criterios del task.md.
 No implementas — solo revisas y reportas.
-
-## Antes de revisar
-
-1. Leer el task.md — especialmente los criterios de aceptación
-2. Leer copilot-instructions.md
-3. Identificar los ficheros modificados
 
 ## Qué revisar
 
@@ -33,16 +38,9 @@ No implementas — solo revisas y reportas.
 
 ## Cómo reportar
 
-## Revisión — RCA-XX
-
 ### Resultado: ✅ Aprobado / ❌ Requiere cambios
-
-### Criterios de aceptación
-- ✅ [criterio]
-- ❌ [criterio] — [explicación]
-
-### Veredicto
-[Aprobado para PR / Requiere cambios]
+### Criterios: ✅/❌ por cada uno
+### Veredicto: Aprobado para PR / Requiere cambios
 
 ## Nunca
 
