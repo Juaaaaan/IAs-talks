@@ -1,3 +1,15 @@
+---
+type: Charla
+title: "Charla 7 — Skills, MCPs y el Arnés Completo"
+description: "Primera charla propia. Introduce Skills y MCPs como piezas del arnés completo. Demo en vivo con Claude Desktop conectado a Jira va MCP."
+tags: [charla, skills, mcp, arnes, jira, demo, claude-desktop]
+related: [sdd, skills, mcp, arnes-completo, demo-jira-charla-7]
+charla: "Charla 7"
+fecha: "2026-06-17"
+estado: "✅ Impartida"
+timestamp: "2026-06-17"
+---
+
 # Charla 7 — Skills, MCPs y el Arnés Completo
 
 **Fecha:** 17 de junio de 2026 **Asistentes:** ~60–90 (developers junior/senior, RRHH, directivos) **Estado:** ✅ Impartida
@@ -63,7 +75,7 @@ Ver [[demo-jira-charla-7]] para el flujo completo.
 
 **Acto 1** — Conectar Claude Desktop a Jira en vivo (8 min): mostrar el `claude_desktop_config.json`, listar proyectos, primera reacción de la audiencia al ver el proyecto KAN real.
 
-**Acto 2** — Claude trabajando con SDD y Jira (12–15 min): lectura del sprint → análisis → generación de `task.md` → creación de issues en Jira a partir del [[demo-spec-consulta-polizas|spec de Consulta de Pólizas]].
+**Acto 2** — Claude trabajando con SDD y Jira (12–15 min): lectura del sprint → análisis → generación de `task.md` → creación de issues en Jira a partir del spec de Consulta de Pólizas.
 
 El momento clave: los issues aparecen en el tablero de Jira en tiempo real mientras la audiencia lo ve.
 
@@ -79,23 +91,13 @@ Tres ideas para llevarse + dónde empezar hoy (Claude Desktop gratuito, MCP de A
 
 ## Lecciones aprendidas
 
-- **La demo es el núcleo.** El momento en que los issues aparecen en Jira en tiempo real es el de mayor impacto. Todo lo anterior es preparación para ese momento.
-- **La aclaración API vs MCP funciona.** Es una pregunta que la audiencia técnica tiene siempre en la cabeza; anticiparla en el guión evita que interrumpa el flujo.
-- **El bloque teórico de Skills es el más frágil.** Es el único sin demo visual. Conviene tenerlo acotado y apoyarse en el ejemplo del equipo de siniestros para hacerlo concreto.
-- **Dos ventanas en pantalla.** Claude Desktop + tablero de Jira simultáneos son imprescindibles para que el efecto visual funcione.
-
----
-
-## Recursos de la charla
-
-- [[demo-jira-charla-7]] — Flujo completo de la demo
-- [[demo-spec-consulta-polizas]] — El spec usado en el Acto 2
-- [[mcp]] — Concepto MCP con config de referencia
-- [[skills]] — Concepto Skills
-- [[sdd]] — Concepto SDD
+- **La demo es el núcleo.** El momento en que los issues aparecen en Jira en tiempo real es el de mayor impacto.
+- **La aclaración API vs MCP funciona.** Anticiparla evita que interrumpa el flujo.
+- **El bloque teórico de Skills es el más frágil.** Único sin demo visual. Conviene apoyarse en el ejemplo del equipo de siniestros.
+- **Dos ventanas en pantalla.** Claude Desktop + tablero de Jira simultáneos son imprescindibles.
 
 ---
 
 ## Próxima charla
 
-[[charla-08-sdd-angular]] — SDD aplicado a un proyecto Angular (proyecto RCA en Jira como demo vehicle).
+[[charla-08-copilot-instrucciones]] — Instruyendo a la IA: `.github/` y `.claude/`

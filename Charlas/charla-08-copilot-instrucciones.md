@@ -1,14 +1,24 @@
+---
+type: Charla
+title: "Charla 8 — Instruyendo a la IA: .github/ y .claude/"
+description: "Instrucciones persistentes para Copilot y Claude Code. Demo de agentes developer/reviewer con anécdota real de Superpowers interceptando prompts."
+tags: [charla, copilot, instrucciones, agentes, github, claude, developer, reviewer, superpowers]
+related: [copilot-instructions, agentes-multiples, frontmatter, arnes-completo, demo-copilot-instrucciones-charla-8]
+charla: "Charla 8"
+fecha: "2026-07-02"
+estado: "✅ Impartida"
+timestamp: "2026-07-02"
+---
+
 # Charla 8 — Instruyendo a la IA: `.github/` y `.claude/`
 
-**Fecha:** Por determinar **Asistentes:** ~60–90 (developers junior/senior, RRHH, directivos, comerciales) **Estado:** 🔜 En preparación
+**Fecha:** Por determinar **Asistentes:** ~60–90 (developers junior/senior, RRHH, directivos, comerciales) **Estado:** ✅ Impartida
 
 ---
 
 ## Idea central
 
-Si la Charla 7 mostró cómo conectar la IA con herramientas externas, esta charla muestra cómo darle a la IA el contexto de cómo trabaja el equipo — de forma persistente, sin tener que explicarlo cada vez.
-
-> _"El onboarding que le harías a un desarrollador nuevo, escríbeselo a la IA en un fichero. Solo una vez."_
+> _"El onboarding que le harías a un desarrollador nuevo, escríbselo a la IA en un fichero. Solo una vez."_
 
 ---
 
@@ -20,12 +30,11 @@ Si la Charla 7 mostró cómo conectar la IA con herramientas externas, esta char
 | Bloque 1 | El problema: la IA sin contexto | 3 min |
 | Bloque 2 | La solución: ficheros de instrucciones | 5 min |
 | Bloque 3 | `.github/` para Copilot — estructura completa | 5 min |
-| Demo Acto 1 | El antes: Copilot sin instrucciones | 5 min |
-| Demo Acto 2 | Crear instrucciones en vivo | 5 min |
-| Demo Acto 3 | El después: Copilot con instrucciones | 5 min |
-| Demo Acto 4 | AGENTS.md, frontmatter e instructions/ | 5 min |
-| Demo Acto 5 | Múltiples agentes: developer y reviewer | 8 min |
-| Bonus | `.claude/` + hook Graphify + RCA-20 | opcional |
+| Demo Acto 1 | Tour por el `.github/` completo | 8 min |
+| Demo Acto 2 | Prompts en vivo: modificaciones reales | 7 min |
+| Demo Acto 3 | AGENTS.md en acción: developer y reviewer | 10 min |
+| Demo Acto 4 | ¿Cómo confiar en el resultado? | 5 min |
+| Bonus | `.claude/` + hook Graphify | opcional |
 | Cierre | 3 ideas + dónde empezar | 3 min |
 
 ---
@@ -38,54 +47,33 @@ Responde a la pregunta que llegó de la audiencia tras la Charla 7: **¿quién c
 
 > _"La respuesta es: los dos juntos. Vosotros tenéis el conocimiento. La IA lo organiza."_
 
-Conecta con el prompt que quedó sin enviar la semana anterior: la RCA-20.
-
 ### Bloque 1 — El problema
 
-Cada sesión con la IA empieza desde cero. No sabe las convenciones del equipo, no conoce el stack, no ha leído el código. Es como un desarrollador nuevo sin onboarding.
-
-**Frase de anclaje:**
-> _"El onboarding que le harías a un desarrollador nuevo, escríbeselo a la IA en un fichero. Solo una vez."_
+Cada sesión con la IA empieza desde cero. No sabe las convenciones del equipo, no conoce el stack. Es como un desarrollador nuevo sin onboarding.
 
 ### Bloque 2 — La solución
 
-Tanto Copilot como Claude tienen ficheros de instrucciones persistentes. El concepto es idéntico, solo cambia el nombre y la ubicación.
-
-Tabla comparativa de ecosistemas presentada en la charla:
+Tabla comparativa de ecosistemas:
 
 | | GitHub Copilot | Claude Code |
 |---|---|---|
 | Instrucciones globales | `.github/copilot-instructions.md` | `CLAUDE.md` |
 | Instrucciones por ruta | `.github/instructions/*.instructions.md` | `.claude/rules/*.md` |
 | Agentes | `AGENTS.md` | `.claude/agents/*.md` |
-| Hooks y permisos | `.github/hooks/` | `.claude/settings.json` |
 
-### Bloque 3 — `.github/` para Copilot
+### Demo — Cuatro actos
 
-Tres ficheros clave:
-- `copilot-instructions.md` — instrucciones globales, se leen siempre
-- `instructions/*.instructions.md` — instrucciones por ruta con frontmatter `applyTo:`
-- `AGENTS.md` — instrucciones para el agente autónomo
+**Acto 1** — Tour por el `.github/` completo. Anécdota de Superpowers: extensión de terceros que interceptaba prompts y generaba su propia estructura de carpetas.
 
-**Frase de anclaje:**
-> _"Tres ficheros de texto. Eso es todo lo que separa a Copilot de conocer vuestro proyecto de verdad."_
+**Acto 2** — Prompts pequeños en vivo (cambiar texto, añadir botón). Respeta tokens de diseño Artisanal Ether y convenciones Angular.
 
-### Demo — Cinco actos
+**Acto 3** — `@developer` implementa, `@reviewer` revisa. **El reviewer encontró un fallo real de tests en vivo.** Momento de mayor impacto.
 
-**Acto 1** — Copilot sin instrucciones genera código genérico.
-**Acto 2** — Se crea `copilot-instructions.md` en vivo. Se explica el origen del fichero (generado con IA, revisado por humano).
-**Acto 3** — Mismo prompt, resultado completamente distinto.
-**Acto 4** — `AGENTS.md` para comportamiento autónomo. Explicación de **frontmatter** (`---`) y `applyTo:` para instrucciones por contexto.
-**Acto 5** — Patrón de múltiples agentes: `developer.agent.md` implementa, `reviewer.agent.md` verifica. Equivalentes en `.claude/agents/`.
-
-**Frase de anclaje del Acto 5:**
-> _"Un agente construye. Otro verifica. Ninguno de los dos trabaja sin contexto. Eso es un equipo de IA."_
+**Acto 4** — Cómo medir la confianza: tests, lint, build, reviewer, PR humana.
 
 ### Cierre
 
-Tres ideas + GitHub Desktop como recurso para perfiles no técnicos.
-
-Gancho para la Charla 9:
+Gancho para Charla 11:
 > _"Hoy le hemos dado a la IA el manual de cómo trabajamos. La semana que viene le damos el manual de por qué lo hacemos así."_
 
 **Frase final:**
@@ -93,27 +81,15 @@ Gancho para la Charla 9:
 
 ---
 
-## Recursos de la charla
+## Lecciones aprendidas
 
-- [[demo-copilot-instrucciones-charla-8]] — Flujo completo de la demo
-- [[copilot-instructions]] — Concepto copilot-instructions.md
-- [[frontmatter]] — Qué es el frontmatter
-- [[agentes-multiples]] — Patrón developer/reviewer con agentes
-- [[github-actions]] — Teaser para charla futura
-
-### Ficheros de referencia (proyecto RCA)
-- `Recursos/copilot-instructions-rca.md` — El `copilot-instructions.md` usado en la demo
-- `Recursos/agents-md-rca.md` — El `AGENTS.md` del proyecto RCA
-- `Recursos/testing-instructions-rca.md` — Instrucciones para tests
-- `Recursos/components-instructions-rca.md` — Instrucciones para componentes
-- `Recursos/developer-agent-github-rca.md` — Agente developer para Copilot
-- `Recursos/reviewer-agent-github-rca.md` — Agente reviewer para Copilot
-- `Recursos/developer-agent-claude-rca.md` — Agente developer para Claude
-- `Recursos/reviewer-agent-claude-rca.md` — Agente reviewer para Claude
-- `Recursos/task-rca-20.md` — Task de la RCA-20 usada en el bonus
+- Desactivar extensiones de terceros antes de la demo — Superpowers interceptaba prompts
+- Para demos en vivo, prompts pequeños son más seguros que crear componentes completos
+- El reviewer pillando un fallo real es el momento de mayor impacto de la charla
+- El Copilot CLI puede ser lento con tareas complejas
 
 ---
 
 ## Próxima charla
 
-[[charla-09-wiki-llm-obsidian]] — Wiki LLM con Obsidian y GitHub como repositorio de conocimiento documental.
+[[charla-11-wiki-llm-obsidian]] — Wiki LLM con Obsidian, GitHub y el estándar OKF.
