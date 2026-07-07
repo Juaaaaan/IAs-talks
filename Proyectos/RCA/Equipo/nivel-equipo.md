@@ -3,13 +3,13 @@ type: Concepto
 title: "Nivel del equipo — Resumen y recomendaciones"
 description: "Visión agregada del assessment de madurez IA del equipo. Quién está preparado para qué, brechas prioritarias y plan de acción."
 tags: [equipo, assessment, nivel, resumen, recomendaciones, ia]
-related: [assessment-framework, perfil-alejandro-m, perfil-sara-l, perfil-miguel-r, perfil-laura-g, perfil-jose-p]
+related: [assessment-framework, perfil-alejandro-m, perfil-sara-l, perfil-miguel-r, perfil-laura-g, perfil-jose-p, perfil-francisco-t]
 timestamp: "2026-07-07"
 ---
 
 # Nivel del equipo — Resumen y recomendaciones
 
-*Assessment realizado en julio de 2026. 5 participantes.*
+*Assessment realizado en julio de 2026. 6 participantes (equipo multidisciplinar: desarrollo + operaciones).*
 
 ---
 
@@ -18,22 +18,24 @@ timestamp: "2026-07-07"
 | Dimensión | Media Personas | Nivel |
 |-----------|:---:|-------|
 | 1. Ideación, Planning y Diseño | 1.8 | Inicial/Repetible |
-| 2. Desarrollo y Generación de Código | 2.0 | Repetible |
-| 3. Testing, Calidad y Seguridad | 2.0 | Repetible |
-| 4. Validación de Código IA | 1.8 | Inicial/Repetible |
-| 5. Configuración y Assets de IA | 1.4 | Inicial |
-| 6. Automatización y Agentes | 1.2 | Inicial |
-| 7. Gobierno, Riesgo y Compliance | 2.2 | Repetible |
-| 8. Cultura, Skills y Adopción | 2.0 | Repetible |
-| **Media global** | **1.8** | **Inicial/Repetible** |
+| 2. Desarrollo y Generación de Código | 2.2 | Repetible |
+| 3. Testing, Calidad y Seguridad | 2.3 | Repetible |
+| 4. Validación de Código IA | 2.0 | Repetible |
+| 5. Configuración y Assets de IA | 1.8 | Inicial/Repetible |
+| 6. Automatización y Agentes | 1.7 | Inicial/Repetible |
+| 7. Gobierno, Riesgo y Compliance | 2.3 | Repetible |
+| 8. Cultura, Skills y Adopción | 2.3 | Repetible |
+| **Media global** | **2.1** | **Repetible** |
 
 ---
 
-## Brecha principal: Dimensión 5 y 6
+## Brecha principal: Dimensión 5 y 6 (en mejora)
 
-El equipo tiene uso individual heterogéneo (media 1.8) y **no ha estandarizado el context engineering** (Dimensión 5: 1.4) ni ha adoptado flujos agentic (Dimensión 6: 1.2). La incorporación de José P. (score 0.6) evidencia que los perfiles junior entran sin base de IA, lo que amplía la brecha.
+La incorporación de Francisco T. (AI Ops Senior) reduce significativamente la brecha en Dimensiones 5 y 6. El equipo pasa de no tener referente en automatización y agentes a contar con un especialista (score 4/4 en ambas dimensiones).
 
-**Consecuencia práctica:** cuando entra una persona nueva al proyecto, no hay onboarding de IA estructurado. Cada developer tiene sus propios prompts y configuraciones que no benefician al resto. José P. es un caso claro: motivación alta pero formación cero.
+**Situación actual:** el equipo sigue teniendo uso heterogéneo, pero ahora cuenta con **dos champions complementarios**: Alejandro M. (desarrollo) y Francisco T. (operaciones/seguridad). La brecha de José P. sigue existiendo pero hay más capacidad de mentoría.
+
+**Consecuencia práctica:** Francisco T. aporta experiencia en montaje de sistemas agénticos (Hermes), seguridad IA (red team, prompt injection) y context engineering operativo (AGENTS.md, skills, MCPs). El equipo ya no depende de un solo perfil para adopción avanzada.
 
 ---
 
@@ -41,7 +43,8 @@ El equipo tiene uso individual heterogéneo (media 1.8) y **no ha estandarizado 
 
 | Persona | Modo agentic | Champion | Prioridad formación |
 |---------|:---:|:---:|---------------------|
-| Alejandro M. | ✅ Sí | ✅ Sí | Gobernanza (D7) |
+| Alejandro M. | ✅ Sí | ✅ Sí (Dev) | Gobernanza (D7) |
+| Francisco T. | ✅ Sí | ✅ Sí (Ops/Seguridad) | Ideación y diseño (D1) |
 | Sara L. | ❌ No | ❌ No | Context engineering (D5) + Validación (D4) |
 | Miguel R. | ⚠️ Con supervisión | ⚠️ Parcial | Modo agentic (D6) + Assets (D5) |
 | Laura G. | ⚠️ En testing | ❌ No | Context engineering (D5) |
@@ -71,8 +74,14 @@ El equipo tiene uso individual heterogéneo (media 1.8) y **no ha estandarizado 
 
 ---
 
+## Visión de equipo multidisciplinar
+
+El equipo ya no es solo de desarrollo. Con la incorporación de Francisco T. se establece un **equipo multidisciplinar** donde operaciones e IA convergen. El objetivo es cubrir todo el ciclo: desde la generación de código hasta la operación segura de agentes autónomos.
+
+---
+
 ## Pregunta clave respondida
 
 > *"¿Quién del equipo está preparado para liderar la adopción de Copilot en el próximo proyecto?"*
 
-**Alejandro M.** — único con score ≥ 3 en Dimensiones 2, 5 y 8. Pendiente de formación en gobernanza (D7) antes de proyectos con restricciones de cliente.
+**Alejandro M.** (desarrollo) y **Francisco T.** (operaciones/seguridad) — ambos con score ≥ 3 en Dimensiones 2, 5 y 8. Francisco cubre además la brecha de seguridad y automatización que el equipo tenía. Pendiente: Alejandro necesita formación en gobernanza (D7); Francisco en ideación/diseño (D1).
