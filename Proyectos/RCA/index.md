@@ -26,7 +26,7 @@ Proyectos/RCA/
 │   ├── estado-sprint-actual.md
 │   └── contexto-proyecto.md
 └── Equipo/
-    ├── (pendiente — perfiles del equipo)
+    └── (pendiente — perfiles del equipo)
 ```
 
 ---
