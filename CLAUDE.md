@@ -25,7 +25,7 @@ The series builds a cumulative narrative across ten talks around the **arnés co
 SDD    → arnés documental   (what to build)
 Skills → arnés de comportamiento  (how to behave)
 MCPs   → arnés de integración     (how to act in the real world)
-──────────────────────────────────────────────────────────
+─────────────────────────────────────────────────
 The three together = el arnés completo
 ```
 
