@@ -74,7 +74,17 @@
 
 ---
 
-## ADR-008 — Graphify para análisis de arquitectura
+## ADR-008 — Responsive desktop-first
+
+**Decisión:** Implementar diseño responsive con estrategia desktop-first. Breakpoints estándar: tablet 768px, mobile 375px.
+
+**Por qué:** El sistema de diseño Artisanal Ether solo define versión desktop, pero el cliente requiere visualización en tablet y mobile. La estrategia desktop-first es coherente porque ya tenemos el diseño desktop implementado — adaptamos hacia abajo.
+
+**Consecuencia:** Las adaptaciones responsive son decisiones de desarrollo (no hay maquetas de referencia para mobile/tablet). Se documentan en [[decision-responsive]]. Si el equipo de diseño publica maquetas responsive en el futuro, se revisan las adaptaciones.
+
+---
+
+## ADR-009 — Graphify para análisis de arquitectura
 
 **Decisión:** `graphify` (pip install graphify) integrado en el flujo de desarrollo.
 
