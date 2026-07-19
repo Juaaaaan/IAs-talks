@@ -10,7 +10,7 @@
 | Apertura | Puente desde la Charla 12 — la pregunta que queda abierta | 3 min |
 | Bloque 1 | Qué es Copilot Studio y dónde encaja | 7 min |
 | Demo — Acto 1 | Construir el agente en vivo en Copilot Studio | 15 min |
-| Demo — Acto 2 | Usar el agente en Copilot 365 | 8 min |
+| Demo — Acto 2 | Usar el agente en Teams | 8 min |
 | Bloque 2 | Cómo saber si la IA está funcionando — métricas | 8 min |
 | Cierre | 3 ideas para llevarse + preview charlas siguientes | 4 min |
 
@@ -23,8 +23,18 @@
 | Demo | Herramienta |
 |------|-------------|
 | Construcción del agente | Copilot Studio (make.preview.microsoft.com) |
-| Uso del agente | Microsoft Copilot 365 |
+| Uso del agente | Microsoft Teams |
 | Dashboard de analytics | Copilot Studio — pestaña Analytics |
+
+---
+
+## Notas técnicas aprendidas en la preparación
+
+- El entorno LITE de Copilot Studio **no permite subir ficheros directamente**. El conocimiento se añade mediante **URLs de SharePoint** autenticadas.
+- El panel de prueba interno de Copilot Studio **no puede autenticarse** contra SharePoint — las respuestas del panel de test no son fiables. El canal correcto para probar es **Teams**.
+- El agente funciona correctamente en Teams porque los usuarios están autenticados con sus cuentas corporativas.
+- El handbook corporativo 2026 está cargado como fuente de conocimiento vía SharePoint.
+- **El agente ya está publicado y disponible en Teams** — no es necesario crearlo en directo el día de la charla. Ver sección de checklist.
 
 ---
 
@@ -55,37 +65,34 @@
 
 > *"No es un chatbot genérico. Cuando le preguntáis algo a ChatGPT o a Copilot 365 sin más, la IA responde con conocimiento general del mundo. Eso está bien para muchas cosas."*
 
-> *"Pero hay preguntas que ese conocimiento genérico no puede responder. ¿Cuántos días de vacaciones tengo según nuestro convenio? ¿Cuál es el proceso para solicitar un cambio de proyecto? ¿Qué incluye nuestra póliza de salud? Esas respuestas no están en internet. Están en vuestros documentos."*
+> *"Pero hay preguntas que ese conocimiento genérico no puede responder. ¿Cuántos profesionales somos en la empresa? ¿Cuál es el proceso para solicitar un cambio de proyecto? ¿Qué dice nuestro handbook sobre las incorporaciones? Esas respuestas no están en internet. Están en vuestros documentos."*
 
 ### Qué es
 
-> *"Copilot Studio os permite construir un agente que sí sabe esas cosas. Porque vosotros le dais ese conocimiento. Le subís los documentos, le definís el comportamiento, y el agente responde basándose en lo que vosotros le habéis enseñado."*
+> *"Copilot Studio os permite construir un agente que sí sabe esas cosas. Porque vosotros le dais ese conocimiento. Le conectáis los documentos, le definís el comportamiento, y el agente responde basándose en lo que vosotros le habéis enseñado."*
 
 > *"Tres cosas clave para que os queden claras:"*
 
 > *"Primera: no necesita código. Cualquier persona de esta sala puede construir un agente en Copilot Studio. No hace falta ser developer."*
 
-> *"Segunda: el conocimiento es vuestro. Los documentos que subís no salen de la empresa. Esto no es IA pública — es IA con vuestros datos, bajo vuestro control."*
+> *"Segunda: el conocimiento es vuestro. Los documentos que conectáis no salen de la empresa. Esto no es IA pública — es IA con vuestros datos, bajo vuestro control, con las mismas credenciales corporativas que usáis cada día."*
 
-> *"Tercera: vive donde ya trabajáis. Un agente de Copilot Studio se despliega en Teams, en Copilot 365, en los canales que ya usáis. No hay que instalar nada nuevo ni cambiar hábitos."*
+> *"Tercera: vive donde ya trabajáis. Este agente vive en Teams. No hay que instalar nada nuevo ni cambiar hábitos."*
 
 **Frase que debe quedar:**
 > *"La diferencia entre un LLM genérico y un agente de Copilot Studio es la misma que entre un becario recién llegado y alguien que lleva tres años en la empresa y conoce todos los procesos."*
 
 ### Dónde encaja en el mapa
 
-> *"En el mapa que visteis la semana pasada, esto es el Nivel 4. Agentic. Automatización profunda. La IA no solo asiste — actúa de forma autónoma dentro de un proceso definido."*
+> *"En el mapa que visteis la semana pasada, esto es el Nivel 4. Agentic. La IA no solo asiste — actúa de forma autónoma dentro de un proceso definido."*
 
-> *"Y lo vais a ver construirse ahora mismo."*
+> *"Y lo vais a ver ahora mismo."*
 
 ---
 
 ## Demo — Acto 1: Construir el agente en Copilot Studio — 15 min
 
-**Configuración previa necesaria:**
-- Copilot Studio abierto en el navegador (make.preview.microsoft.com)
-- Documento FAQ de onboarding preparado (ficticio) listo para subir
-- Política de teletrabajo preparada (ficticia) lista para subir
+> ⚠️ **El agente ya está creado y publicado en Teams.** El Acto 1 muestra el proceso de construcción para que la audiencia entienda cómo funciona por dentro. No es necesario crear un agente nuevo — se muestra la configuración del agente existente.
 
 ---
 
@@ -93,97 +100,77 @@
 
 > *"Esto es Copilot Studio. La interfaz desde la que cualquier persona puede crear un agente."*
 
-Mostrar la pantalla de inicio. Señalar las secciones principales sin detenerse.
+Mostrar la pantalla de inicio. Abrir el agente ya creado.
 
-> *"No vamos a explorar todo. Vamos directamente a crear."*
-
----
-
-### Paso 2 — Crear el agente (2 min)
-
-Hacer clic en "Nuevo agente" o equivalente.
-
-> *"Le damos un nombre. Este agente se va a llamar 'Agente de bienvenida'. Su trabajo: responder las preguntas que tiene cualquier persona nueva en la empresa durante sus primeras semanas."*
-
-> *"Pensad en cuántas veces alguien de RRHH responde las mismas cinco preguntas a cada persona que se incorpora. Este agente las responde por ellos."*
-
-Completar nombre y descripción breve en la interfaz.
+> *"Este es el agente que hemos preparado para hoy. Se llama 'Agente de bienvenida'. Vamos a ver cómo está construido."*
 
 ---
 
-### Paso 3 — Subir el conocimiento (5 min)
+### Paso 2 — Mostrar la configuración (2 min)
 
-> *"Aquí está la clave. El agente sabe lo que vosotros le enseñáis."*
+Navegar por las secciones del agente: nombre, descripción, instrucciones.
 
-Ir a la sección de Knowledge / Conocimiento. Subir los dos documentos en directo.
+> *"Le hemos dado instrucciones muy concretas: responde solo sobre lo que sabe, en español, con tono cercano. Si no tiene la información, lo dice — no se inventa nada."*
 
-> *"Estoy subiendo ahora mismo dos documentos. Un FAQ de incorporación y una política de teletrabajo. Nada más. Eso es todo el conocimiento que tiene este agente."*
-
-Esperar a que procese.
-
-> *"Lo que está pasando ahora mismo: Copilot Studio está leyendo estos documentos, extrayendo el significado de cada párrafo y guardándolo de forma que el agente pueda consultarlo cuando alguien le pregunte. Exactamente lo que visteis en la Charla 12 cuando hablamos de RAG y embeddings. Aquí lo estáis viendo en acción."*
+> *"Pensad en cuántas veces alguien de RRHH responde las mismas preguntas a cada persona que se incorpora. Este agente las responde por ellos."*
 
 ---
 
-### Paso 4 — Primera prueba en el panel de test (7 min)
+### Paso 3 — Mostrar el conocimiento (5 min)
 
-Abrir el panel de test en la misma pantalla.
+Ir a la sección de Knowledge / Conocimiento. Mostrar la URL de SharePoint conectada.
 
-> *"Ahora le pregunto."*
+> *"Aquí está la clave. El conocimiento del agente viene de un documento real de la empresa: nuestro handbook 2026. No de internet. No de un modelo genérico. De nuestro propio documento, al que solo tienen acceso las personas autenticadas con cuentas corporativas."*
 
-**Pregunta 1:**
+> *"Lo que ocurre por debajo: Copilot Studio lee ese documento, extrae el significado de cada párrafo y lo guarda de forma que el agente pueda consultarlo cuando alguien le pregunte. Exactamente lo que visteis en la Charla 12 cuando hablamos de RAG y embeddings. Aquí lo estáis viendo en acción."*
+
+---
+
+### Paso 4 — Las preguntas que responde y las que no (7 min)
+
+Mostrar el panel de configuración de temas o abrir Teams directamente.
+
+> *"Antes de ver el agente en acción, quiero contaros algo que descubrimos preparando esta demo. Algo que ilustra perfectamente cómo funciona un agente bien construido."*
+
+> *"Le preguntamos cuántos profesionales somos en la empresa. Responde perfectamente — está en el handbook."*
+
+> *"Pero le preguntamos por la política de teletrabajo. Y dice que no tiene esa información. ¿Por qué? Porque no está en el handbook. No se la inventa. Reconoce el límite de su conocimiento."*
+
+> *"Y si le preguntamos por los bonus de fin de año, igual: no tiene esa información."*
+
+**Frase de anclaje:**
+> *"Un agente que reconoce lo que no sabe es más valioso que uno que siempre responde algo."*
+
+> *"Y la pregunta natural es: ¿qué habría que hacer para que supiera sobre teletrabajo? Añadir ese documento al conocimiento. Así de simple. Eso es exactamente cómo se itera y mejora un agente."*
+
+---
+
+## Demo — Acto 2: Usar el agente en Teams — 8 min
+
+Cambio de ventana. Abrir Teams.
+
+> *"Salimos de Copilot Studio y vamos a donde está la gente: Teams."*
+
+> *"El agente está disponible aquí. Esto es lo que vería cualquier compañero. Sin entrar en Copilot Studio. Sin saber cómo está construido. Solo la conversación."*
+
+Localizar el agente en Teams y abrirlo.
+
+**Pregunta 1 — responde bien:**
 ```
-¿Cuántos días de vacaciones tengo durante el primer año?
-```
-
-Mostrar la respuesta. Señalar que cita el documento.
-
-> *"Fijaos en algo importante. No se lo ha inventado. Ha buscado en el documento que acabamos de subir y ha extraído la respuesta. Si el documento no lo dijera, el agente lo diría."*
-
-**Pregunta 2:**
-```
-¿Cómo solicito el teletrabajo? ¿Hay un formulario?
+¿Cuántos profesionales trabajamos en la empresa?
 ```
 
 Mostrar la respuesta.
 
-> *"Dos preguntas. Dos respuestas basadas en documentos reales. En dos minutos, sin código."*
+> *"Responde con datos reales de nuestro handbook. No de internet."*
 
-**Pregunta 3 — la que falla intencionadamente:**
-```
-¿Cuál es la política de bonus de fin de año?
-```
+**Pregunta de la sala** (pedir a alguien que proponga una pregunta sobre la empresa):
 
-> *"Esto no está en ninguno de los documentos que he subido. Veamos qué hace."*
-
-Mostrar cómo el agente indica que no tiene esa información.
-
-> *"Esto es exactamente lo que debe hacer un agente bien construido. No inventarse respuestas. Reconocer los límites de su conocimiento."*
-
-**Frase de anclaje del momento:**
-> *"Un agente que reconoce lo que no sabe es más valioso que uno que siempre responde algo."*
-
----
-
-## Demo — Acto 2: Usar el agente en Copilot 365 — 8 min
-
-Cambio de ventana. Abrir Copilot 365.
-
-> *"Ahora salimos de Copilot Studio y vamos a donde está la gente: Copilot 365."*
-
-> *"El agente que acabamos de construir hace diez minutos ya está disponible aquí."*
-
-Localizar el agente en la interfaz de Copilot 365.
-
-> *"Esto es lo que vería cualquier persona de la empresa. Sin entrar en Copilot Studio. Sin saber cómo está construido. Solo la conversación."*
-
-**Pregunta de la sala** (pedir a alguien que proponga una pregunta relacionada con incorporación o teletrabajo):
-
-> *"¿Alguien quiere preguntarle algo?"*
+> *"¿Alguien quiere preguntarle algo sobre la empresa?"*
 
 Escribir la pregunta que proponga la sala. Mostrar la respuesta.
 
-> *"Lo que veis aquí no lo he preparado esta mañana. Lo hemos construido juntos hace diez minutos."*
+> *"Lo que veis aquí está funcionando con nuestros propios documentos, con nuestras propias credenciales, dentro de nuestro entorno corporativo."*
 
 **Frase que debe quedar:**
 > *"Cualquier persona de esta sala puede tener algo así funcionando esta semana."*
@@ -210,7 +197,7 @@ Abrir la pestaña Analytics en Copilot Studio.
 
 > *"**Deflection rate** — cuántas solicitudes resolvió el agente sin intervención humana. Si RRHH respondía 50 preguntas al mes y el agente resuelve 35, el deflection rate es del 70%."*
 
-> *"Y hay algo que me parece especialmente útil: podéis definir vuestras propias métricas en lenguaje natural."*
+> *"Y hay algo especialmente útil: podéis definir vuestras propias métricas en lenguaje natural."*
 
 Mostrar la sección de Custom Metrics.
 
@@ -228,7 +215,7 @@ Mostrar la sección de Custom Metrics.
 
 > *"La conclusión práctica: más velocidad sin calidad no es progreso, es deuda. Medir el impacto de la IA en el equipo requiere ir más allá de contar cuánto código se genera."*
 
-> *"Esto da para una charla entera. Y la tendremos. Hoy solo quería que supierais que ese marco existe y que hay preguntas abiertas muy interesantes sobre cómo medirlo bien."*
+> *"Esto da para una charla entera. Y la tendremos. Hoy solo quería que supierais que ese marco existe."*
 
 **Frase que debe quedar:**
 > *"Medir adopción es fácil. Medir impacto real es el siguiente reto."*
@@ -251,9 +238,9 @@ Mostrar la sección de Custom Metrics.
 
 > *"Primera: Copilot Studio no es para developers. Es para cualquier persona que tenga conocimiento que vale la pena capturar y compartir. RRHH, operaciones, comercial, soporte. Si hay preguntas que se repiten, hay un agente que puede responderlas."*
 
-> *"Segunda: construir es la parte fácil. Medir es la que marca la diferencia. Un agente que nadie usa no sirve de nada. Un agente cuyo uso medís y mejorais se convierte en una pieza real de cómo trabaja el equipo."*
+> *"Segunda: construir es la parte fácil. Medir es la que marca la diferencia. Un agente que nadie usa no sirve de nada. Un agente cuyo uso medís y mejoráis se convierte en una pieza real de cómo trabaja el equipo."*
 
-> *"Tercera: esto es el Nivel 4. Lo que acabáis de ver — un agente con conocimiento propio, desplegado en vuestras herramientas, con métricas para mejorarlo — es exactamente donde el mapa decía que ibais. Y lo habéis visto construirse en cuarenta minutos."*
+> *"Tercera: esto es el Nivel 4. Lo que acabáis de ver — un agente con conocimiento propio, desplegado en Teams, con métricas para mejorarlo — es exactamente donde el mapa decía que ibais."*
 
 **Frase final:**
 > *"La semana pasada os di el mapa. Hoy habéis puesto el primer pin."*
@@ -262,27 +249,18 @@ Mostrar la sección de Custom Metrics.
 
 ## Checklist antes del miércoles
 
-### Lunes — explorar y construir
-- [ ] Acceder a Copilot Studio (make.preview.microsoft.com)
-- [ ] Explorar la interfaz — familiarizarse sin objetivo durante 30-45 min
-- [ ] Tener listos los documentos ficticios de demo (FAQ onboarding + política teletrabajo)
-- [ ] Crear el agente "Agente de bienvenida" con esos documentos
-- [ ] Probar el panel de test — confirmar que responde bien y que falla bien (pregunta fuera de knowledge)
-- [ ] Desplegarlo en Copilot 365 — confirmar que aparece disponible
-- [ ] Explorar la pestaña Analytics — ver qué métricas están disponibles
-- [ ] Explorar Custom Metrics — probar a definir una en lenguaje natural
-
 ### Martes — ensayo
-- [ ] Ajustar el guión según lo que hayas descubierto explorando
 - [ ] Ensayo completo cronometrado — objetivo: 43-45 min
-- [ ] Preparar las dos ventanas: Copilot Studio + Copilot 365
-- [ ] Tener los documentos ficticios listos para subir en directo (no presubidos)
+- [ ] Confirmar que el agente sigue disponible en Teams
+- [ ] Preparar las dos ventanas: Copilot Studio (configuración) + Teams (uso)
+- [ ] Tener la pestaña Analytics de Copilot Studio lista para mostrar
+- [ ] Pensar qué pregunta pedirás a la sala en el Acto 2
 
 ### El día de la charla
-- [ ] Copilot Studio abierto — con el agente sin crear aún (se crea en directo)
-- [ ] Documentos ficticios listos para subir en el momento
-- [ ] Copilot 365 abierto en otra ventana con el agente desplegado
+- [ ] Copilot Studio abierto con el agente existente (no crear uno nuevo)
+- [ ] Teams abierto con el agente localizado y listo
 - [ ] Analytics de Copilot Studio listo para mostrar al final
+- [ ] Recordar: el panel de test interno no funciona con SharePoint — usar siempre Teams para probar
 
 ---
 
@@ -292,7 +270,6 @@ Mostrar la sección de Custom Metrics.
 - [[metricas-ia]] — Concepto métricas de IA (para charlas futuras)
 - Documentación oficial analytics: https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-overview
 - Guía de KPIs y mejora de rendimiento: https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/analytics
-- Documentos de demo: [[demo-faq-onboarding]] · [[demo-politica-teletrabajo]]
 
 ---
 
