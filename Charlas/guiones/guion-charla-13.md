@@ -62,9 +62,24 @@
 
 > *"Antes de entrar en la demo, necesito que tengáis claro qué es Copilot Studio y qué no es."*
 
+### Chatbot vs agente — la distinción que importa
+
+> *"A ver, ¿quién ha tenido una mala experiencia con un chatbot? El de atención al cliente, el del banco, el de cualquier web..."*
+
+**Pausa. Dejar que la gente reaccione.**
+
+> *"Yo también. Y es exactamente por eso que lo que vamos a ver hoy no es un chatbot. Parece uno — escribes, responde. Pero por dentro funciona de forma completamente diferente."*
+
+> *"Un chatbot clásico sigue un guión. Si le preguntas algo que no está en el guión, se rompe. Los habéis visto — os da opciones que no sirven, os manda en bucles, os hace repetir lo mismo tres veces."*
+
+> *"Un agente razona. Entiende lo que le preguntas, busca en su conocimiento, y construye una respuesta. Y cuando no sabe algo — y esto es importante — lo dice. No te manda en círculos. No inventa. Te dice que no lo sabe."*
+
+**Frase que debe quedar:**
+> *"La diferencia entre un chatbot y un agente es la misma que entre un contestador automático y una persona que realmente te escucha."*
+
 ### Qué no es
 
-> *"No es un chatbot genérico. Cuando le preguntáis algo a ChatGPT o a Copilot 365 sin más, la IA responde con conocimiento general del mundo. Eso está bien para muchas cosas."*
+> *"Y tampoco es un chatbot genérico como ChatGPT. Cuando le preguntáis algo a ChatGPT o a Copilot 365 sin más, la IA responde con conocimiento general del mundo. Eso está bien para muchas cosas."*
 
 > *"Pero hay preguntas que ese conocimiento genérico no puede responder. ¿Cuántos profesionales somos en la empresa? ¿Cuál es el proceso para solicitar un cambio de proyecto? ¿Qué dice nuestro handbook sobre las incorporaciones? Esas respuestas no están en internet. Están en vuestros documentos."*
 
