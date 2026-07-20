@@ -23,7 +23,7 @@
 | Demo | Herramienta |
 |------|-------------|
 | Construcción del agente | Copilot Studio (make.preview.microsoft.com) |
-| Uso del agente | Microsoft Teams |
+| Uso del agente | Microsoft Teams — canal dedicado al agente |
 | Dashboard de analytics | Copilot Studio — pestaña Analytics |
 
 ---
@@ -34,6 +34,7 @@
 - El panel de prueba interno de Copilot Studio **no puede autenticarse** contra SharePoint — las respuestas del panel de test no son fiables. El canal correcto para probar es **Teams**.
 - El agente funciona correctamente en Teams porque los usuarios están autenticados con sus cuentas corporativas.
 - El handbook corporativo 2026 está cargado como fuente de conocimiento vía SharePoint.
+- **El despliegue del agente requiere crear un canal en Teams** — se crea un canal específico para el agente y desde ahí opera. No aparece como un bot flotante sino dentro de ese canal.
 - **El agente ya está publicado y disponible en Teams** — no es necesario crearlo en directo el día de la charla. Ver sección de checklist.
 
 ---
@@ -126,9 +127,19 @@ Ir a la sección de Knowledge / Conocimiento. Mostrar la URL de SharePoint conec
 
 ---
 
-### Paso 4 — Las preguntas que responde y las que no (7 min)
+### Paso 4 — El despliegue en Teams (2 min)
 
-Mostrar el panel de configuración de temas o abrir Teams directamente.
+Mostrar la sección de Canales / Channels en Copilot Studio.
+
+> *"Una vez el agente está configurado, hay que desplegarlo en algún canal. En nuestro caso lo hemos publicado en Teams."*
+
+> *"Y aquí viene algo importante: el agente no aparece como un bot flotante en Teams. Lo que hicimos fue crear un canal específico en Teams únicamente para este agente. Así de claro y ordenado — cada agente tiene su propio espacio."*
+
+> *"Cualquier persona que tenga acceso a ese canal puede hablar con el agente directamente desde Teams, sin instalar nada, sin aprender ninguna herramienta nueva."*
+
+---
+
+### Paso 5 — Las preguntas que responde y las que no (5 min)
 
 > *"Antes de ver el agente en acción, quiero contaros algo que descubrimos preparando esta demo. Algo que ilustra perfectamente cómo funciona un agente bien construido."*
 
@@ -141,7 +152,7 @@ Mostrar el panel de configuración de temas o abrir Teams directamente.
 **Frase de anclaje:**
 > *"Un agente que reconoce lo que no sabe es más valioso que uno que siempre responde algo."*
 
-> *"Y la pregunta natural es: ¿qué habría que hacer para que supiera sobre teletrabajo? Añadir ese documento al conocimiento. Así de simple. Eso es exactamente cómo se itera y mejora un agente."*
+> *"¿Qué habría que hacer para que supiera sobre teletrabajo? Añadir ese documento al conocimiento. Así de simple. Eso es exactamente cómo se itera y mejora un agente."*
 
 ---
 
@@ -149,11 +160,11 @@ Mostrar el panel de configuración de temas o abrir Teams directamente.
 
 Cambio de ventana. Abrir Teams.
 
-> *"Salimos de Copilot Studio y vamos a donde está la gente: Teams."*
+> *"Salimos de Copilot Studio y vamos a Teams. Al canal que creamos específicamente para este agente."*
 
-> *"El agente está disponible aquí. Esto es lo que vería cualquier compañero. Sin entrar en Copilot Studio. Sin saber cómo está construido. Solo la conversación."*
+> *"Esto es lo que vería cualquier compañero que tenga acceso al canal. Sin entrar en Copilot Studio. Sin saber cómo está construido. Solo la conversación."*
 
-Localizar el agente en Teams y abrirlo.
+Abrir el canal del agente en Teams.
 
 **Pregunta 1 — responde bien:**
 ```
@@ -188,6 +199,10 @@ Escribir la pregunta que proponga la sala. Mostrar la respuesta.
 ### El dashboard de Copilot Studio (3 min)
 
 Abrir la pestaña Analytics en Copilot Studio.
+
+> *"Estas métricas son reales. Llevan activas desde que creamos el agente ayer. Son pocas sesiones porque solo lo he usado yo probándolo — pero ya hay datos."*
+
+> *"Imaginad esto con 60 personas usándolo durante un mes."*
 
 > *"Tres métricas que mirar siempre:"*
 
@@ -240,7 +255,7 @@ Mostrar la sección de Custom Metrics.
 
 > *"Segunda: construir es la parte fácil. Medir es la que marca la diferencia. Un agente que nadie usa no sirve de nada. Un agente cuyo uso medís y mejoráis se convierte en una pieza real de cómo trabaja el equipo."*
 
-> *"Tercera: esto es el Nivel 4. Lo que acabáis de ver — un agente con conocimiento propio, desplegado en Teams, con métricas para mejorarlo — es exactamente donde el mapa decía que ibais."*
+> *"Tercera: esto es el Nivel 4. Lo que acabáis de ver — un agente con conocimiento propio, desplegado en un canal de Teams, con métricas para mejorarlo — es exactamente donde el mapa decía que ibais."*
 
 **Frase final:**
 > *"La semana pasada os di el mapa. Hoy habéis puesto el primer pin."*
@@ -249,18 +264,20 @@ Mostrar la sección de Custom Metrics.
 
 ## Checklist antes del miércoles
 
-### Martes — ensayo
+### Martes — sesiones adicionales y ensayo
+- [ ] Hacer 4-5 conversaciones independientes en Teams para generar datos en Analytics
+- [ ] Revisar Analytics por la tarde — confirmar que hay métricas suficientes para mostrar
 - [ ] Ensayo completo cronometrado — objetivo: 43-45 min
-- [ ] Confirmar que el agente sigue disponible en Teams
-- [ ] Preparar las dos ventanas: Copilot Studio (configuración) + Teams (uso)
+- [ ] Confirmar que el agente sigue disponible en el canal de Teams
+- [ ] Preparar las dos ventanas: Copilot Studio (configuración) + Teams (canal del agente)
 - [ ] Tener la pestaña Analytics de Copilot Studio lista para mostrar
 - [ ] Pensar qué pregunta pedirás a la sala en el Acto 2
 
 ### El día de la charla
 - [ ] Copilot Studio abierto con el agente existente (no crear uno nuevo)
-- [ ] Teams abierto con el agente localizado y listo
+- [ ] Teams abierto en el canal del agente, listo para escribir
 - [ ] Analytics de Copilot Studio listo para mostrar al final
-- [ ] Recordar: el panel de test interno no funciona con SharePoint — usar siempre Teams para probar
+- [ ] Recordar: el panel de test interno no funciona con SharePoint — el agente funciona en Teams
 
 ---
 
