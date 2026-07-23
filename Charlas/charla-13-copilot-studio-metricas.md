@@ -3,7 +3,7 @@ type: Charla
 title: "Charla 13 — De saber a medir: Copilot Studio y cómo saber si la IA está funcionando"
 description: "Resumen exhaustivo de la Charla 13. Chatbot vs agente, construcción de un agente con Copilot Studio, demo en Teams con el handbook corporativo, métricas de analytics y apunte sobre DORA y el AI Productivity Paradox."
 tags: [charla, copilot-studio, agentes, metricas, teams, rag, dora, nivel-4]
-related: [[charla-12-mapa-ia]], [[copilot-studio]], [[metricas-ia]], [[rag]], [[embeddings]], [[agentic-workflows]]
+related: [charla-12-mapa-ia, copilot-studio, metricas-ia , rag, embeddings, agentic-workflows]
 timestamp: "2026-07-22"
 ---
 
