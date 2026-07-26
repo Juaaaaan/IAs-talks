@@ -1,9 +1,9 @@
 ---
 type: Indice
 title: "IAs-talks — Base de conocimiento"
-description: "Vault de conocimiento de la serie de charlas de IA. Wiki LLM en formato OKF navegable por agentes y humanos. 60+ ficheros markdown interconectados."
+description: "Vault de conocimiento de la serie de charlas de IA. Wiki LLM en formato OKF navegable por agentes y humanos. 100+ ficheros markdown interconectados."
 tags: [indice, vault, wiki-llm, okf, ia, charlas, conocimiento]
-timestamp: "2026-07-13"
+timestamp: "2026-07-26"
 ---
 
 # 🧠 IA Talks — Base de conocimiento
@@ -20,21 +20,21 @@ Todos los ficheros siguen el estándar **[[okf]]** (Open Knowledge Format): fron
 IAs-talks/
 ├── index.md              ← Punto de entrada para agentes (mapa del grafo)
 ├── README.md             ← Este fichero (orientación para humanos)
-├── CLAUDE.md             ← Instrucciones para agentes que trabajan en el vault
+├── CLAUDE.md              ← Instrucciones para agentes que trabajan en el vault
 │
 ├── Charlas/              ← Resumen narrativo de cada sesión impartida
 │   └── guiones/          ← Scripts completos para el ponente
-├── Conceptos/            ← 41 definiciones de conceptos técnicos de IA
+├── Conceptos/            ← 46 conceptos clasificados + 3 nuevos pendientes de clasificar
 │   ├── nivel-1-fundamentos/  ← Conceptos de la serie de charlas (11)
-│   ├── nivel-2-intermedios/  ← Conceptos técnicos intermedios (10)
-│   ├── nivel-3-avanzados/    ← Patrones y arquitecturas (10)
+│   ├── nivel-2-intermedios/  ← Conceptos técnicos intermedios (12)
+│   ├── nivel-3-avanzados/    ← Patrones y arquitecturas (13)
 │   └── nivel-4-frontera/     ← Tecnologías emergentes 2026-2027 (10)
-├── Demos/                ← Paso a paso de demos en vivo
-├── Recursos/             ← Ficheros de referencia — configs, agentes, tasks
+├── Demos/                ← Paso a paso de demos en vivo (6)
+├── Recursos/             ← Ficheros de referencia — configs, agentes, tasks, novedades
 ├── Proyectos/            ← Wikis LLM de proyectos reales (ej. RCA)
 │   └── RCA/
 │       ├── Developer/    ← Decisiones técnicas del proyecto
-│       └── Equipo/       ← Perfiles de madurez IA del equipo
+│       └── Equipo/       ← Perfiles de madurez IA del equipo (7 perfiles)
 └── Plantillas/           ← Templates OKF para nuevos ficheros
 ```
 
@@ -65,14 +65,16 @@ Las cinco juntas = el arnés completo
 | 8 | [[charla-08-copilot-instrucciones\|Instruyendo a la IA: .github/ y .claude/]] | ✅ Impartida — 2 jul 2026 |
 | 9–10 | Serie empresa (heredadas) | ✅ Impartidas |
 | 11 | [[guion-charla-11\|Wiki LLM: la IA que recuerda a tu equipo]] | ✅ Impartida — 9 jul 2026 |
-| 12 | GitHub Actions + Copilot coding agent | 📋 Planificada |
-| 13 | El ciclo completo — cierre del arco | 📋 Planificada |
+| 12 | [[charla-12-mapa-ia\|El mapa de la IA: dónde estamos y adónde va esto]] | ✅ Impartida |
+| 13 | [[charla-13-copilot-studio-metricas\|Copilot Studio, agentes y métricas — demo real con handbook corporativo y Teams]] | ✅ Impartida |
+
+> Serie completa (7-13). El propietario original de la serie recupera la titularidad en septiembre.
 
 ---
 
-## Conceptos del vault (41)
+## Conceptos del vault
 
-### Conceptos fundacionales (serie de charlas)
+### Conceptos fundacionales (nivel-1-fundamentos, 11)
 
 - [[arnes-completo]] — La metáfora central de la serie
 - [[sdd]] — Specification-Driven Development
@@ -84,9 +86,9 @@ Las cinco juntas = el arnés completo
 - [[okf]] — Open Knowledge Format — estándar para Wiki LLM
 - [[wiki-llm]] — Base de conocimiento para agentes (patrón Karpathy)
 - [[graphify]] — Grafo de conocimiento del codebase
-- [[github-actions]] — Automatización con IA (charla futura)
+- [[github-actions]] — Automatización con IA
 
-### Conceptos de nivel 2 (intermedios)
+### Conceptos de nivel 2 — intermedios (12)
 
 - [[rag]] — Retrieval-Augmented Generation
 - [[context-engineering]] — Diseño del contexto completo para IA
@@ -98,8 +100,10 @@ Las cinco juntas = el arnés completo
 - [[structured-output]] — Salida en formatos parseables (JSON, YAML)
 - [[multimodal]] — LLMs que ven, oyen y leen
 - [[context-window-management]] — Gestión de la ventana de contexto
+- [[copilot-instructions]] — (versión nivel 2, más técnica)
+- [[mcp]] — (versión nivel 2, más técnica)
 
-### Conceptos de nivel 3 (avanzados)
+### Conceptos de nivel 3 — avanzados (13)
 
 - [[agentic-workflows]] — Flujos de trabajo autónomos con agentes
 - [[memory]] — Memoria a corto y largo plazo de los agentes
@@ -111,10 +115,13 @@ Las cinco juntas = el arnés completo
 - [[knowledge-graphs]] — GraphRAG — grafos de conocimiento + LLMs
 - [[model-routing]] — Elegir el modelo correcto para cada tarea
 - [[caching-cost]] — Optimización de costes y latencia
+- [[agentes-multiples]] — (versión nivel 3, patrones avanzados)
+- [[github-actions]] — (versión nivel 3, más técnica)
+- [[graphify]] — (versión nivel 3, más técnica)
 
-### Conceptos de nivel 4 (frontera 2026-2027)
+### Conceptos de nivel 4 — frontera 2026-2027 (10)
 
-- [[reasoning-models]] — Modelos que piensan antes de responder (o1, o3)
+- [[reasoning-models]] — Modelos que piensan antes de responder
 - [[computer-use]] — Agentes que controlan la pantalla
 - [[mcp-ecosystem]] — El ecosistema de servidores MCP
 - [[ai-ide-patterns]] — Patrones de integración IA en el IDE
@@ -124,6 +131,24 @@ Las cinco juntas = el arnés completo
 - [[ai-governance]] — Gobernanza: EU AI Act, ISO 42001
 - [[federated-ai]] — IA sin depender de un solo proveedor
 - [[autonomous-coding-agents]] — Agentes que programan solos
+
+### ⚠️ Pendientes de clasificar (Charla 13, sin carpeta nivel-X asignada)
+
+- [[agente-ia]] — Qué es un agente de IA (nuevo)
+- [[copilot-studio]] — Microsoft Copilot Studio (nuevo)
+- [[metricas-ia]] — Cómo medir el impacto de la IA (nuevo)
+- `Conceptos/embeddings.md` y `Conceptos/rag.md` — **duplicados**: ya existen en `nivel-2-intermedios/`. Revisar si hace falta fusionar o eliminar la copia suelta.
+
+---
+
+## Demos (6)
+
+| Fichero | Charla |
+|---|---|
+| [[demo-jira-charla-7]] | Charla 7 — Jira + SDD con Claude Desktop |
+| [[demo-copilot-instrucciones-charla-8]] | Charla 8 — Copilot con instrucciones |
+| [[demo-faq-onboarding]] | Charla 13 — FAQ de onboarding con handbook corporativo |
+| [[demo-politica-teletrabajo]] | Charla 13 — Política de teletrabajo vía agente + Teams |
 
 ---
 
@@ -136,6 +161,16 @@ Las cinco juntas = el arnés completo
 | **Audiencia mixta** | 60–90 asistentes: developers, RRHH, directivos, comerciales |
 | **Herramientas reales** | Demos con proyectos reales (RCA), herramientas del día a día |
 | **Estándar OKF** | Todo fichero tiene frontmatter YAML navegable por agentes |
+| **Accesibilidad sobre tecnicismo** | Lección de mitad de serie: preferir framing universal a jerga técnica |
+
+---
+
+## Proyecto demo: RCA (Resin Craft Art)
+
+Proyecto real usado como hilo demo a lo largo de toda la serie. Ver **[[Proyectos/RCA/index]]** para el detalle completo:
+
+- `Developer/` — decisiones de arquitectura, dead-ends, sprints
+- `Equipo/` — 7 perfiles de madurez IA + assessment framework + OKR de capacidad IA del equipo
 
 ---
 
@@ -143,7 +178,7 @@ Las cinco juntas = el arnés completo
 
 1. **Crear un fichero nuevo:** Usa las plantillas de `Plantillas/` para mantener el formato OKF
 2. **Conectar conceptos:** Añade `related:` en el frontmatter y `[[wikilinks]]` en el cuerpo
-3. **Mantener el grafo:** Si creas un concepto nuevo, añádelo en `index.md`
+3. **Mantener el grafo:** Si creas un concepto nuevo, añádelo en `index.md` y clasifícalo en el `nivel-X` correspondiente (evita dejarlo suelto en la raíz de `Conceptos/`)
 
 ---
 
