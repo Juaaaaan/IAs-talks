@@ -21,11 +21,11 @@ IAs-talks/
 ├── CLAUDE.md              ← instrucciones para agentes que trabajan en el vault
 ├── Charlas/              ← resumen narrativo de cada charla
 │   └── guiones/          ← scripts completos para el ponente
-├── Conceptos/            ← conceptos técnicos explicados
-│   ├── nivel-1-fundamentos/  ← conceptos de la serie de charlas
-│   ├── nivel-2-intermedios/  ← conceptos técnicos intermedios
-│   ├── nivel-3-avanzados/    ← patrones y arquitecturas
-│   └── nivel-4-frontera/     ← tecnologías emergentes 2026-2027
+├── Conceptos/            ← 44 conceptos, uno por fichero, clasificados por nivel
+│   ├── nivel-1-fundamentos/  ← conceptos de la serie de charlas (7)
+│   ├── nivel-2-intermedios/  ← conceptos técnicos intermedios (13)
+│   ├── nivel-3-avanzados/    ← patrones y arquitecturas (14)
+│   └── nivel-4-frontera/     ← tecnologías emergentes 2026-2027 (10)
 ├── Demos/                ← paso a paso de demos en vivo
 ├── Recursos/             ← ficheros de referencia y configuración
 ├── Proyectos/            ← proyectos demo de la serie (RCA)
@@ -51,21 +51,27 @@ Serie completa (7–13). Cierre del arco narrativo del arnés completo.
 
 ---
 
-## Conceptos
+## Conceptos (44)
+
+### nivel-1-fundamentos (7)
 
 | Fichero | Descripción |
 |---|---|
 | [[arnes-completo]] | La metáfora central de la serie |
 | [[sdd]] | Specification-Driven Development |
 | [[skills]] | Arnés de comportamiento |
-| [[mcp]] | Model Context Protocol |
-| [[copilot-instructions]] | Instrucciones persistentes para Copilot |
-| [[agentes-multiples]] | Patrón developer/reviewer |
 | [[frontmatter]] | Metadatos YAML en ficheros markdown |
 | [[okf]] | Open Knowledge Format — estándar para Wiki LLM |
 | [[wiki-llm]] | Base de conocimiento para agentes (patrón Karpathy) |
-| [[graphify]] | Grafo de conocimiento del codebase |
-| [[github-actions]] | Automatización con IA |
+| [[agente-ia]] | Chatbot clásico vs agente que razona |
+
+### nivel-2-intermedios (13)
+
+| Fichero | Descripción |
+|---|---|
+| [[mcp]] | Model Context Protocol |
+| [[copilot-instructions]] | Instrucciones persistentes para Copilot |
+| [[copilot-studio]] | Plataforma no-code de Microsoft para agentes corporativos |
 | [[rag]] | Retrieval-Augmented Generation |
 | [[context-engineering]] | Diseño del contexto completo para IA |
 | [[embeddings]] | Representación semántica — búsqueda por significado |
@@ -76,16 +82,30 @@ Serie completa (7–13). Cierre del arco narrativo del arnés completo.
 | [[structured-output]] | Salida en formatos parseables (JSON, YAML) |
 | [[multimodal]] | LLMs que ven, oyen y leen |
 | [[context-window-management]] | Gestión de la ventana de contexto |
+
+### nivel-3-avanzados (14)
+
+| Fichero | Descripción |
+|---|---|
+| [[agentes-multiples]] | Patrón developer/reviewer |
+| [[github-actions]] | Automatización con IA |
+| [[graphify]] | Grafo de conocimiento del codebase |
 | [[agentic-workflows]] | Flujos de trabajo autónomos con agentes |
 | [[memory]] | Memoria a corto y largo plazo de los agentes |
 | [[planning-reasoning]] | Planificación y razonamiento en IA |
 | [[code-generation-patterns]] | Patrones de generación de código con IA |
 | [[eval-benchmarking]] | Medir si la IA funciona bien |
+| [[metricas-ia]] | Métricas de agentes conversacionales, DORA y AI Productivity Paradox |
 | [[prompt-injection]] | Ataques y seguridad en sistemas con IA |
 | [[orchestration-patterns]] | Pipeline, fan-out, supervisor, swarm |
 | [[knowledge-graphs]] | GraphRAG — grafos de conocimiento + LLMs |
 | [[model-routing]] | Elegir el modelo correcto para cada tarea |
 | [[caching-cost]] | Optimización de costes y latencia |
+
+### nivel-4-frontera (10)
+
+| Fichero | Descripción |
+|---|---|
 | [[reasoning-models]] | Modelos que piensan antes de responder |
 | [[computer-use]] | Agentes que controlan la pantalla |
 | [[mcp-ecosystem]] | El ecosistema de servidores MCP |
@@ -96,11 +116,6 @@ Serie completa (7–13). Cierre del arco narrativo del arnés completo.
 | [[ai-governance]] | Gobernanza: EU AI Act, ISO 42001 |
 | [[federated-ai]] | IA sin depender de un solo proveedor |
 | [[autonomous-coding-agents]] | Agentes que programan solos |
-| [[agente-ia]] | Qué es un agente de IA — ⚠️ pendiente de clasificar en nivel-X |
-| [[copilot-studio]] | Microsoft Copilot Studio — ⚠️ pendiente de clasificar en nivel-X |
-| [[metricas-ia]] | Cómo medir el impacto de la IA — ⚠️ pendiente de clasificar en nivel-X |
-
-> Nota: `Conceptos/embeddings.md` y `Conceptos/rag.md` (raíz) son ficheros sueltos duplicados de las versiones ya clasificadas en `nivel-2-intermedios/`. Pendiente decidir si se fusionan o se eliminan.
 
 ---
 
@@ -150,17 +165,19 @@ Las conexiones principales entre conceptos:
 arnes-completo
 ├── sdd
 ├── skills
-├── mcp
-└── copilot-instructions
-    ├── agentes-multiples
-    │   └── frontmatter
-    │       └── okf
-    └── graphify
+└── agente-ia
+    ├── copilot-studio
+    │   ├── mcp
+    │   ├── rag
+    │   ├── embeddings
+    │   └── metricas-ia
+    └── agentes-multiples
+        └── frontmatter
+            └── okf
 
-agente-ia
-├── copilot-studio
-├── mcp
-└── metricas-ia
+mcp
+└── copilot-instructions
+    └── graphify
 ```
 
 ---
@@ -171,3 +188,4 @@ Todos los ficheros siguen el estándar **[[okf]]** (Open Knowledge Format):
 - Campo `type:` obligatorio
 - Campo `related:` para conectar conceptos
 - Campo `timestamp:` para rastrear cuándo se creó o actualizó
+- **Un concepto = un fichero = un nivel.** Si un concepto cambia de nivel, se mueve; nunca se duplica.
