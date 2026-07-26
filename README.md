@@ -24,12 +24,12 @@ IAs-talks/
 │
 ├── Charlas/              ← Resumen narrativo de cada sesión impartida
 │   └── guiones/          ← Scripts completos para el ponente
-├── Conceptos/            ← 46 conceptos clasificados + 3 nuevos pendientes de clasificar
-│   ├── nivel-1-fundamentos/  ← Conceptos de la serie de charlas (11)
-│   ├── nivel-2-intermedios/  ← Conceptos técnicos intermedios (12)
-│   ├── nivel-3-avanzados/    ← Patrones y arquitecturas (13)
+├── Conceptos/            ← 44 conceptos, todos clasificados por nivel, sin ficheros sueltos
+│   ├── nivel-1-fundamentos/  ← Conceptos de la serie de charlas (7)
+│   ├── nivel-2-intermedios/  ← Conceptos técnicos intermedios (13)
+│   ├── nivel-3-avanzados/    ← Patrones y arquitecturas (14)
 │   └── nivel-4-frontera/     ← Tecnologías emergentes 2026-2027 (10)
-├── Demos/                ← Paso a paso de demos en vivo (6)
+├── Demos/                ← Paso a paso de demos en vivo (4)
 ├── Recursos/             ← Ficheros de referencia — configs, agentes, tasks, novedades
 ├── Proyectos/            ← Wikis LLM de proyectos reales (ej. RCA)
 │   └── RCA/
@@ -37,6 +37,8 @@ IAs-talks/
 │       └── Equipo/       ← Perfiles de madurez IA del equipo (7 perfiles)
 └── Plantillas/           ← Templates OKF para nuevos ficheros
 ```
+
+> **Nota sobre `Conceptos/`:** cada concepto vive en un único fichero, en su carpeta `nivel-X` correspondiente. No hay ficheros sueltos en la raíz ni ficheros "redirect" duplicando nombres entre niveles — limpieza hecha el 26 jul 2026.
 
 ---
 
@@ -72,24 +74,23 @@ Las cinco juntas = el arnés completo
 
 ---
 
-## Conceptos del vault
+## Conceptos del vault (44)
 
-### Conceptos fundacionales (nivel-1-fundamentos, 11)
+### nivel-1-fundamentos (7)
 
 - [[arnes-completo]] — La metáfora central de la serie
 - [[sdd]] — Specification-Driven Development
 - [[skills]] — El arnés de comportamiento
-- [[mcp]] — Model Context Protocol
-- [[copilot-instructions]] — Instrucciones persistentes para Copilot
-- [[agentes-multiples]] — Patrón developer/reviewer
 - [[frontmatter]] — Metadatos YAML en ficheros markdown
 - [[okf]] — Open Knowledge Format — estándar para Wiki LLM
 - [[wiki-llm]] — Base de conocimiento para agentes (patrón Karpathy)
-- [[graphify]] — Grafo de conocimiento del codebase
-- [[github-actions]] — Automatización con IA
+- [[agente-ia]] — Chatbot clásico vs agente que razona
 
-### Conceptos de nivel 2 — intermedios (12)
+### nivel-2-intermedios (13)
 
+- [[mcp]] — Model Context Protocol
+- [[copilot-instructions]] — Instrucciones persistentes para Copilot
+- [[copilot-studio]] — Plataforma no-code de Microsoft para agentes corporativos
 - [[rag]] — Retrieval-Augmented Generation
 - [[context-engineering]] — Diseño del contexto completo para IA
 - [[embeddings]] — Representación semántica — búsqueda por significado
@@ -100,26 +101,25 @@ Las cinco juntas = el arnés completo
 - [[structured-output]] — Salida en formatos parseables (JSON, YAML)
 - [[multimodal]] — LLMs que ven, oyen y leen
 - [[context-window-management]] — Gestión de la ventana de contexto
-- [[copilot-instructions]] — (versión nivel 2, más técnica)
-- [[mcp]] — (versión nivel 2, más técnica)
 
-### Conceptos de nivel 3 — avanzados (13)
+### nivel-3-avanzados (14)
 
+- [[agentes-multiples]] — Patrón developer/reviewer
+- [[github-actions]] — Automatización con IA
+- [[graphify]] — Grafo de conocimiento del codebase
 - [[agentic-workflows]] — Flujos de trabajo autónomos con agentes
 - [[memory]] — Memoria a corto y largo plazo de los agentes
 - [[planning-reasoning]] — Planificación y razonamiento en IA
 - [[code-generation-patterns]] — Patrones de generación de código con IA
 - [[eval-benchmarking]] — Medir si la IA funciona bien
+- [[metricas-ia]] — Métricas de agentes conversacionales, DORA y el AI Productivity Paradox
 - [[prompt-injection]] — Ataques y seguridad en sistemas con IA
 - [[orchestration-patterns]] — Pipeline, fan-out, supervisor, swarm
 - [[knowledge-graphs]] — GraphRAG — grafos de conocimiento + LLMs
 - [[model-routing]] — Elegir el modelo correcto para cada tarea
 - [[caching-cost]] — Optimización de costes y latencia
-- [[agentes-multiples]] — (versión nivel 3, patrones avanzados)
-- [[github-actions]] — (versión nivel 3, más técnica)
-- [[graphify]] — (versión nivel 3, más técnica)
 
-### Conceptos de nivel 4 — frontera 2026-2027 (10)
+### nivel-4-frontera (10)
 
 - [[reasoning-models]] — Modelos que piensan antes de responder
 - [[computer-use]] — Agentes que controlan la pantalla
@@ -132,16 +132,9 @@ Las cinco juntas = el arnés completo
 - [[federated-ai]] — IA sin depender de un solo proveedor
 - [[autonomous-coding-agents]] — Agentes que programan solos
 
-### ⚠️ Pendientes de clasificar (Charla 13, sin carpeta nivel-X asignada)
-
-- [[agente-ia]] — Qué es un agente de IA (nuevo)
-- [[copilot-studio]] — Microsoft Copilot Studio (nuevo)
-- [[metricas-ia]] — Cómo medir el impacto de la IA (nuevo)
-- `Conceptos/embeddings.md` y `Conceptos/rag.md` — **duplicados**: ya existen en `nivel-2-intermedios/`. Revisar si hace falta fusionar o eliminar la copia suelta.
-
 ---
 
-## Demos (6)
+## Demos (4)
 
 | Fichero | Charla |
 |---|---|
@@ -161,6 +154,7 @@ Las cinco juntas = el arnés completo
 | **Audiencia mixta** | 60–90 asistentes: developers, RRHH, directivos, comerciales |
 | **Herramientas reales** | Demos con proyectos reales (RCA), herramientas del día a día |
 | **Estándar OKF** | Todo fichero tiene frontmatter YAML navegable por agentes |
+| **Un concepto, un fichero, un nivel** | Nada de duplicados ni redirects — si un concepto sube de nivel, se mueve, no se copia |
 | **Accesibilidad sobre tecnicismo** | Lección de mitad de serie: preferir framing universal a jerga técnica |
 
 ---
@@ -178,7 +172,8 @@ Proyecto real usado como hilo demo a lo largo de toda la serie. Ver **[[Proyecto
 
 1. **Crear un fichero nuevo:** Usa las plantillas de `Plantillas/` para mantener el formato OKF
 2. **Conectar conceptos:** Añade `related:` en el frontmatter y `[[wikilinks]]` en el cuerpo
-3. **Mantener el grafo:** Si creas un concepto nuevo, añádelo en `index.md` y clasifícalo en el `nivel-X` correspondiente (evita dejarlo suelto en la raíz de `Conceptos/`)
+3. **Un concepto = un nivel = un fichero:** Clasifica cada concepto nuevo directamente en su carpeta `nivel-X` — nunca sueltos en la raíz de `Conceptos/`, y nunca duplicado en dos niveles a la vez
+4. **Mantener el grafo:** Si creas un concepto nuevo, añádelo en `index.md`
 
 ---
 
