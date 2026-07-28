@@ -21,14 +21,14 @@ timestamp: "2026-07-26"
 |--------|-----------|--------|
 | Apertura | Gancho: Shadow AI + puente desde Charla 13 | 3 min |
 | Bloque 1 | Casos reales — cuando la falta de gobernanza sale cara | 7 min |
-| Bloque 2 | Niveles de riesgo — EU AI Act + ejercicio interactivo de clasificación | 10 min |
+| Bloque 2 | Niveles de riesgo — EU AI Act + política interna | 10 min |
 | Bloque 3 | Qué significa esto según tu rol | 6 min |
-| Bloque 4 | Núcleo — política de uso de IA + casos aplicados | 12 min |
+| Bloque 4 | Núcleo — política interna de uso de IA punto por punto | 15 min |
 | Bloque 5 | Autoevaluación — en qué nivel estáis vosotros | 5 min |
-| Cierre | 3 ideas + checklist accionable + referencias | 4 min |
+| Cierre | 3 ideas + referencias | 3 min |
 | Preguntas | Turno abierto | 5-10 min |
 
-**Total estimado:** ~47 min + preguntas
+**Total estimado:** ~49 min + preguntas
 
 ---
 
@@ -72,10 +72,10 @@ timestamp: "2026-07-26"
 
 > *"Existe una regulación europea, el EU AI Act, que clasifica cualquier sistema de IA según su nivel de riesgo. No os voy a leer el reglamento — os lo voy a traducir a ejemplos de vuestro día a día."*
 
-| Nivel de riesgo | Ejemplo genérico (EU AI Act) | 🔲 TODO — ejemplo aplicado a Sopra Steria / banca-seguros |
+| Nivel de riesgo | Ejemplo genérico (EU AI Act) | Ejemplo aplicado a nuestro contexto |
 |---|---|---|
 | **Inaceptable** | Scoring social, vigilancia masiva | Prohibido por definición — no debería aparecer en nuestro trabajo |
-| **Alto riesgo** | Selección de personal, diagnóstico médico, scoring crediticio | 🔲 Ej.: uso de IA en procesos de scoring/riesgo de cliente, si aplica |
+| **Alto riesgo** | Selección de personal, diagnóstico médico, scoring crediticio | Ver detalle abajo en la política interna |
 | **Riesgo limitado** | Chatbots (deben avisar que son IA) | Agentes de Copilot Studio como el de la Charla 13 |
 | **Riesgo mínimo** | Autocompletado, filtros de spam | Uso de Copilot para autocompletar código |
 
@@ -84,19 +84,19 @@ timestamp: "2026-07-26"
 **Frase que debe quedar:**
 > *"No toda IA es igual de arriesgada. La pregunta no es '¿puedo usar IA?', es '¿qué está en juego si me equivoco?'"*
 
-### Ejercicio interactivo — Clasifica el riesgo (con la sala)
+### Política interna: nuestros 5 niveles de riesgo
 
-> *"Os voy a leer cinco situaciones. Para cada una, decidme en voz alta o levantando la mano: ¿riesgo mínimo, limitado, alto o inaceptable?"*
+> *"El EU AI Act es el marco legal. Internamente, en la empresa, aterrizamos ese marco en 5 niveles operativos con criterios claros, aprobación mínima y evidencia esperada."*
 
-| # | Situación | Respuesta (revelar después de la votación) |
-|---|---|---|
-| 1 | Usar IA para autocompletar código mientras programas | Riesgo mínimo |
-| 2 | Un agente conversacional en Teams que responde dudas de onboarding | Riesgo limitado (debe identificarse como IA) |
-| 3 | Usar IA para preseleccionar candidatos en un proceso de contratación | Riesgo alto (impacta directamente a personas) |
-| 4 | Pedir a una IA que redacte el borrador de un email interno | Riesgo mínimo |
-| 5 | 🔲 TODO — sustituir por un ejemplo real del sector banca/seguros (p. ej. IA aplicada a scoring de riesgo o detección de fraude) | Alto riesgo casi con seguridad |
+| Nivel | Criterios | Ejemplos | Aprobación mínima | Evidencia |
+|-------|-----------|----------|-------------------|-----------|
+| **Prohibido** | 🔲 TODO | 🔲 TODO | 🔲 TODO | 🔲 TODO |
+| **Crítico** | 🔲 TODO | 🔲 TODO | 🔲 TODO | 🔲 TODO |
+| **Alto** | 🔲 TODO | 🔲 TODO | 🔲 TODO | 🔲 TODO |
+| **Medio** | 🔲 TODO | 🔲 TODO | 🔲 TODO | 🔲 TODO |
+| **Bajo** | 🔲 TODO | 🔲 TODO | 🔲 TODO | 🔲 TODO |
 
-> *"Este ejercicio no busca que acertéis todos — busca que, a partir de hoy, os hagáis la pregunta antes de usar la herramienta, no después."*
+> *"Fijaos en el detalle importante: cuanto más alto el nivel, no solo cambia lo que podéis o no hacer. Cambia quién tiene que aprobarlo y qué prueba hay que dejar de que la decisión se tomó bien. Esto es lo que separa una política real de un cartel bienintencionado."*
 
 📎 *Para quien quiera profundizar en el marco regulatorio completo (EU AI Act, ISO 42001, NIST AI RMF), la referencia está en la nota [[ai-governance]] del vault.*
 
@@ -118,51 +118,107 @@ timestamp: "2026-07-26"
 
 ---
 
-## Bloque 4 — Núcleo: política de uso de IA + casos aplicados — 12 min
+## Bloque 4 — Núcleo: política interna de uso de IA, punto por punto — 15 min
 
-> *"En vez de una demo en pantalla, hoy vamos a recorrer juntos algo más útil: una política de uso de IA. Un documento que os podéis llevar y aplicar mañana mismo."*
+> *"Hasta aquí hemos hablado del marco. Ahora entramos en el documento real: la política interna que aplica desde mañana. Seis piezas — vamos una a una."*
 
-### La política, punto por punto
+### 4.1 Escenarios permitidos por fase de trabajo
 
-**1. Qué datos puedo compartir con qué herramienta**
+> *"La primera pregunta es la más práctica: ¿en qué momento del trabajo puedo usar IA y en cuál no? La política lo organiza por fase."*
 
-| Tipo de dato | ¿IA pública (ChatGPT, Claude.ai personal)? | ¿IA corporativa (Copilot, Claude vía empresa)? |
+| Fase / Actividad | Permitido | Condicionado | Prohibido |
+|---|---|---|---|
+| Ideación, discovery y business analysis | 🔲 TODO | 🔲 TODO | 🔲 TODO |
+| Diseño y arquitectura | 🔲 TODO | 🔲 TODO | 🔲 TODO |
+| Desarrollo y generación de código | 🔲 TODO | 🔲 TODO | 🔲 TODO |
+| Pruebas y QA | 🔲 TODO | 🔲 TODO | 🔲 TODO |
+| 🔲 TODO — añadir el resto de fases relevantes | | | |
+
+> *"'Condicionado' no es una casilla decorativa. Significa: sí, pero con estos requisitos. Cuando algo cae en condicionado, la responsabilidad de comprobar que se cumplen las condiciones es tuya, no del que escribió la política."*
+
+---
+
+### 4.2 Datos permitidos y restringidos
+
+> *"Segunda pieza: qué datos pueden entrar en qué tipo de IA. Aquí es donde se juega la parte más sensible — la que dio problemas a Samsung."*
+
+| Clase de dato | Público / no homologado | Cliente aprobado / dedicado | Condiciones mínimas |
+|---|---|---|---|
+| 🔲 TODO — Ej.: datos técnicos internos | 🔲 TODO | 🔲 TODO | 🔲 TODO |
+| 🔲 TODO — Ej.: datos de cliente identificables | 🔲 TODO | 🔲 TODO | 🔲 TODO |
+| 🔲 TODO — Ej.: información pública / no sensible | 🔲 TODO | 🔲 TODO | 🔲 TODO |
+| 🔲 TODO — Ej.: credenciales, claves, tokens | 🔲 TODO | 🔲 TODO | 🔲 TODO |
+| 🔲 TODO — completar con el resto de clases de dato de la política | | | |
+
+**Caso aplicado:**
+> *"Un compañero pide a una IA que le ayude a mejorar el tono de un email para un cliente. El texto que ha escrito él, sí. El nombre y los datos bancarios del cliente para 'que quede más personalizado', no."*
+
+**Segundo caso aplicado:**
+> *"Una persona de RRHH quiere que una IA le ayude a redactar el feedback de una evaluación. El texto genérico sobre feedback constructivo, sin problema. Pegar el historial de rendimiento real del empleado para que 'lo resuma', ya es otra cosa — son datos personales de una persona identificable."*
+
+---
+
+### 4.3 Revisión humana obligatoria
+
+> *"Tercera pieza: ¿quién revisa qué antes de que el output tenga consecuencias reales? Un agente puede equivocarse — la responsabilidad final sigue siendo humana."*
+
+| Output / acción | Revisión mínima requerida | Aprobador / owner | Evidencia esperada |
+|---|---|---|---|
+| 🔲 TODO — Ej.: comunicación a cliente | 🔲 TODO | 🔲 TODO | 🔲 TODO |
+| 🔲 TODO — Ej.: código a producción | 🔲 TODO | 🔲 TODO | 🔲 TODO |
+| 🔲 TODO — Ej.: documento contractual o legal | 🔲 TODO | 🔲 TODO | 🔲 TODO |
+| 🔲 TODO — Ej.: borrador interno de uso propio | 🔲 TODO | 🔲 TODO | 🔲 TODO |
+| 🔲 TODO — completar según política real | | | |
+
+> *"La columna de 'evidencia' es la que suele faltar en políticas mal hechas. Sin evidencia — un log, un firmante, una traza — la revisión no existe a efectos de auditoría, aunque haya ocurrido."*
+
+---
+
+### 4.4 Herramientas: corporativas y restricciones con cliente
+
+> *"Cuarta pieza: qué se puede usar. Esta tabla la mantendremos actualizada al margen del guion, porque cambia con más frecuencia que el resto de la política."*
+
+| Herramienta | Estado | Restricciones con cliente |
 |---|---|---|
-| Código propio sin datos de cliente | 🔲 TODO — definir según política interna | 🔲 TODO |
-| Datos de cliente (nombres, cuentas, contratos) | ❌ Nunca | 🔲 TODO — depende de configuración DLP |
-| Información pública/genérica | ✅ | ✅ |
-| Credenciales, claves, tokens | ❌ Nunca, en ninguna herramienta | ❌ Nunca, en ninguna herramienta |
+| 🔲 TODO — Juan pondrá el listado real de herramientas corporativas aprobadas | | |
 
 **Caso aplicado:**
-> *"Un compañero tiene que redactar un email a un cliente y le pide ayuda a una IA para mejorar el tono. ¿Qué puede pegar en el prompt? El texto que ya ha escrito él, sí. El nombre y los datos bancarios del cliente para 'que quede más personalizado', no."*
+> *"Instalarse una extensión de IA de una tienda de navegador porque parece útil, sin pasar por el canal oficial — eso es Shadow AI, aunque la intención sea buena."*
 
 **Segundo caso aplicado:**
-> *"Una persona de RRHH quiere usar IA para ayudarse a redactar el feedback de una evaluación de desempeño. El texto genérico sobre cómo dar feedback constructivo, sin problema. Pegar el historial de rendimiento real de la persona evaluada para que la IA 'lo resuma', ya es otra historia — son datos personales de un empleado."*
+> *"Un equipo descubre una herramienta gratuita para transcribir reuniones y la usa en llamadas con clientes sin consultar. La grabación y la transcripción pueden estar pasando por servidores fuera de cualquier control de la empresa — exactamente el tipo de caso que llevó a Samsung a prohibir la IA generativa pública."*
 
-**2. Qué herramientas están aprobadas**
+---
 
-> 🔲 TODO: listar aquí las herramientas de IA oficialmente aprobadas en Sopra Steria (Copilot 365, Copilot Studio, Claude corporativo si aplica, etc.) frente a las que no lo están.
+### 4.5 Proceso de incidentes relacionados con IA
 
-**Caso aplicado:**
-> *"Instalarse una extensión de IA de una tienda de navegador porque parece útil, sin pasar por el canal oficial — eso es exactamente Shadow AI, aunque la intención sea buena."*
+> *"Quinta pieza — la que más tranquiliza a la sala cuando se explica: qué hacer si algo ya ha salido mal. Porque va a pasar. Y lo peor no es el incidente en sí; es esconderlo."*
 
-**Segundo caso aplicado:**
-> *"Un equipo descubre una herramienta de IA gratuita para transcribir reuniones y la usa en llamadas con clientes sin haberlo consultado. La grabación y la transcripción pueden estar pasando por servidores fuera de cualquier control de la empresa — exactamente el tipo de caso que llevó a Samsung a prohibir la IA generativa pública."*
+**Pasos del proceso:**
 
-**3. Quién revisa el output antes de que llegue a un cliente**
+1. 🔲 TODO — Paso 1 (detección: cómo se identifica que ha habido un incidente)
+2. 🔲 TODO — Paso 2 (notificación: a quién y en qué plazo)
+3. 🔲 TODO — Paso 3 (contención: qué hacer inmediatamente)
+4. 🔲 TODO — Paso 4 (análisis y registro)
+5. 🔲 TODO — Paso 5 (comunicación a cliente / regulador si aplica)
+6. 🔲 TODO — Paso 6 (aprendizaje y actualización de la política)
 
-> *"Esto conecta con lo que vimos en la Charla 13: un agente puede equivocarse, y de hecho lo bueno es cuando reconoce que no sabe algo. Pero la responsabilidad final de lo que sale hacia un cliente sigue siendo humana."*
+**Frase que debe quedar:**
+> *"Un incidente reportado a tiempo es un problema resuelto. Un incidente escondido es un problema que crece. Y no venimos aquí a señalar culpables — venimos a evitar el segundo caso."*
 
-| Tipo de output | ¿Necesita revisión humana antes de enviarse? |
+---
+
+### 4.6 Checklist rápido de decisión
+
+> *"Sexta y última pieza. Antes de usar una IA para algo real, cuatro preguntas — si respondes 'no' a alguna, para y consulta."*
+
+| # | Pregunta |
 |---|---|
-| Borrador interno, uso propio | No obligatoria |
-| Comunicación a cliente | Sí, siempre |
-| Código que va a producción | Sí — igual que cualquier código, con o sin IA |
-| Documento con validez contractual/legal | Sí, y revisión específica de la persona responsable |
-
-**4. Qué hacer si algo ya ha salido mal**
-
-> 🔲 TODO: definir aquí el canal real de escalado en Sopra Steria (¿a quién se avisa si alguien detecta que se compartió un dato sensible con una IA no aprobada?). Sin este punto, la política se queda coja — es el que más tranquiliza a la sala.
+| 1 | 🔲 TODO — Ej.: ¿Sé en qué nivel de riesgo cae lo que voy a hacer? |
+| 2 | 🔲 TODO — Ej.: ¿La herramienta que voy a usar está aprobada para este tipo de dato? |
+| 3 | 🔲 TODO — Ej.: ¿Sé quién tiene que revisar el output antes de que salga? |
+| 4 | 🔲 TODO — Ej.: ¿Sé qué hacer si algo sale mal? |
+| 🔲 TODO — añadir preguntas adicionales de la política real | |
 
 **Frase que debe quedar:**
 > *"Una política de gobernanza no existe para frenaros. Existe para que sepáis, en el momento de dudar, qué hacer sin tener que adivinarlo."*
@@ -194,7 +250,7 @@ timestamp: "2026-07-26"
 
 ---
 
-## Cierre — 4 min
+## Cierre — 3 min
 
 > *"Primera idea: el Shadow AI no nace de mala fe, nace de falta de información. La solución no es más control, es más claridad."*
 >
@@ -202,15 +258,10 @@ timestamp: "2026-07-26"
 >
 > *"Tercera idea: esto no es solo cosa de developers. Todos los que estáis en esta sala tomáis decisiones cada semana sobre qué compartir con una IA — la política de hoy es para todos."*
 
-**Checklist accionable — lo que os lleváis:**
-- [ ] Antes de pegar algo en una IA, preguntaros: ¿esto tiene datos de un cliente o información confidencial?
-- [ ] Usar solo herramientas de la lista aprobada — 🔲 TODO: enlazar aquí el listado real
-- [ ] Toda comunicación a cliente generada o asistida por IA, revisión humana antes de enviar
-- [ ] Si algo ya ha pasado, no lo escondáis — 🔲 TODO: enlazar canal de escalado real
-
 **Referencias para profundizar:**
 - [[ai-governance]] — marco regulatorio completo (EU AI Act, ISO 42001, NIST)
-- 🔲 TODO: enlazar política interna real de Sopra Steria una vez localizada
+- 🔲 TODO: enlazar política interna oficial de Sopra Steria
+- El checklist rápido del Bloque 4.6 es lo que os lleváis a la mesa mañana
 
 ---
 
