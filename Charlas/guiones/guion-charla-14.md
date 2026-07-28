@@ -34,7 +34,7 @@ timestamp: "2026-07-26"
 
 ## Apertura — Gancho: Shadow AI — 3 min
 
-> _"En la Charla 13 hablamos de cómo medir si un agente funciona. De cómo medir si el código que genera la IA es fiable. Hoy vamos a hablar de algo distinto: no de si la IA funciona bien, sino de si la estamos usando de forma segur a."_
+> _"En la Charla 13 hablamos de cómo medir si un agente funciona. De cómo medir si el código que genera la IA es fiable. Hoy vamos a hablar de algo distinto: no de si la IA funciona bien, sino de si la estamos usando de forma segura."_
 
 **La pregunta incómoda:**
 
@@ -164,7 +164,7 @@ timestamp: "2026-07-26"
 
 | Herramienta                            | Restricciones con cliente       |
 | -------------------------------------- | ------------------------------- |
-| Microsoft 365 Copilot y GitHub copilot | Aceptación por parte de cliente |
+| Microsoft 365 Copilot y GitHub Copilot | Aceptación por parte de cliente |
 
 **Caso aplicado:**
 
