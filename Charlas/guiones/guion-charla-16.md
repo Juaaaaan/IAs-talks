@@ -247,9 +247,7 @@ openspec/
 
 ### Paso 1 — Punto de partida: Jira (~1 min)
 
-Mostrar un issue real de la instancia demo.
-
-⚠️ *Elegir de antemano un issue pequeño y acotado (una funcionalidad concreta de RCA), y tenerlo creado — [decidir: KAN-XX o RCA-XX]. Ideal: algo visual que se pueda ver funcionar al final de la demo (ej. "añadir badge de 'agotado' en las tarjetas de producto", "añadir filtro por categoría en el catálogo").*
+Mostrar el issue **RCA-21 — Cart Drawer** en la instancia demo: [https://da-ju-ia-talks.atlassian.net/browse/RCA-21](https://da-ju-ia-talks.atlassian.net/browse/RCA-21)
 
 > _"Esto es lo que tendríais cualquiera de vosotros: una tarea en el backlog, escrita en dos frases por un PM. Ambigua, incompleta. Justo lo que un agente odia."_
 
@@ -447,15 +445,40 @@ Una vez que el agente ha completado todas las tareas:
 
 **Lo que pasa:**
 1. OpenSpec **fusiona las delta specs** del cambio en el spec principal (`openspec/specs/`)
-2. **Mueve la carpeta del cambio** a `openspec/changes/archive/2026-08-12-filtro-por-categoria/`
-3. El spec principal ahora refleja el estado actualizado del sistema — incluye el filtro por categoría como comportamiento documentado
+2. **Mueve la carpeta del cambio** a `openspec/changes/archive/2026-08-12-cart-drawer/`
+3. El spec principal ahora refleja el estado actualizado del sistema — incluye el cart-drawer como comportamiento documentado
 4. El escenario queda limpio para el siguiente cambio
 
-> _"Ese es el ciclo completo: idea en Jira → propuesta estructurada → revisión humana → código → archivo. El agente ha escrito el código. Yo he dirigido el qué y he revisado el plan. Y el spec del proyecto ha crecido solo, sin que yo haya tenido que reescribir nada a mano."_
+#### Aquí se para OpenSpec — el resto es Git
+
+> _"Y ahora un detalle importante: OpenSpec ha terminado su trabajo. A partir de aquí, la herramienta no hace nada más. Crear la rama, hacer commit, abrir una PR, pedir code review a un compañero, mergear — eso es Git, como siempre, y lo haces tú."_
+
+**El ciclo completo, con las dos mitades:**
+
+```
+┌─────────────────────────────────────────────────┐
+│  OpenSpec (qué construir y cómo)                │
+│                                                 │
+│  /opsx-propose → revisar → /opsx-apply → /opsx-archive  │
+└─────────────────────┬───────────────────────────┘
+                      │
+                      ▼  ← aquí se para OpenSpec
+┌─────────────────────────────────────────────────┐
+│  Git (cómo gestionas tu repositorio)            │
+│                                                 │
+│  git checkout -b feat/cart-drawer                │
+│  git add . && git commit                        │
+│  git push → abrir PR → code review → merge      │
+└─────────────────────────────────────────────────┘
+```
+
+> _"OpenSpec te dice qué construir. Git te dice cómo lo gestionas. Son dos flujos separados que no se pisan. Cada equipo tiene su forma de trabajar con ramas — trunk-based, GitFlow, feature branches — y OpenSpec no se mete ahí. Es como el arquitecto que te da los planos pero no te dice qué transportista usar."_
+
+> _"Y si mañana queréis hacer otra tarea con OpenSpec, el flujo es exactamente el mismo: otro propose, otro apply, otro archive. Cada tarea genera su carpeta de cambio, su delta spec, y al archivar se fusiona con el spec principal. El spec va creciendo tarea a tarea. Lo único que se acumula es el papeleo — y ahí es donde entra el criterio del Bloque 5: para tareas grandes merece la pena, para tareas triviales no."_
 
 **Frase que debe quedar:**
 
-> _"El agente escribió el código. Yo dirigí el qué. Y el spec se actualizó solo. Ese es el reparto de trabajo del que va toda esta charla — y lo acabáis de ver funcionando de una tarea de Jira a código real."_
+> _"El agente escribió el código. Yo dirigí el qué. Y el spec se actualizó solo. Pero la última palabra — subirlo, abrir la PR, mergearlo — sigue siendo mía. OpenSpec construye; el humano decide cuándo se sube."_
 
 ---
 
@@ -514,24 +537,25 @@ Una vez que el agente ha completado todas las tareas:
 
 ## Checklist antes del miércoles
 
-- [ ] **Preparar el entorno de la demo end-to-end:**
-  - [ ] RCA (Angular) funcionando en local, sin errores de compilación
-  - [ ] `node --version` ≥ 20.19.0
-  - [ ] `npm install -g @fission-ai/openspec@latest` ejecutado y verificado (`openspec --version`)
-  - [ ] `openspec init` ejecutado en el proyecto RCA con `github-copilot` seleccionado
-  - [ ] Verificar que los ficheros `.github/prompts/opsx-*.prompt.md` se han generado
-  - [ ] Verificar que `/opsx-propose` aparece en el menú de slash commands de Copilot en VS Code
-  - [ ] Instancia Jira demo accesible (`da-ju-ia-talks.atlassian.net`)
-- [ ] **Elegir el issue de Jira de la demo** — pequeño, acotado y visual (que se vea funcionar al final). Tenerlo creado de antemano en el proyecto RCA. Ideal: algo que se resuelva en 2-3 ficheros (componente + servicio + template)
-- [ ] **Elegir el modelo de Copilot para la demo** — verificar qué modelos tienes disponibles en tu plan (Claude Sonnet 4.6 recomendado; si quieres demostrar músculo, Opus 4.8). Comprobar que no te quedas sin premium requests a mitad de demo
-- [ ] **Ensayar la demo completa al menos una vez** — cronometrar los 20 min; saber qué pasos se pueden saltar si va larga. Especialmente: comprobar que `/opsx-apply` ejecuta las tareas correctamente contra RCA con el modelo elegido
+- [x] **Preparar el entorno de la demo end-to-end:**
+  - [x] RCA (Angular) funcionando en local, sin errores de compilación
+  - [x] `node --version` ≥ 20.19.0
+  - [x] `npm install -g @fission-ai/openspec@latest` ejecutado y verificado (`openspec --version`)
+  - [x] `openspec init` ejecutado en el proyecto RCA con `claude-code` *(nota: la demo se ha ensayado con Claude Code; si se quiere hacer con Copilot en la charla, re-ejecutar `openspec init` seleccionando `github-copilot`)*
+  - [ ] Verificar que los ficheros `.github/prompts/opsx-*.prompt.md` se han generado *(solo si se usa Copilot en la demo)*
+  - [ ] Verificar que `/opsx-propose` aparece en el menú de slash commands de Copilot en VS Code *(solo si se usa Copilot en la demo)*
+  - [x] Instancia Jira demo accesible (`da-ju-ia-talks.atlassian.net`)
+- [x] **Elegir el issue de Jira de la demo** — **RCA-21 (Cart Drawer)** ✅
+- [ ] **Elegir el modelo de Copilot para la demo** — verificar qué modelos tienes disponibles en tu plan (Claude Sonnet 4.6 recomendado; si quieres demostrar músculo, Opus 4.8). Comprobar que no te quedas sin premium requests a mitad de demo. *(Si la demo se hace con Claude Code en vez de Copilot, decidir qué modelo usar ahí)*
+- [x] **Ensayar la demo completa al menos una vez** — ✅ ciclo completo con RCA-21 (propose → apply → archive) ejecutado con Claude Code
 - [ ] **Plan B para la demo** — grabación de respaldo o capturas de cada paso (instalación, propuesta generada, delta spec, implementación). Si falla en vivo, reencuadrar como aprendizaje sobre los límites reales de los agentes
 - [ ] **Verificar el estado actual de los tres tools** — versiones/favoritos de OpenSpec, Spec Kit y Kiro por si han cambiado; el dato de JetBrains (90% / 13%)
 - [ ] **Confirmar la referencia del refresco** — cuál es la grabación donde explicaste SDD en detalle (Charla 7 o la de SDD en Angular), para citarla en el Bloque 1
-- [ ] **Tener a mano `task-rca-28.md`** para el contraste manual vs herramienta del Bloque 2 y Paso 3
+- [x] **Tener a mano `task-rca-28.md`** para el contraste manual vs herramienta del Bloque 2 y Paso 3
 - [ ] **Preparar el ejemplo EARS adaptado a RCA** para el Bloque 3 (el del carrito y el stock, o el que prefieras)
-- [ ] **Avisar en la apertura** de que es una charla técnica con demo — señalizar el cambio de registro
+- [x] **Avisar en la apertura** de que es una charla técnica con demo — señalizar el cambio de registro *(mensaje enviado a compañeros)*
 - [ ] **Comprobar la extensión OpenSpec for Copilot** (opcional) — si decides mencionarla, tenerla instalada y verificar que funciona con tu versión de VS Code
+- [ ] **Decidir: ¿demo con Copilot o con Claude Code?** — el guion está escrito para Copilot (slash commands en VS Code), pero el ensayo se hizo con Claude Code. Si la demo final es con Claude Code, adaptar las referencias a slash commands del Paso 0 y Paso 4
 
 ### Si hace falta recortar a ~45 min
 
