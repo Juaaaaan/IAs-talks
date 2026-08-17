@@ -3,7 +3,7 @@ type: Indice
 title: "IAs-talks — Índice del vault"
 description: "Mapa de navegación del vault de conocimiento de la serie de charlas de IA. Punto de entrada para agentes y colaboradores."
 tags: [indice, navegacion, vault, wiki-llm]
-timestamp: "2026-07-26"
+timestamp: "2026-08-17"
 ---
 
 # IAs-talks — Índice del vault
@@ -46,8 +46,14 @@ IAs-talks/
 | [[guion-charla-12]]                       | Charla 12 — Guión con frases de J.C. Jover              | ✅ Impartida |
 | [[charla-13-copilot-studio-metricas]]     | Charla 13 — Copilot Studio, agentes y métricas          | ✅ Impartida |
 | [[guion-charla-13]]                       | Charla 13 — Guión, demo handbook corporativo + Teams    | ✅ Impartida |
+| [[material-charla-14-gobernanza]]         | Charla 14 — Gobernanza de la IA (EU AI Act, ISO 42001)  | ✅ Impartida |
+| [[guion-charla-14]]                       | Charla 14 — Guión gobernanza                            | ✅ Impartida |
+| [[MATERIAL-CHARLA-15-SEGURIDAD]]          | Charla 15 — Seguridad en sistemas con IA                | ✅ Impartida |
+| [[guion-charla-15]]                       | Charla 15 — Guión seguridad                             | ✅ Impartida |
+| [[MATERIAL-CHARLA-16-SDD-HERRAMIENTAS]]   | Charla 16 — SDD con herramientas: spec manual vs OpenSpec | ✅ Impartida |
+| [[guion-charla-16]]                       | Charla 16 — Guión, demo OpenSpec + Claude Code          | ✅ Impartida |
 
-Serie completa (7–13). Cierre del arco narrativo del arnés completo.
+Serie en curso (7–16). El arco narrativo del **arnés completo** se cerró en la Charla 13; a partir de la 14 la serie continúa con bloques temáticos (gobernanza, seguridad, herramientas SDD). **Próxima: Charla 17 (en preparación).**
 
 ---
 
