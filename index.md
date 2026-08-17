@@ -21,9 +21,9 @@ IAs-talks/
 ├── CLAUDE.md              ← instrucciones para agentes que trabajan en el vault
 ├── Charlas/              ← resumen narrativo de cada charla
 │   └── guiones/          ← scripts completos para el ponente
-├── Conceptos/            ← 44 conceptos, uno por fichero, clasificados por nivel
-│   ├── nivel-1-fundamentos/  ← conceptos de la serie de charlas (7)
-│   ├── nivel-2-intermedios/  ← conceptos técnicos intermedios (13)
+├── Conceptos/            ← 46 conceptos, uno por fichero, clasificados por nivel
+│   ├── nivel-1-fundamentos/  ← conceptos de la serie de charlas (8)
+│   ├── nivel-2-intermedios/  ← conceptos técnicos intermedios (14)
 │   ├── nivel-3-avanzados/    ← patrones y arquitecturas (14)
 │   └── nivel-4-frontera/     ← tecnologías emergentes 2026-2027 (10)
 ├── Demos/                ← paso a paso de demos en vivo
@@ -52,14 +52,15 @@ IAs-talks/
 | [[guion-charla-15]]                       | Charla 15 — Guión seguridad                             | ✅ Impartida |
 | [[MATERIAL-CHARLA-16-SDD-HERRAMIENTAS]]   | Charla 16 — SDD con herramientas: spec manual vs OpenSpec | ✅ Impartida |
 | [[guion-charla-16]]                       | Charla 16 — Guión, demo OpenSpec + Claude Code          | ✅ Impartida |
+| [[guion-charla-17]]                       | Charla 17 — Elegir bien la IA: herramienta, modelo y modo de trabajo | 📝 Guión listo (pdte. impartir) |
 
-Serie en curso (7–16). El arco narrativo del **arnés completo** se cerró en la Charla 13; a partir de la 14 la serie continúa con bloques temáticos (gobernanza, seguridad, herramientas SDD). **Próxima: Charla 17 (en preparación).**
+Serie en curso (7–16 impartidas; 17 con guión listo). El arco narrativo del **arnés completo** se cerró en la Charla 13; a partir de la 14 la serie continúa con bloques temáticos (gobernanza, seguridad, herramientas SDD, elección de IA). **Próxima: Charla 17 (guión listo, pendiente de impartir).**
 
 ---
 
-## Conceptos (44)
+## Conceptos (46)
 
-### nivel-1-fundamentos (7)
+### nivel-1-fundamentos (8)
 
 | Fichero | Descripción |
 |---|---|
@@ -70,8 +71,9 @@ Serie en curso (7–16). El arco narrativo del **arnés completo** se cerró en 
 | [[okf]] | Open Knowledge Format — estándar para Wiki LLM |
 | [[wiki-llm]] | Base de conocimiento para agentes (patrón Karpathy) |
 | [[agente-ia]] | Chatbot clásico vs agente que razona |
+| [[alucinaciones]] | Cuándo la IA se lo inventa (y cómo protegerte) |
 
-### nivel-2-intermedios (13)
+### nivel-2-intermedios (14)
 
 | Fichero | Descripción |
 |---|---|
@@ -88,6 +90,7 @@ Serie en curso (7–16). El arco narrativo del **arnés completo** se cerró en 
 | [[structured-output]] | Salida en formatos parseables (JSON, YAML) |
 | [[multimodal]] | LLMs que ven, oyen y leen |
 | [[context-window-management]] | Gestión de la ventana de contexto |
+| [[modelos-abiertos-vs-cerrados]] | Las dos familias del panorama IA (y la residencia de datos) |
 
 ### nivel-3-avanzados (14)
 
