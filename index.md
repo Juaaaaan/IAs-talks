@@ -3,7 +3,7 @@ type: Indice
 title: "IAs-talks — Índice del vault"
 description: "Mapa de navegación del vault de conocimiento de la serie de charlas de IA. Punto de entrada para agentes y colaboradores."
 tags: [indice, navegacion, vault, wiki-llm]
-timestamp: "2026-08-17"
+timestamp: "2026-08-24"
 ---
 
 # IAs-talks — Índice del vault
@@ -53,6 +53,7 @@ IAs-talks/
 | [[MATERIAL-CHARLA-16-SDD-HERRAMIENTAS]]   | Charla 16 — SDD con herramientas: spec manual vs OpenSpec | ✅ Impartida |
 | [[guion-charla-16]]                       | Charla 16 — Guión, demo OpenSpec + Claude Code          | ✅ Impartida |
 | [[guion-charla-17]]                       | Charla 17 — Elegir bien la IA: herramienta, modelo y modo de trabajo | 📝 Guión listo (pdte. impartir) |
+| [[MATERIAL-CHARLA-17-ELEGIR-IA]]          | Charla 17 — Material post-charla (guía exhaustiva)      | 📝 Material listo |
 
 Serie en curso (7–16 impartidas; 17 con guión listo). El arco narrativo del **arnés completo** se cerró en la Charla 13; a partir de la 14 la serie continúa con bloques temáticos (gobernanza, seguridad, herramientas SDD, elección de IA). **Próxima: Charla 17 (guión listo, pendiente de impartir).**
 
@@ -155,6 +156,7 @@ Ficheros de referencia del proyecto Resin Craft Art usados en las demos, y recur
 - `task-rca-28.md` — task de la RCA-28
 - `glosario-ia-nivel-1.md` — glosario general de IA
 - [[novedades-ia-semana-21julio2026]] — novedades IA semana del 21 de julio 2026
+- [[ia-al-dia-semana-18-08-24-08-2026]] — IA al día, semana del 18 al 24 de agosto 2026
 
 ---
 
