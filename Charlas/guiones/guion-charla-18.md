@@ -1,7 +1,7 @@
 ---
 type: Guión
 title: "Guión Charla 18 — Abriendo la caja: cómo piensa la IA por dentro (con datos en la mano)"
-description: "Charla transversal pero un peldaño más adentro: tras aprender a ELEGIR bien la IA (Charla 17), hoy abrimos la tapa y enseñamos cómo piensa por dentro — sin una sola línea de código. El vehículo es una demo en vivo sobre un Excel de gestión de proyecto real (plan a un año: WBS con PERT, equipo, presupuesto, timeline, KPIs y Gantt). Sobre esa hoja afloran cuatro mecanismos internos: (1) predice el patrón más probable, (2) busca por significado (embeddings), (3) alucina con aplomo, (4) tiene una ventana de contexto que se le llena. Cada mecanismo se cierra con un 'y por eso, cuando la uses, haz X'. Reparto deliberado de herramientas — Copilot dentro de Excel vs chatbot general — como guiño a la brújula de la Charla 17. ~50 min + preguntas."
+description: "Charla transversal pero un peldaño más adentro: tras aprender a ELEGIR bien la IA (Charla 17), hoy abrimos la tapa y enseñamos cómo piensa por dentro — sin una sola línea de código. El vehículo es una demo en vivo sobre un Excel de gestión de proyecto real (plan a un año: WBS con PERT, equipo, presupuesto, timeline, KPIs y Gantt). Sobre esa hoja afloran cuatro mecanismos internos: (1) predice el patrón más probable, (2) busca por significado (embeddings), (3) alucina sin fuente — el peligro se ha movido, (4) tiene una ventana de contexto que se le llena. Cada mecanismo se cierra con un 'y por eso, cuando la uses, haz X'. Reparto deliberado de herramientas — Copilot dentro de Excel vs chatbot general — como guiño a la brújula de la Charla 17. ~50 min + preguntas."
 tags: [guion, charla-18, mecanismos-internos, prediccion-siguiente-token, embeddings, alucinaciones, ventana-de-contexto, demo-excel, copilot-en-excel, transversal]
 related: [alucinaciones, embeddings, rag, context-window-management, temperature, model-routing, wiki-llm]
 charla: "Charla 18"
@@ -32,7 +32,7 @@ timestamp: "2026-08-24"
 | Apertura  | Gancho + el Excel en pantalla + las 4 preguntas que abriremos    | 5 min    |
 | Bloque 1  | Mecanismo 1 — Predice el patrón (Copilot en Excel)              | 9 min    |
 | Bloque 2  | Mecanismo 2 — Busca por significado / embeddings (Excel + mapa) | 12 min   |
-| Bloque 3  | Mecanismo 3 — Alucina con aplomo (contraste Excel ↔ chatbot)    | 9 min    |
+| Bloque 3  | Mecanismo 3 — Alucina… ¿o ya no? El peligro se ha movido        | 9 min    |
 | Bloque 4  | Mecanismo 4 — La ventana de contexto se llena (chatbot)         | 7 min    |
 | Bloque 5  | Qué se lleva cada rol                                            | 3 min    |
 | Cierre    | El kit del lunes + conexión con la serie                        | 5 min    |
@@ -58,7 +58,7 @@ timestamp: "2026-08-24"
 |---|---|---|
 | **1** | ¿Cómo "entiende" la hoja? | No entiende: **predice el patrón** más probable |
 | **2** | ¿Cómo agrupa cosas parecidas? | Por **significado**, no por palabras (embeddings) |
-| **3** | ¿Por qué a veces se lo inventa? | **Alucina** — y suena igual de segura |
+| **3** | ¿Cuándo se lo inventa (y cuándo ya no)? | El peligro se ha movido: **alucina sin fuente**, no con ella |
 | **4** | ¿Por qué "se le olvida" en chats largos? | Su **ventana de contexto** se llena |
 
 **Frase que debe quedar:**
@@ -142,43 +142,49 @@ Copilot junta, por ejemplo, todos los riesgos de **dependencia de terceros** (es
 
 ---
 
-## Bloque 3 — Mecanismo 3: alucina con aplomo — 9 min
+## Bloque 3 — Mecanismo 3: alucina… ¿o ya no? El peligro se ha movido — 9 min
 
-**Herramienta: contraste Excel ↔ chatbot.** El momento más divertido y el más útil.
+**Herramienta: Copilot en Excel + chatbot general.** El bloque más honesto de la charla: en 2026 la lección ha cambiado, y lo cuento tal cual me pasó preparándola.
 
-> _"Tercer experimento, y este engancha directo con la Charla 17: cuánto verificar. Vamos a pillar a la IA inventándose cosas. En directo. Pero con un giro."_
+> _"Tercer experimento. Yo venía a pillar a la IA mintiendo en directo… y no lo he conseguido. Y esa sorpresa es justo la lección de hoy. Mirad."_
 
-### Primero, en Excel (donde se apoya en datos reales)
+### 3A — Intento engañarla con la fuente delante (y no puedo)
 
-**En pantalla — prompt en Copilot de Excel:**
-> `¿Cuántas horas suma la fase de Integraciones?`
+**En pantalla — con el Excel/tabla delante, lanzarle trampas seguidas:**
+> `¿Cómo va la tarea de migración de los servidores a la nube?` · `Resume el riesgo de la tarea T40.` · `La tarea de migración a la nube va con retraso, ¿cuál es la causa más probable?`
 
-Acierta, porque se apoya en las fórmulas y los datos de la hoja.
+Nada de eso existe en el plan. Y el modelo, en vez de picar, **se contiene**: dice que no lo ve, o te corrige la premisa.
 
-> _"Aquí ha acertado. ¿Por qué? Porque no ha 'pensado' la respuesta: se ha apoyado en las celdas y las fórmulas reales. Tiene la fuente delante."_
+> _"Fijaos: tres trampas. Una tarea que no existe, un ID que no existe, y hasta le he colado como un hecho que 'la migración va con retraso'… y no ha picado ni una. Con la fuente delante y un modelo moderno, sabe decir 'eso yo no lo tengo'. El 'botón de no lo sé' que hace dos años casi no existía, hoy los buenos modelos lo tienen mucho más."_
 
-### Ahora, en un chatbot (con la tabla pegada, sin más ancla)
+**El remate (real, enséñalo en pantalla):** la captura de cuando le preguntaste a la propia IA por qué no alucinaba.
 
-**En pantalla — pegar las tareas en un chatbot general y preguntar por algo que NO existe:**
-> `¿Cómo va la tarea de migración de los servidores a la nube?`
+> _"Y lo mejor de todo: se lo pregunté a la propia IA, y me respondió — 'tu demo ha funcionado precisamente porque no he alucinado'. Tiene razón. Ese es el titular de hoy."_
 
-(En el plan **no hay** ninguna tarea de migración a la nube.)
+### 3B — ¿Entonces ya no alucina? Sí, pero el peligro se ha mudado
 
-El chatbot, en vez de decir "no existe", se **inventa** un estado, un porcentaje, quizá un responsable — con redacción impecable.
+> _"Que no os quede la idea equivocada: SÍ alucina. Lo que ha cambiado es DÓNDE. El peligro se ha movido de sitio."_
 
-> _"¡Y ahí lo tenéis! No existe esa tarea. No la ha buscado y no la ha encontrado y os lo dice: se la ha INVENTADO. Y fijaos en el detalle que nos baja la guardia a todos: no titubea. Lo dice con la misma seguridad, la misma redacción de experta, que cuando acierta. Lo segura que suena no dice NADA de si es verdad."_
+**En pantalla — dónde sigue fallando hoy** (captura pre-cocinada, o en vivo si pica):
+- **Sin fuente + dato específico:** pídele la cita exacta — autor, año, estudio — de una cifra de nicho. Ahí inventa referencias con soltura.
+- **Modelos flojos o modos con la guardia baja:** una versión pequeña, o sin web, pica donde el bueno aguanta.
+- **Premisa falsa bien colada, o temas muy recientes / de nicho.**
 
-### El "ajá": alucinar es el mismo mecanismo del Bloque 1
+> _"Es el mismo mecanismo del Bloque 1: completar el patrón más probable. Lo que pasa es que darle la fuente y usar un buen modelo apaga la mayor parte. Lo que queda encendido es esto: sin fuente, modelo flojo, o premisa falsa que le cuelas tú."_
 
-> _"Y lo más importante: esto NO es un bug. Es el mecanismo 1 otra vez. La IA completa el patrón más probable. Le preguntáis por una tarea de migración; el patrón 'responder sobre el estado de una tarea' es completar con un estado plausible. No tiene un botón interno de 'esto no lo sé'. Por eso, cuando trabaja anclada a una fuente real — como en Excel — inventa mucho menos; y cuando razona en el aire, inventa más."_
+### El "ajá"
 
-**La consecuencia práctica (la regla de la 17, aplicada):**
+> _"El titular de 2026: con una fuente delante, un buen modelo ya no se lo inventa — sabe decir 'no lo tengo'. Alucina cuando le quitas la fuente, cuando usas un modelo con la guardia baja, o cuando le metes tú un hecho sin verificar."_
 
-> _"El kit: cuando el dato importe, ánclala a una fuente y verifícalo. Pedidle 'cita la celda / la frase exacta'. Si no puede, desconfiad. Es la capa 4 de la semana pasada — cuánto me la juego — vista por dentro."_
+**La consecuencia práctica (la regla de la 17, actualizada):**
+
+> _"El kit del lunes, en tres. Uno: dadle SIEMPRE la fuente — es lo que más apaga la invención. Dos: vigilad VUESTRAS propias preguntas; no le metáis hechos sin verificar, que se los traga. Tres: sospechad más de datos específicos sin fuente y de lo muy reciente. Y calibrad según lo que cuesta el error, como en la 17."_
 
 **Frase que debe quedar:**
 
-> _"La IA se equivoca con muy buena letra. Alucinar no es un fallo raro: es su forma normal de funcionar cuando no tiene la fuente delante."_
+> _"En 2026 el peligro se ha movido: con la fuente delante, un buen modelo sabe decir 'no lo tengo'. Alucina cuando le quitas la fuente o le cuelas una premisa falsa — ahí es donde hay que mirar."_
+
+> 🔎 **Nota de demo (importante):** este bloque ya **no depende de que el modelo pique**. La parte 3A (que se resista) es **fiable en vivo** — ensayado: con el modelo actual resiste todas las trampas de tabla. Para la 3B, si tu modelo tampoco inventa la cita, tira de **captura pre-cocinada** de un modelo flojo/sin fuente inventando, más la captura del propio mensaje de la IA reconociendo que no alucinó.
 
 ---
 
@@ -234,7 +240,7 @@ Empieza a perder precisión o mezcla detalles.
 >
 > _"Dos: no busca palabras, busca SIGNIFICADOS. Por eso os entiende aunque cambiéis las palabras, y encuentra el documento bueno."_
 >
-> _"Tres: ALUCINA, y suena igual de segura cuando miente. Anclad a la fuente lo que importe y verificad — la capa 4 de la semana pasada."_
+> _"Tres: el peligro se ha MOVIDO. Con la fuente delante ya sabe decir 'no lo tengo'; alucina sin fuente o si le cuelas una premisa falsa. Dadle la fuente y vigilad vuestras preguntas — la capa 4 de la semana pasada."_
 >
 > _"Cuatro: tiene una MESA de tamaño fijo. En lo largo, resumid, reenfocad o empezad de nuevo."_
 >
@@ -252,7 +258,7 @@ Empieza a perder precisión o mezcla detalles.
 |---|---|---|---|---|
 | 1 | Predice el patrón | Copilot en Excel | "¿De qué trata esta hoja y qué es cada columna?" → la deduce | En vivo (+ captura respaldo) |
 | 2 | Embeddings | Copilot en Excel + imagen | "Agrupa por tipo de riesgo" → junta significados; luego el mapa 2D | Agrupar en vivo · **mapa pre-cocinado** |
-| 3 | Alucinación | Excel → chatbot | Excel: suma de fase (acierta). Chatbot: tarea inexistente (inventa) | En vivo (+ captura respaldo) |
+| 3 | Alucinación (el peligro se ha movido) | Excel → chatbot | Con la fuente delante RESISTE las trampas; sin fuente / premisa falsa inventa | 3A en vivo · 3B captura pre-cocinada |
 | 4 | Ventana de contexto | Chatbot | Pegar 34 tareas, charlar, preguntar por el principio → pierde detalle | En vivo (+ captura respaldo) |
 
 > **Beat opcional de apertura (fuera de ruta crítica):** "Copilot, retócame este Gantt" (p. ej. cambiar un color o resaltar una fase). Pedir un cambio sobre algo que YA existe falla menos que generarlo de cero. Si hay dudas de wifi/tiempo, se salta.
@@ -265,7 +271,7 @@ Empieza a perder precisión o mezcla detalles.
 - [ ] **Copilot en Excel operativo** — licencia Copilot premium confirmada; **probar el día antes en la máquina de la demo** (no fiarlo al directo)
 - [x] **Mapa de embeddings pre-cocinado** (`mapa-embeddings-riesgos.png`) — riesgos agrupados en islas por significado, con recuadro «misma idea, otras palabras» y guía de lectura ya en la imagen
 - [ ] **Chatbot general elegido** para los bloques 3 y 4 (el aprobado internamente) y sesión abierta con la tabla ya a mano
-- [ ] **Pregunta-trampa ensayada** (Bloque 3) — confirmar que "migración de servidores a la nube" NO aparece en el plan, para que el contraste sea limpio
+- [ ] **Bloque 3 reenfocado ("el peligro se ha movido")** — trampas de tabla listas (migración a la nube, T40, premisa falsa) para mostrar que RESISTE; captura pre-cocinada de una alucinación sin fuente; y captura del mensaje de la IA reconociendo que no alucinó
 - [ ] **Capturas de respaldo** de los cuatro mecanismos por si el modelo se pone tonto ese día
 - [ ] **Slide de las 4 preguntas** — se repite en apertura y cierre
 - [ ] **Cuatro metáforas afinadas** — autocompletar con esteroides / mapa de significados / muy buena letra / la mesa que se llena
