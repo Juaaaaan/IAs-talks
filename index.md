@@ -3,7 +3,7 @@ type: Indice
 title: "IAs-talks — Índice del vault"
 description: "Mapa de navegación del vault de conocimiento de la serie de charlas de IA. Punto de entrada para agentes y colaboradores."
 tags: [indice, navegacion, vault, wiki-llm]
-timestamp: "2026-08-24"
+timestamp: "2026-08-25"
 ---
 
 # IAs-talks — Índice del vault
@@ -21,8 +21,8 @@ IAs-talks/
 ├── CLAUDE.md              ← instrucciones para agentes que trabajan en el vault
 ├── Charlas/              ← resumen narrativo de cada charla
 │   └── guiones/          ← scripts completos para el ponente
-├── Conceptos/            ← 46 conceptos, uno por fichero, clasificados por nivel
-│   ├── nivel-1-fundamentos/  ← conceptos de la serie de charlas (8)
+├── Conceptos/            ← 47 conceptos, uno por fichero, clasificados por nivel
+│   ├── nivel-1-fundamentos/  ← conceptos de la serie de charlas (9)
 │   ├── nivel-2-intermedios/  ← conceptos técnicos intermedios (14)
 │   ├── nivel-3-avanzados/    ← patrones y arquitecturas (14)
 │   └── nivel-4-frontera/     ← tecnologías emergentes 2026-2027 (10)
@@ -54,14 +54,15 @@ IAs-talks/
 | [[guion-charla-16]]                       | Charla 16 — Guión, demo OpenSpec + Claude Code          | ✅ Impartida |
 | [[guion-charla-17]]                       | Charla 17 — Elegir bien la IA: herramienta, modelo y modo de trabajo | 📝 Guión listo (pdte. impartir) |
 | [[MATERIAL-CHARLA-17-ELEGIR-IA]]          | Charla 17 — Material post-charla (guía exhaustiva)      | 📝 Material listo |
+| [[guion-charla-18]]                       | Charla 18 — Abriendo la caja: cómo piensa la IA por dentro | 🔲 Borrador (guión) |
 
-Serie en curso (7–16 impartidas; 17 con guión listo). El arco narrativo del **arnés completo** se cerró en la Charla 13; a partir de la 14 la serie continúa con bloques temáticos (gobernanza, seguridad, herramientas SDD, elección de IA). **Próxima: Charla 17 (guión listo, pendiente de impartir).**
+Serie en curso (7–16 impartidas; 17 con guión y material listos, pendiente de impartir; 18 en preparación). El arco narrativo del **arnés completo** se cerró en la Charla 13; a partir de la 14 la serie continúa con bloques temáticos (gobernanza, seguridad, herramientas SDD, elección de IA, y ahora los mecanismos internos de la IA). **Próxima a impartir: Charla 17. En preparación: Charla 18 (guión en borrador).**
 
 ---
 
-## Conceptos (46)
+## Conceptos (47)
 
-### nivel-1-fundamentos (8)
+### nivel-1-fundamentos (9)
 
 | Fichero | Descripción |
 |---|---|
@@ -72,6 +73,7 @@ Serie en curso (7–16 impartidas; 17 con guión listo). El arco narrativo del *
 | [[okf]] | Open Knowledge Format — estándar para Wiki LLM |
 | [[wiki-llm]] | Base de conocimiento para agentes (patrón Karpathy) |
 | [[agente-ia]] | Chatbot clásico vs agente que razona |
+| [[prediccion-siguiente-token]] | Cómo la IA "entiende": predice el patrón más probable |
 | [[alucinaciones]] | Cuándo la IA se lo inventa (y cómo protegerte) |
 
 ### nivel-2-intermedios (14)
