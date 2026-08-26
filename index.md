@@ -3,7 +3,7 @@ type: Indice
 title: "IAs-talks — Índice del vault"
 description: "Mapa de navegación del vault de conocimiento de la serie de charlas de IA. Punto de entrada para agentes y colaboradores."
 tags: [indice, navegacion, vault, wiki-llm]
-timestamp: "2026-08-25"
+timestamp: "2026-08-26"
 ---
 
 # IAs-talks — Índice del vault
@@ -52,11 +52,11 @@ IAs-talks/
 | [[guion-charla-15]]                       | Charla 15 — Guión seguridad                             | ✅ Impartida |
 | [[MATERIAL-CHARLA-16-SDD-HERRAMIENTAS]]   | Charla 16 — SDD con herramientas: spec manual vs OpenSpec | ✅ Impartida |
 | [[guion-charla-16]]                       | Charla 16 — Guión, demo OpenSpec + Claude Code          | ✅ Impartida |
-| [[guion-charla-17]]                       | Charla 17 — Elegir bien la IA: herramienta, modelo y modo de trabajo | 📝 Guión listo (pdte. impartir) |
-| [[MATERIAL-CHARLA-17-ELEGIR-IA]]          | Charla 17 — Material post-charla (guía exhaustiva)      | 📝 Material listo |
-| [[guion-charla-18]]                       | Charla 18 — Abriendo la caja: cómo piensa la IA por dentro | 🔲 Borrador (guión) |
+| [[guion-charla-17]]                       | Charla 17 — Elegir bien la IA: herramienta, modelo y modo de trabajo | ✅ Impartida |
+| [[MATERIAL-CHARLA-17-ELEGIR-IA]]          | Charla 17 — Material post-charla (guía exhaustiva)      | ✅ Impartida |
+| [[guion-charla-18]]                       | Charla 18 — Abriendo la caja: cómo piensa la IA por dentro | ✅ Impartida |
 
-Serie en curso (7–16 impartidas; 17 con guión y material listos, pendiente de impartir; 18 en preparación). El arco narrativo del **arnés completo** se cerró en la Charla 13; a partir de la 14 la serie continúa con bloques temáticos (gobernanza, seguridad, herramientas SDD, elección de IA, y ahora los mecanismos internos de la IA). **Próxima a impartir: Charla 17. En preparación: Charla 18 (guión en borrador).**
+Serie en curso (**7–18 impartidas**). El arco narrativo del **arnés completo** se cerró en la Charla 13; a partir de la 14 la serie continúa con bloques temáticos (gobernanza, seguridad, herramientas SDD, elección de IA, y en la 18 los mecanismos internos de la IA). **Próxima: Charla 19 (por definir).**
 
 ---
 
