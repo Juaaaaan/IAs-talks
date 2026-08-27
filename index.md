@@ -55,6 +55,7 @@ IAs-talks/
 | [[guion-charla-17]]                       | Charla 17 — Elegir bien la IA: herramienta, modelo y modo de trabajo | ✅ Impartida |
 | [[MATERIAL-CHARLA-17-ELEGIR-IA]]          | Charla 17 — Material post-charla (guía exhaustiva)      | ✅ Impartida |
 | [[guion-charla-18]]                       | Charla 18 — Abriendo la caja: cómo piensa la IA por dentro | ✅ Impartida |
+| [[MATERIAL-CHARLA-18-COMO-PIENSA-LA-IA]]  | Charla 18 — Material post-charla (cómo piensa la IA por dentro) | ✅ Impartida |
 
 Serie en curso (**7–18 impartidas**). El arco narrativo del **arnés completo** se cerró en la Charla 13; a partir de la 14 la serie continúa con bloques temáticos (gobernanza, seguridad, herramientas SDD, elección de IA, y en la 18 los mecanismos internos de la IA). **Próxima: Charla 19 (por definir).**
 
@@ -159,6 +160,7 @@ Ficheros de referencia del proyecto Resin Craft Art usados en las demos, y recur
 - `glosario-ia-nivel-1.md` — glosario general de IA
 - [[novedades-ia-semana-21julio2026]] — novedades IA semana del 21 de julio 2026
 - [[ia-al-dia-semana-18-08-24-08-2026]] — IA al día, semana del 18 al 24 de agosto 2026
+- [[ia-al-dia-semana-25-08-31-08-2026]] — IA al día, semana del 25 al 31 de agosto 2026
 
 ---
 
