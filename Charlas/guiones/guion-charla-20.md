@@ -30,14 +30,14 @@ timestamp: 2026-09-14
 | 1. Apertura | Callback a la 16 + mapa del arnés | 4 min |
 | 2. Las dos correas | Especificar ≠ ejecutar | 4 min |
 | 3. El ejecutor cerrado | Claude Code: potente pero atado | 4 min |
-| 4. El giro | El ejecutor también puede ser abierto: OpenCode | 7 min |
+| 4. El giro | El ejecutor también puede ser abierto: OpenCode | 8 min |
 | 5. ¿Y a mí qué? | Por qué aparece en soluciones internas | 7 min |
 | 6. Escenario concreto | Una casa como la nuestra | 5 min |
 | 7. Visual guiado | *(pendiente de decidir — placeholder)* | 6 min |
 | 8. Equilibrio | Abierto vs cerrado: las 3 preguntas | 5 min |
 | 9. Cierre | Pregunta para todos + círculo con la 19 + puente | 4 min |
 
-**Total ≈ 46 min** (preguntas aparte).
+**Total ≈ 47 min** (preguntas aparte).
 
 ---
 
@@ -112,7 +112,7 @@ Explicar qué hace un ejecutor, en cristiano, y sembrar la tensión. Sin atacar 
 
 ---
 
-## Bloque 4 — El giro: el ejecutor también puede ser abierto (OpenCode) — 7 min
+## Bloque 4 — El giro: el ejecutor también puede ser abierto (OpenCode) — 8 min
 
 Presentar OpenCode por las propiedades que importan, no como catálogo de features.
 
@@ -120,7 +120,7 @@ Presentar OpenCode por las propiedades que importan, no como catálogo de featur
 
 Ir una a una, despacio:
 
-> *"**Uno: es abierto.** El código está a la vista, cualquiera lo puede auditar. No es una caja negra."*
+> *"**Uno: es abierto de verdad.** Licencia MIT, el código entero público: más de 900 personas contribuyendo y 27.000 copias —forks— circulando. Podéis ver cada línea, cambiarla y montarlo en vuestra propia casa. Con Claude Code o Copilot no veis ni una."*
 >
 > *"**Dos: no te casa con ningún proveedor.** Le enchufas el motor que quieras — el de una empresa, el de otra, o incluso un modelo que corra en vuestra propia máquina o en un servidor interno. Tú eliges el motor, no la herramienta por ti."*
 >
@@ -128,10 +128,14 @@ Ir una a una, despacio:
 
 > *"Y no es un experimento de garaje: es una de las herramientas de su tipo más usadas del mundo. Vive en la terminal, pero también tiene app de escritorio y extensión para el editor, así que no es solo para gente muy técnica."*
 
+**Adelantarse a la duda técnica (por si alguien de la sala la piensa):**
+
+> *"Alguno estará pensando: 'esto se parece muchísimo a Claude Code o a Copilot'. Y tiene toda la razón: se usa parecido, hacen el mismo trabajo. La diferencia no está en cómo se usa — está en de quién es. Uno lo puedes abrir, cambiar y traer a casa. El otro no. Misma cara, dueño distinto."*
+
 **Reseñable — pausa aquí:**
 > *"El mismo trabajo que hace el ejecutor cerrado. Pero el motor lo eliges tú, y tus datos se quedan en casa."*
 
-> ⚠️ *Antes del miércoles: verificar cifras que quiera citar (nº de proveedores soportados, popularidad). Para la charla basta con "decenas de proveedores, incluso modelos locales" — no colgarse de un número exacto.*
+> ⚠️ *Cifras verificadas (sep 2026): licencia MIT · 75+ proveedores, incluidos modelos locales (Ollama/LM Studio) · ~200.000 estrellas en GitHub · 900+ contribuidores · 27.000 forks · ~7,5M devs/mes. Redondea al hablar; no hace falta soltarlas todas.*
 
 ---
 
@@ -152,6 +156,10 @@ Tres razones por las que una empresa elige lo abierto:
 > *"**Tres: correr contra lo suyo.** Muchas casas ya tienen sus propios modelos o acuerdos. Una herramienta abierta se enchufa a eso; una cerrada te obliga a lo suyo."*
 
 > *"Por eso lo veis aparecer en soluciones internas. No porque sea 'más chulo', sino porque deja el control del lado de la empresa."*
+
+**Y un paso más — porque es abierto, se construye ENCIMA:**
+
+> *"Y como el motor es abierto, la gente monta sus propias aplicaciones usándolo por debajo: interfaces web, apps de escritorio, de móvil. OpenCode hace de motor, y tú le pones la cara que quieras. Eso con una caja cerrada es imposible. Guardad esta idea para el final."*
 
 **Frase que debe quedar:**
 > *"La factura y los datos dejan de ser rehenes."*
@@ -179,7 +187,7 @@ Aterrizar en un caso cercano y genérico. **Sin nombrar ninguna solución intern
 
 > 🚧 **PLACEHOLDER — pendiente de decisión de Juan.**
 >
-> Este bloque está diseñado para **sobrevivir con cero herramienta en directo** (Juan prefiere teoría y no estar pendiente de una demo frágil en vivo). No depende de nada montado.
+> Este bloque está diseñado para **sobrevivir con cero herramienta en directo** (Juan prefiere teoría y no estar pendiente de una demo frágil en vivo; además, la instalación está confirmada — ya la usan compañeros). No depende de nada montado.
 >
 > Opciones sobre la mesa (elegir una cuando Juan lo decida):
 > - **A —** Recorrido por la web `opencode.ai` + un par de capturas de la interfaz (terminal/escritorio) mientras se comenta. Cero riesgo, cero instalación.
@@ -234,7 +242,7 @@ Recolocar en el arnés, dejar la pregunta que se lleva **todo el mundo**, cerrar
 
 > *"Y os enlazo con lo del principio. ¿Os acordáis de que os dije que ya hay compañeros usándola? Por eso os la traigo: no por curiosidad, sino porque ya está aquí. Quiero que la conozcáis, aunque no la toquéis, por si os llega la oportunidad de trabajar con ella. Mejor que os pille sabiendo lo que es."*
 >
-> *"Y quién sabe: igual la semana que viene, con más tiempo, dejamos de hablar y montamos algo de verdad."*
+> *"Y quién sabe: igual la semana que viene, con más tiempo, dejamos de hablar y montamos algo de verdad — un frontal propio para crear y lanzar agentes, con OpenCode de motor por debajo."*
 
 **Frase final:**
 > *"Hoy no os lleváis una herramienta. Os lleváis el criterio para entender la que viene."*
