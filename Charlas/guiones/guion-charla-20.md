@@ -33,7 +33,7 @@ timestamp: 2026-09-14
 | 4. El giro | El ejecutor también puede ser abierto: OpenCode | 8 min |
 | 5. ¿Y a mí qué? | Por qué aparece en soluciones internas | 7 min |
 | 6. Escenario concreto | Una casa como la nuestra | 5 min |
-| 7. Visual guiado | *(pendiente de decidir — placeholder)* | 6 min |
+| 7. Visual guiado | Recorrido web opencode.ai + capturas (opción A) | 6 min |
 | 8. Equilibrio | Abierto vs cerrado: las 3 preguntas | 5 min |
 | 9. Cierre | Pregunta para todos + círculo con la 19 + puente | 4 min |
 
@@ -183,20 +183,38 @@ Aterrizar en un caso cercano y genérico. **Sin nombrar ninguna solución intern
 
 ---
 
-## Bloque 7 — Visual guiado — 6 min
+## Bloque 7 — Visual guiado (opción A: recorrido web) — 6 min
 
-> 🚧 **PLACEHOLDER — pendiente de decisión de Juan.**
+Recorrido por `opencode.ai` y GitHub, con capturas, comentando. **Cero herramienta en vivo, cero instalación.** El objetivo es que la audiencia *vea* de qué hemos hablado — y el pico es el momento de elegir el motor.
+
+**1. "Esto existe y es real" — home de opencode.ai**
+> *"Que no os quede como algo abstracto. Esto es una web, un producto real. Mirad: funciona en la terminal, pero también como app de escritorio y dentro del editor. No es un juguete."*
+
+**2. "Se parece a lo que ya conocéis" — captura de la interfaz**
+> *"Y fijaos cómo se ve trabajando: le das una tarea, primero te propone un plan, y luego lo ejecuta. ¿Os suena? Claro — es el mismo tipo de herramienta que Claude Code o Copilot. Hasta aquí, igual."*
+
+**3. EL MOMENTO — elegir el motor (captura del selector de modelo)** ← reseñable
+> *"Y ahora, la diferencia. Este menú de aquí."* [señalar el selector de modelos] *"Aquí elijo YO el motor: Claude, GPT, Gemini… o un modelo que corre en mi propia máquina, sin salir de casa."*
 >
-> Este bloque está diseñado para **sobrevivir con cero herramienta en directo** (Juan prefiere teoría y no estar pendiente de una demo frágil en vivo; además, la instalación está confirmada — ya la usan compañeros). No depende de nada montado.
+> *(Pausa. Dejar la captura en pantalla unos segundos.)*
 >
-> Opciones sobre la mesa (elegir una cuando Juan lo decida):
-> - **A —** Recorrido por la web `opencode.ai` + un par de capturas de la interfaz (terminal/escritorio) mientras se comenta. Cero riesgo, cero instalación.
-> - **B —** Walkthrough de OpenCode ya montado en tu equipo (instalación confirmada: ya la usan compañeros): enseñar cómo se elige el proveedor y el modo Plan/Build. Pausa larga en el momento *"elijo el motor"* — ese es el reseñable.
-> - **C —** Enseñarlo desde tu propio trasteo previo (capturas / grabación), sin depender de que arranque nada en vivo.
->
-> **Reseñable objetivo del bloque, sea cual sea la opción:** el instante en que se elige el proveedor/modelo. Ahí es donde la audiencia *ve* de qué hemos estado hablando.
->
-> *Cuando decidas A/B/C, relleno este bloque con el paso a paso y las frases.*
+> *"Este menú es toda la charla de hoy. En una caja cerrada, este menú no existe: el motor lo eligen por ti."*
+
+**Frase que debe quedar:**
+> *"Todo lo de hoy cabe en este menú: quién elige el motor."*
+
+**4. "Y es abierto de verdad" — captura del repo en GitHub**
+> *"Una última. Esto es su código, en GitHub. Licencia MIT, a la vista, con miles de personas mirándolo y mejorándolo. Con Claude Code o Copilot, esta página sencillamente no existe."*
+
+**5. (Opcional, si sobra tiempo) "La gente construye encima" — captura del ecosistema**
+> *"Y como es abierto, mirad lo que ha hecho la gente: sus propias apps encima de OpenCode. Guardad esto… porque es justo lo que os decía antes."* [enlaza con el Bloque 5 y el tease del 9]
+
+> 📸 **Capturas a preparar antes del miércoles** (nada en vivo):
+> - Home de `opencode.ai`
+> - Vista de la interfaz (TUI o app de escritorio) trabajando / modo Plan-Build
+> - **El selector de modelo/proveedor** (la más importante — es el reseñable)
+> - Repo en GitHub: cabecera con licencia MIT + estrellas/forks
+> - (Opcional) Página de ecosistema con frontales de la comunidad
 
 ---
 
@@ -252,14 +270,12 @@ Recolocar en el arnés, dejar la pregunta que se lleva **todo el mundo**, cerrar
 ## Checklist antes del miércoles
 
 ### Cuanto antes
-- [ ] (Instalación: confirmado que se puede — ya la usan compañeros.) Si vas con el Bloque 7 opción B, tenerla montada y probada antes del miércoles
-- [ ] Decidir Bloque 7: opción A (web), B (montado) o C (trasteo previo)
+- [ ] Preparar las capturas del Bloque 7 (ver lista 📸): home de opencode.ai, interfaz Plan-Build, **selector de modelo**, repo con licencia MIT, (opc.) ecosistema
 
 ### Lunes / Martes
 - [ ] Verificar cifras a citar de OpenCode (proveedores, popularidad) — o dejarlo en "decenas / de las más usadas"
 - [ ] Preparar el esquema visual de las dos correas (Bloque 2)
 - [ ] Preparar el esquema de las 3 preguntas (Bloque 8)
-- [ ] Rellenar el Bloque 7 según la opción elegida
 - [ ] Ensayo cronometrado (vigilar que la teoría no se estire de más)
 
 ### El día de la charla
@@ -271,6 +287,6 @@ Recolocar en el arnés, dejar la pregunta que se lleva **todo el mundo**, cerrar
 
 ## Decisiones abiertas (para cerrar contigo)
 
-1. **Bloque 7 (visual):** A / B / C — me dices y lo relleno.
+1. **Bloque 7 (visual):** ✅ cerrado — opción A (recorrido web `opencode.ai` + GitHub, con capturas; cero instalación). Paso a paso ya escrito.
 2. **Gancho honesto de apertura:** ✅ cerrado — apertura en frío afirmativa: la herramienta ya está entrando en la empresa, hay compañeros usándola y tú también puedes usarla.
 3. **Puente final:** ✅ cerrado — cierre en círculo con la Charla 19 (caja cerrada) + OpenCode como herramienta que ya asoma en la empresa ("conocedla por si nos toca") + tease de "montamos algo la semana que viene".
