@@ -1,7 +1,7 @@
 ---
 type: guion
 title: "Charla 22 — Pregúntale primero"
-description: "Charla de hábito, no de adopción: la IA ya se usa, falta el reflejo de usarla por defecto. Define explícitamente la mentalidad IA-first (la IA como primera pregunta, no como solución automática), con respaldo en la distinción real AI-enabled vs AI-first y un ejemplo antes/después, y luego el ciclo de vida de cualquier trabajo (idea → especificar → construir → comprobar → publicar → mantener) repite esa pregunta seis veces, cada parada anclada a un ejemplo real ya visto en la serie: RRHH (idea), OpenSpec/RCA (16, especificar), OpenCode + Hermes Agent/9Router (20, construir), el spec BDD de la 16 (comprobar), el Analista de RFP y su checkpoint humano (19, publicar), Wiki LLM e instrucciones persistentes (11/8, mantener). Incluye ejercicio en vivo con una tarea real de cada asistente."
+description: "Charla de hábito, no de adopción: la IA ya se usa, falta el reflejo de incorporarla de forma consciente. Define la mentalidad IA-first como una segunda mirada temprana: primero entender el problema y pensar una solución base; antes de ejecutarla, preguntar dónde puede ayudar la IA, sin convertirla en solución automática ni sustituto del criterio, con respaldo en la distinción real AI-enabled vs AI-first y un ejemplo antes/después, y luego el ciclo de vida de cualquier trabajo (idea → especificar → construir → comprobar → publicar → mantener) repite esa pregunta seis veces, cada parada anclada a un ejemplo real ya visto en la serie: RRHH (idea), OpenSpec/RCA (16, especificar), OpenCode + Hermes Agent/9Router (20, construir), el spec BDD de la 16 (comprobar), el Analista de RFP y su checkpoint humano (19, publicar), Wiki LLM e instrucciones persistentes (11/8, mantener). Incluye ejercicio en vivo con una tarea real de cada asistente."
 tags: [charla, guion, ia-first, habito, sdlc, criterio, arnes, callbacks]
 related:
   - "[[guion-charla-16]]"
@@ -22,21 +22,21 @@ timestamp: 2026-10-05
 
 ### 7 de octubre de 2026
 
-> Charla de hábito, no de adopción. La audiencia ya usa la IA — no hay que convencer de que funciona. El objetivo es un único cambio de reflejo: antes de hacer algo vosotros, preguntarle primero. Un ejercicio en vivo ancla el concepto a una tarea real de cada asistente, y cada parada del ciclo se apoya en un ejemplo que la sala ya ha visto — nada nuevo que aprender, solo un hilo que lo conecta todo.
+> Charla de hábito, no de adopción. La audiencia ya usa la IA — no hay que convencer de que funciona. El objetivo es un cambio de reflejo más preciso: ante una tarea, primero entender el problema y plantear una solución razonable; antes de invertir tiempo en ejecutarla, preguntarse qué partes puede acelerar, enriquecer o simplificar la IA. No se trata de pensar menos, sino de no recorrer solos un camino que puede hacerse mejor acompañados. Un ejercicio en vivo ancla el concepto a una tarea real de cada asistente, y cada parada del ciclo se apoya en un ejemplo que la sala ya ha visto — nada nuevo que aprender, solo un hilo que lo conecta todo.
 
 ---
 
 ## Estructura de tiempos
 
 | Bloque | Contenido | Tiempo |
-|--------|-----------|--------|
-| 1. Apertura | Lo que ya tenéis delante (RRHH, uso cotidiano) | 4 min |
-| 2. ¿Construir o ya existe? | Agentes (19) vs PowerApps/Power Automate — criterio, sin matizar el resto | 4 min |
-| 3. El giro | Qué es pensar en IA-first (AI-enabled vs AI-first) + antes/después + el resultado, no la tarea | 7 min |
-| 4. Ejercicio en vivo | Pensad en una tarea real vuestra de esta semana | 3 min |
-| 5. El hilo | Un ciclo que ya conocéis sin saberlo | 3 min |
-| 6. Las seis paradas | Idea · Especificar · Construir · Comprobar · Publicar · Mantener — cada una con un ejemplo ya visto en la serie | 19 min |
-| 7. Cierre | La frase, seis veces — y el guiño al arnés mental | 5 min |
+|---|---|---:|
+| 1. Apertura | Uso cotidiano y problema del hábito | 4 min |
+| 2. El giro | Pensar la tarea, explorar con IA y decidir con criterio | 8 min |
+| 3. ¿Construir o ya existe? | Aplicar criterio antes de añadir complejidad | 4 min |
+| 4. Ejercicio en vivo | Una tarea real de esta semana | 3 min |
+| 5. El hilo | Un ciclo que ya conocéis | 3 min |
+| 6. Las seis paradas | Idea · Especificar · Construir · Comprobar · Publicar · Mantener | 19 min |
+| 7. Cierre | Los límites y el criterio humano | 4 min |
 
 **Total ≈ 45 min** (preguntas aparte).
 
@@ -57,7 +57,47 @@ Abrir con lo que la sala ya ha visto funcionar. Cero necesidad de convencer. Men
 
 ---
 
-## Bloque 2 — ¿Construir un agente, o ya existe algo hecho? — 4 min
+## Bloque 2 — El giro: qué es pensar en IA-first — 8 min
+
+> *"Y aquí está el cambio de hoy, en una frase: antes de hacerlo vosotros, preguntadle primero."*
+>
+> *"Pero 'primero' no significa apagar vuestra cabeza. Ante una tarea, primero entendéis el problema y pensáis cómo la resolveríais de manera tradicional. Antes de comprometer tiempo y esfuerzo con esa solución, hacéis una segunda pasada: ¿en qué partes puede ayudarme la IA?, ¿qué camino puede hacer más fácil?, ¿qué ángulo no estoy viendo? Después decidís si seguís vosotros, sigue ella o lo hacéis entre los dos."*
+>
+> *"La IA no sustituye el primer pensamiento ni toma la última decisión. Se incorpora al principio de la exploración, antes de ejecutar. La IA es la primera conversación sobre vuestra solución, no la última palabra."*
+
+**Ponerle nombre (el concepto que da título a hoy):**
+
+> *"Esto tiene nombre, y quiero decirlo una vez para que os lo llevéis: se llama mentalidad IA-first. No me lo invento yo — es un concepto real que lleva meses en boca de empresas y medios como Wired: hay diferencia entre usar la IA de vez en cuando para una tarea suelta —eso tiene nombre aparte, se llama AI-enabled— y ser de verdad AI-first, donde la IA es el punto de partida, no un complemento que añades al final."*
+>
+> *"Normalmente se habla de esto a nivel de empresa entera: cómo rediseña sus procesos, su estrategia, su forma de decidir. Hoy lo bajamos a una escala mucho más pequeña y mucho más vuestra: no la empresa, vosotros. El mismo principio, aplicado a cada tarea de vuestro día a día."*
+>
+> *"Y quiero ser muy preciso: IA-first no es IA-only ni IA-always. No significa que la IA sea siempre la solución, que haga todo el trabajo o que decida por vosotros. Una vez entendido el problema y antes de ejecutar vuestra solución, comprobáis si puede aportar opciones, preguntas, velocidad o contraste. A veces la respuesta será sí; otras veces, no merece la pena usarla."*
+
+**El antes/después — para que no quede abstracto:**
+
+> *"Os lo enseño con un caso tonto, a propósito, para que se vea clarísimo. Mañana tenéis una reunión con un cliente nuevo."*
+>
+> *"Modelo tradicional: entendéis que necesitáis preparar la reunión, pensáis los objetivos y abrís un Word para escribir el guion. Esa primera reflexión es necesaria. El problema es ejecutar todo el camino sin una segunda pregunta: ¿en qué puede ayudarme aquí la IA? Quizá os falte un riesgo, una objeción o una pregunta que no habíais considerado."*
+>
+> *"Modelo IA-first: después de aclarar qué reunión tenéis y qué resultado buscáis, pero antes de redactarlo todo, le preguntáis: 'mañana tengo una reunión con un cliente nuevo sobre esto, ¿qué debería cubrir, y qué le preguntaría yo si estuviera en su lugar?'. Diez segundos después tenéis un primer borrador — con cosas en las que ni habíais caído. Y AHORA decidís: lo seguís tal cual, lo afináis juntos, o lo tiráis entero y empezáis de cero. Pero decidís después de preguntar, no antes."*
+>
+> *"Fijaos en que la diferencia no está en quién acaba haciendo el trabajo. Puede que al final el guion lo escribáis enteramente vosotros. La diferencia está en no pasar directamente de entender el problema a ejecutar la primera solución. Entre ambas cosas abrís una exploración con IA y luego aplicáis vuestro criterio. Eso es IA-first: incorporar la IA temprano, no obedecerla automáticamente."*
+
+**El giro mental (pensar en el resultado, no en la tarea):**
+
+> *"Hay un pequeño truco que ayuda muchísimo: dejad de pensar en la tarea que tenéis delante, y pensad en el resultado al que queréis llegar. No 'voy a escribir este documento', sino 'quiero llegar a X' — y preguntadle primero cómo llegar. Cambia una tarea entera por una conversación."*
+
+**Frases que deben quedar:**
+> *"La IA es la primera conversación sobre tu solución, no la última decisión."*
+>
+> *"IA-first no es IA-only ni IA-always."*
+>
+> *"Antes de invertir esfuerzo, pregúntale primero."*
+
+
+---
+
+## Bloque 3 — ¿Construir un agente, o ya existe algo hecho? — 4 min
 
 > *"Y aquí va algo que forma parte del mismo reflejo, no una excepción a él: preguntar primero no significa 'móntate un agente para todo'. A veces la pregunta correcta no es '¿qué agente necesito?', es '¿hace falta construir algo, o ya existe una herramienta que lo resuelve?'. Esa pregunta también se la hacéis primero a la IA."*
 >
@@ -70,38 +110,8 @@ Abrir con lo que la sala ya ha visto funcionar. Cero necesidad de convencer. Men
 **Frase que debe quedar:**
 > *"No todo lo que automatizáis necesita un agente. A veces la pregunta IA-first es la contraria: ¿hace falta construir algo, o ya existe?"*
 
----
-
-## Bloque 3 — El giro: qué es pensar en IA-first — 7 min
-
-> *"Y aquí está el cambio de hoy, en una frase: antes de hacerlo vosotros, preguntadle primero."*
->
-> *"No 'uso la IA cuando me acuerdo'. Sino: la IA es mi primer movimiento, siempre. Después decidís si seguís vosotros, sigue ella, o lo hacéis entre los dos."*
-
-**Ponerle nombre (el concepto que da título a hoy):**
-
-> *"Esto tiene nombre, y quiero decirlo una vez para que os lo llevéis: se llama mentalidad IA-first. No me lo invento yo — es un concepto real que lleva meses en boca de empresas y medios como Wired: hay diferencia entre usar la IA de vez en cuando para una tarea suelta —eso tiene nombre aparte, se llama AI-enabled— y ser de verdad AI-first, donde la IA es el punto de partida, no un complemento que añades al final."*
->
-> *"Normalmente se habla de esto a nivel de empresa entera: cómo rediseña sus procesos, su estrategia, su forma de decidir. Hoy lo bajamos a una escala mucho más pequeña y mucho más vuestra: no la empresa, vosotros. El mismo principio, aplicado a cada tarea de vuestro día a día."*
->
-> *"Y quiero ser muy preciso con lo que significa, porque se malentiende fácil: no significa que la IA sea siempre la solución. Significa que es siempre la primera pregunta. Antes de decidir cómo lo hacéis, antes de poneros con ello vosotros solos, la primera parada es ella."*
-
-**El antes/después — para que no quede abstracto:**
-
-> *"Os lo enseño con un caso tonto, a propósito, para que se vea clarísimo. Mañana tenéis una reunión con un cliente nuevo."*
->
-> *"Modelo antiguo — el que tenemos todos metido de serie: abrís un Word, y os ponéis a escribir el guion de la reunión vosotros, desde cero. Media hora después tenéis algo. Y puede que se os haya olvidado algo importante, porque lo habéis pensado solos, con vuestra cabeza y nada más."*
->
-> *"Modelo IA-first: antes de abrir el Word, le preguntáis: 'mañana tengo una reunión con un cliente nuevo sobre esto, ¿qué debería cubrir, y qué le preguntaría yo si estuviera en su lugar?'. Diez segundos después tenéis un primer borrador — con cosas en las que ni habíais caído. Y AHORA decidís: lo seguís tal cual, lo afináis juntos, o lo tiráis entero y empezáis de cero. Pero decidís después de preguntar, no antes."*
->
-> *"Fijaos en que la diferencia no está en quién acaba haciendo el trabajo. Puede que al final el guion lo escribáis enteramente vosotros. La diferencia está en qué es lo primero que hacéis: antes, poneros a ello directamente; ahora, preguntar antes de poneros a ello. Eso es IA-first — no es que la IA resuelva por vosotros, es que es la primera puerta que tocáis, siempre, se note o no se note después en el resultado."*
-
-**El giro mental (pensar en el resultado, no en la tarea):**
-
-> *"Hay un pequeño truco que ayuda muchísimo: dejad de pensar en la tarea que tenéis delante, y pensad en el resultado al que queréis llegar. No 'voy a escribir este documento', sino 'quiero llegar a X' — y preguntadle primero cómo llegar. Cambia una tarea entera por una conversación."*
-
-**Frase que debe quedar — se repite seis veces más:**
-> *"Antes de hacerlo tú, pregúntale primero."*
+**Microejemplo de límite:**
+> *"Y a veces la conclusión será todavía más sencilla: no hace falta IA. Si solo vais a corregir una fecha, confirmar un dato conocido o responder un sí o un no, introducir un modelo puede añadir más fricción que valor. IA-first significa evaluar pronto si aporta algo y descartarla pronto cuando no lo aporta."*
 
 ---
 
@@ -163,7 +173,7 @@ En cada parada: el concepto, el ejemplo real de una charla anterior, y una pregu
 
 > *"Tercera parada: construir, hacerlo de verdad. En la Charla 20 vimos que, a la hora de ejecutar, hay quien decide el motor por vosotros y hay quien os deja elegirlo. ¿Os acordáis del menú de OpenCode, donde elegíais qué IA hacía el trabajo? Esa es la pregunta de esta parada, aplicada: antes de hacerlo vosotros, preguntadle quién —o qué— lo hace mejor."*
 >
-> *"Y un apunte rápido de actualidad, porque esto no se ha parado ni una semana: ha salido un primo de OpenCode, Hermes Agent, y una herramienta nueva, 9Router, que aplican el mismo reflejo a elegir herramienta — antes de usarla, preguntadle qué pasa con vuestros datos."*
+> *"El ejemplo no depende de que una herramienta concreta sobreviva. OpenCode fue el caso que vimos; Hermes Agent o 9Router pueden servir como apunte de actualidad si siguen vigentes. La idea duradera es otra: antes de elegir herramienta, preguntad qué hace mejor, qué contexto necesita, cuánto control os deja y qué ocurre con vuestros datos."*
 >
 > *"Aplicado a lo vuestro: la parte de 'hacerlo' de vuestra tarea — ¿la ibais a hacer entera vosotros, o le habéis dejado sitio a la IA?"*
 
@@ -173,7 +183,9 @@ En cada parada: el concepto, el ejemplo real de una charla anterior, y una pregu
 
 > *"Cuarta parada: comprobar. Antes de dar algo por bueno vosotros solos, pregúntale que lo ponga a prueba. ¿Os acordáis de aquel fichero de la 16, con las frases 'dado que el usuario está en el catálogo, cuando selecciona una categoría, entonces solo se muestran esos productos'? Eso, sin que lo supierais entonces, ya era BDD: contarle el resultado esperado como una historia, para poder comprobar si se cumple. Quien programa tiene su versión más técnica, TDD — pero con contar la historia basta para la mayoría."*
 >
-> *"Aplicado a lo vuestro: antes de dar vuestra tarea por terminada, ¿le habéis pedido que la revise, o la vais a dar por buena solo porque os lo parece a vosotros?"*
+> *"Esto no es solo para código. Antes de enviar un correo delicado, una propuesta o una presentación, podéis pedirle: actúa como el destinatario; busca ambigüedades, objeciones y cosas que podrían entenderse mal. La IA no valida la verdad ni sustituye una revisión experta: hace de segundo par de ojos."*
+>
+> *"Aplicado a lo vuestro: antes de dar vuestra tarea por terminada, ¿le habéis pedido que la revise desde otro punto de vista?"*
 
 **Antes de hacerlo tú, pregúntale primero.** *(mismo ejemplo que 6.2, otro ángulo)*
 
@@ -195,7 +207,7 @@ En cada parada: el concepto, el ejemplo real de una charla anterior, y una pregu
 
 ---
 
-## Bloque 7 — Cierre: la frase, seis veces — 5 min
+## Bloque 7 — Cierre: la frase, seis veces — 4 min
 
 > *"Habéis oído la misma frase seis veces, aplicada a algo vuestro de verdad y a cosas que ya habíamos visto juntos. Es a propósito: eso es el hábito, haciéndose."*
 >
@@ -205,10 +217,12 @@ En cada parada: el concepto, el ejemplo real de una charla anterior, y una pregu
 > *"¿Alguien se ha dado cuenta, en alguna de las seis paradas, de algo que no había pensado de su tarea? Lo leo si alguien lo escribe en el chat."*
 
 **Frase final — dejar fija en pantalla:**
-> *"Antes de hacerlo tú, pregúntale primero."*
+> *"Antes de invertir esfuerzo, pregúntale primero."*
+>
+> *"IA-first no es IA-only ni IA-always: la IA abre opciones; vuestro criterio decide."*
 
 **Guiño al arnés mental:**
-> *"Y si os lleváis una idea más: el arnés que llevamos meses montando para la IA, podéis ponéroslo también a vosotros mismos. La IA como primer borrador. Vuestro criterio, la rienda."*
+> *"Y si os lleváis una idea más: el arnés que llevamos meses montando para la IA, podéis ponéroslo también a vosotros mismos. Primero entendéis el camino. La IA os ayuda a explorarlo y a recorrerlo mejor. Vuestro criterio sigue llevando la rienda."*
 
 ---
 
@@ -236,5 +250,5 @@ En cada parada: el concepto, el ejemplo real de una charla anterior, y una pregu
 2. **6.2 y 6.4 comparten el mismo ejemplo** (el spec de la 16) visto desde dos ángulos — es intencional, para que quede ligero y no meta un caso nuevo cada vez. Si prefieres un ejemplo distinto para Comprobar, lo cambio.
 3. **9Router / Hermes Agent (6.3):** verificar vigencia cerca de la fecha — es ecosistema que se mueve semana a semana.
 4. **Mención al compañero (Bloque 1):** dejada deliberadamente breve y sin detalle, ya que no has visto la charla todavía — ajústala si después de verla quieres meter algo concreto.
-5. **Ejemplo antes/después del Bloque 3 (reunión con cliente nuevo):** es genérico, a propósito, para que se entienda sin depender de contexto previo. Si tienes un caso real tuyo donde el "modelo antiguo" te costó algo, sustitúyelo — pega más que uno inventado.
-6. **Frase descartada del Bloque 2 anterior** ("el problema no es la confianza, es el hábito") — se cae con el cambio de bloque. Era buena, así que si quieres recuperarla en otro punto (encajaría en el Bloque 1 o el 3), dímelo.
+5. **Ejemplo antes/después del Bloque 2 (reunión con cliente nuevo):** es genérico, a propósito, para que se entienda sin depender de contexto previo. Si tienes un caso real tuyo donde el "modelo antiguo" te costó algo, sustitúyelo — pega más que uno inventado.
+6. **Frase descartada del Bloque 2 anterior** ("el problema no es la confianza, es el hábito") — se cae con el cambio de bloque. Era buena, así que si quieres recuperarla en otro punto (encajaría en el Bloque 1 o el 2), dímelo.
