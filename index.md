@@ -3,7 +3,7 @@ type: Indice
 title: "IAs-talks — Índice del vault"
 description: "Mapa de navegación del vault de conocimiento de la serie de charlas de IA. Punto de entrada para agentes y colaboradores."
 tags: [indice, navegacion, vault, wiki-llm]
-timestamp: "2026-08-26"
+timestamp: "2026-10-07"
 ---
 
 # IAs-talks — Índice del vault
@@ -21,11 +21,11 @@ IAs-talks/
 ├── CLAUDE.md              ← instrucciones para agentes que trabajan en el vault
 ├── Charlas/              ← resumen narrativo de cada charla
 │   └── guiones/          ← scripts completos para el ponente
-├── Conceptos/            ← 47 conceptos, uno por fichero, clasificados por nivel
-│   ├── nivel-1-fundamentos/  ← conceptos de la serie de charlas (9)
-│   ├── nivel-2-intermedios/  ← conceptos técnicos intermedios (14)
-│   ├── nivel-3-avanzados/    ← patrones y arquitecturas (14)
-│   └── nivel-4-frontera/     ← tecnologías emergentes 2026-2027 (10)
+├── Conceptos/            ← 53 conceptos, uno por fichero, clasificados por nivel
+│   ├── nivel-1-fundamentos/  ← conceptos de la serie de charlas (10)
+│   ├── nivel-2-intermedios/  ← conceptos técnicos intermedios (15)
+│   ├── nivel-3-avanzados/    ← patrones y arquitecturas (15)
+│   └── nivel-4-frontera/     ← tecnologías emergentes 2026-2027 (13)
 ├── Demos/                ← paso a paso de demos en vivo
 ├── Recursos/             ← ficheros de referencia y configuración
 ├── Proyectos/            ← proyectos demo de la serie (RCA)
@@ -56,14 +56,20 @@ IAs-talks/
 | [[MATERIAL-CHARLA-17-ELEGIR-IA]]          | Charla 17 — Material post-charla (guía exhaustiva)      | ✅ Impartida |
 | [[guion-charla-18]]                       | Charla 18 — Abriendo la caja: cómo piensa la IA por dentro | ✅ Impartida |
 | [[MATERIAL-CHARLA-18-COMO-PIENSA-LA-IA]]  | Charla 18 — Material post-charla (cómo piensa la IA por dentro) | ✅ Impartida |
+| [[MATERIAL-CHARLA-19-DE-RESPONDER-A-ACTUAR]] | Charla 19 — De responder a actuar: equipo de agentes y checkpoint humano | ✅ Impartida |
+| [[guion-charla-19]]                       | Charla 19 — Guión, demo Analista de RFP + Excel         | ✅ Impartida |
+| [[MATERIAL-CHARLA-20-EL-EJECUTOR-ABIERTO]] | Charla 20 — El ejecutor abierto: OpenCode vs Claude Code | ✅ Impartida |
+| [[guion-charla-20]]                       | Charla 20 — Guión, el menú de OpenCode                  | ✅ Impartida |
+| —                                          | Charla 21 — Copilot, WorkIQ y PowerPoints (impartida por un compañero, sin ficha en el vault) | ✅ Impartida |
+| [[guion-charla-22]]                       | Charla 22 — Pregúntale primero: mentalidad IA-first     | ✅ Impartida |
 
-Serie en curso (**7–18 impartidas**). El arco narrativo del **arnés completo** se cerró en la Charla 13; a partir de la 14 la serie continúa con bloques temáticos (gobernanza, seguridad, herramientas SDD, elección de IA, y en la 18 los mecanismos internos de la IA). **Próxima: Charla 19 (por definir).**
+Serie en curso (**7–22 impartidas**, con la 21 fuera del pipeline del vault por no haberla dado Juan). El arco narrativo del **arnés completo** se cerró en la Charla 13; a partir de la 14 la serie continúa con bloques temáticos: gobernanza, seguridad, herramientas SDD, elección de IA, mecanismos internos de la IA, de responder a actuar (agentes que ejecutan), el ejecutor abierto, y en la 22 la mentalidad IA-first. **Próxima: por definir.**
 
 ---
 
-## Conceptos (47)
+## Conceptos (53)
 
-### nivel-1-fundamentos (9)
+### nivel-1-fundamentos (10)
 
 | Fichero | Descripción |
 |---|---|
@@ -76,8 +82,9 @@ Serie en curso (**7–18 impartidas**). El arco narrativo del **arnés completo*
 | [[agente-ia]] | Chatbot clásico vs agente que razona |
 | [[prediccion-siguiente-token]] | Cómo la IA "entiende": predice el patrón más probable |
 | [[alucinaciones]] | Cuándo la IA se lo inventa (y cómo protegerte) |
+| [[ia-first]] | Mentalidad: preguntar primero a la IA antes de ejecutar tu propia solución |
 
-### nivel-2-intermedios (14)
+### nivel-2-intermedios (15)
 
 | Fichero | Descripción |
 |---|---|
@@ -95,8 +102,9 @@ Serie en curso (**7–18 impartidas**). El arco narrativo del **arnés completo*
 | [[multimodal]] | LLMs que ven, oyen y leen |
 | [[context-window-management]] | Gestión de la ventana de contexto |
 | [[modelos-abiertos-vs-cerrados]] | Las dos familias del panorama IA (y la residencia de datos) |
+| [[bdd]] | Behavior-Driven Development — verificar contando el resultado esperado como historia |
 
-### nivel-3-avanzados (14)
+### nivel-3-avanzados (15)
 
 | Fichero | Descripción |
 |---|---|
@@ -114,8 +122,9 @@ Serie en curso (**7–18 impartidas**). El arco narrativo del **arnés completo*
 | [[knowledge-graphs]] | GraphRAG — grafos de conocimiento + LLMs |
 | [[model-routing]] | Elegir el modelo correcto para cada tarea |
 | [[caching-cost]] | Optimización de costes y latencia |
+| [[ai-code-review]] | IA revisando pull requests — la revisión como nuevo cuello de botella |
 
-### nivel-4-frontera (10)
+### nivel-4-frontera (13)
 
 | Fichero | Descripción |
 |---|---|
@@ -129,6 +138,9 @@ Serie en curso (**7–18 impartidas**). El arco narrativo del **arnés completo*
 | [[ai-governance]] | Gobernanza: EU AI Act, ISO 42001 |
 | [[federated-ai]] | IA sin depender de un solo proveedor |
 | [[autonomous-coding-agents]] | Agentes que programan solos |
+| [[ai-native-sdlc]] | El ciclo de vida del desarrollo rediseñado para cuando la IA escribe el código |
+| [[hooks-approval-gates]] | Hooks como puertas de aprobación dentro del pipeline de IA |
+| [[intent-md]] | Fichero corto y versionado que captura la intención antes de planificar |
 
 ---
 
@@ -179,7 +191,9 @@ Las conexiones principales entre conceptos:
 ```
 arnes-completo
 ├── sdd
+│   └── bdd
 ├── skills
+├── ia-first
 └── agente-ia
     ├── copilot-studio
     │   ├── mcp
@@ -193,6 +207,13 @@ arnes-completo
 mcp
 └── copilot-instructions
     └── graphify
+
+ai-native-sdlc
+├── intent-md
+├── sdd-variations
+├── agentic-workflows
+├── hooks-approval-gates
+└── ai-code-review
 ```
 
 ---
