@@ -3,9 +3,9 @@ type: Concepto
 title: "AI-Native SDLC — El ciclo de vida del desarrollo con IA"
 description: "Rediseñar el ciclo de vida del software cuando los agentes escriben la mayor parte del código: por qué el cuello de botella se mueve a planificar, revisar, testear y desplegar. Las seis etapas Plan → Design → Build → Test → Deploy → Maintain."
 tags: [sdlc, ciclo-de-vida, agentes, desarrollo, cuello-de-botella, gobernanza]
-related: [arnes-completo, sdd-variations, intent-md, agentic-workflows, orchestration-patterns, eval-benchmarking, github-actions, hooks-approval-gates, ai-code-review, metricas-ia]
+related: [arnes-completo, sdd-variations, intent-md, agentic-workflows, orchestration-patterns, eval-benchmarking, github-actions, hooks-approval-gates, ai-code-review, metricas-ia, ia-first]
 estado: "✅ Publicado"
-timestamp: "2026-09-17"
+timestamp: "2026-10-07"
 ---
 
 # AI-Native SDLC — El ciclo de vida del desarrollo con IA
@@ -61,7 +61,7 @@ Uno es la mochila; el otro, la ruta.
 
 ## Para esta serie
 
-Esta nota es la espina de la **Charla 10 (Full cycle — cierre del arco)**: conecta las piezas sueltas de toda la serie en un único recorrido. Para audiencia mixta, la idea que tiene que aterrizar es una sola: *la IA no elimina el proceso, mueve dónde duele*.
+Se valoró como columna vertebral de la Charla 22, pero se usó solo parcialmente — como ejemplo dentro de la mentalidad **[[ia-first]]** (ver [[guion-charla-22]]), no como protagonista. Sigue siendo buen candidato para un futuro capítulo de cierre o síntesis de la serie, sin fecha fija todavía: conecta piezas sueltas de toda la serie en un único recorrido. Para audiencia mixta, la idea que tiene que aterrizar es una sola: *la IA no elimina el proceso, mueve dónde duele*.
 
 ---
 
@@ -72,6 +72,7 @@ Esta nota es la espina de la **Charla 10 (Full cycle — cierre del arco)**: con
 - **[[sdd-variations]]** — La etapa Design: especificar antes de implementar
 - **[[ai-code-review]]** y **[[hooks-approval-gates]]** — El control en la etapa Deploy
 - **[[metricas-ia]]** — Cerrar el bucle en Maintain
+- **[[ia-first]]** — La Charla 22 usa esta misma idea, simplificada, como ejemplo de aplicar el reflejo IA-first a un proceso completo
 
 ---
 
