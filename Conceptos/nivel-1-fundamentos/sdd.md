@@ -3,7 +3,7 @@ type: Concepto
 title: "SDD — Specification-Driven Development"
 description: "Metodología donde los requisitos se expresan en ficheros markdown estructurados antes de que la IA genere código"
 tags: [sdd, spec, documentacion, arnes, desarrollo, task, plan]
-related: [arnes-completo, skills, mcp, copilot-instructions]
+related: [arnes-completo, skills, mcp, copilot-instructions, odd]
 charla: "Charlas 7-8"
 estado: "✅ Publicado"
 timestamp: "2026-06-17"
@@ -55,6 +55,7 @@ Se diferencia de [[skills]] en que el SDD es específico por proyecto o feature,
 - **[[mcp]]** — Los MCPs permiten que la IA actúe sobre el `spec.md` directamente (ej: crear issues en Jira a partir del spec)
 - **[[arnes-completo]]** — El SDD es la primera pieza del arnés
 - **[[copilot-instructions]]** — Las instrucciones del proyecto complementan el SDD con el contexto técnico
+- **[[odd]]** — SDD es la rama a la que se entra deliberadamente dentro de ODD, solo cuando se pide explícitamente o se acepta una propuesta; fuera de eso, ODD es el comportamiento por defecto
 
 ---
 
@@ -65,6 +66,7 @@ Se diferencia de [[skills]] en que el SDD es específico por proyecto o feature,
 |6|Concepto central — introducción completa|
 |7|Pieza de base sobre la que se añaden Skills y MCPs|
 |8|El `task.md` como fuente de verdad para los agentes developer y reviewer|
+|23|Se formaliza la relación con [[odd|ODD]]: SDD es una rama explícita dentro de ODD, no una alternativa que compite con él|
 
 ---
 
