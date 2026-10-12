@@ -3,7 +3,7 @@ type: Concepto
 title: "El Arnés Completo"
 description: "Metáfora central de la serie: SDD + Skills + MCPs + Instrucciones como arnés que canaliza la IA hacia el trabajo real"
 tags: [arnes, sdd, skills, mcp, instrucciones, metafora, serie]
-related: [sdd, skills, mcp, copilot-instructions]
+related: [sdd, skills, mcp, copilot-instructions, ai-harness-engineering, odd]
 charla: "Charlas 7-8"
 estado: "✅ Publicado"
 timestamp: "2026-06-17"
@@ -71,6 +71,13 @@ Ficheros en `.github/` y `.claude/` que le dan a la IA el contexto persistente d
 |7|Skills + MCPs — cierre del arnés completo|
 |8|Instrucciones persistentes — cuarta pieza|
 |11|Wiki LLM — el conocimiento como quinta pieza|
+|23|El arnés recibe su nombre de industria ([[ai-harness-engineering]]); [[odd|ODD]] se añade como el comportamiento por defecto cuando no se invoca ninguna pieza explícita|
+
+---
+
+## Charla 23 — el arnés recibe nombre
+
+Todo lo descrito arriba —SDD, Skills, MCPs, instrucciones— tiene nombre fuera de esta serie: se llama **[[ai-harness-engineering|AI harness engineering]]**. Y el propio comportamiento por defecto del agente, cuando no se invoca ninguna de estas piezas explícitamente, también tiene nombre: **[[odd|ODD]]**.
 
 ---
 
@@ -81,3 +88,5 @@ Ficheros en `.github/` y `.claude/` que le dan a la IA el contexto persistente d
 > _"La semana pasada os dieron las riendas. Hoy habéis visto cómo engancharlas al caballo."_ — Cierre Charla 7
 
 > _"La IA nunca se olvida de leerlo."_ — Cierre Charla 8
+
+> _"El arnés tiene nombre: AI harness engineering."_ — Apertura Charla 23
