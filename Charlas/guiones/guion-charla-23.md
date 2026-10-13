@@ -16,95 +16,90 @@ related:
   - "[[rdd]]"
 charla: 23
 estado: borrador
-timestamp: 2026-10-12
+timestamp: 2026-10-13
 ---
 
 # Guión Charla 23 — Comprobar antes de construir: BDD, ODD y el arnés con nombre
 
 ### 14 de octubre de 2026
 
-> Charla con una demo real sobre RCA (BDD). Cierra la mitad "antes de construir" de la etapa Comprobar del ciclo de 6 pasos (introducido en la 22). Es también la primera charla que nombra "el arnés" con su término de industria: **AI harness engineering**. La mitad "después de construir" (ai-code-review, con el framework RDD) queda reservada para una charla futura con su propia demo — no se toca hoy.
+> Charla con una demo real sobre RCA. Cierra la mitad "antes de construir" de la etapa Comprobar, introducida en la charla 22. Toda la sesión gira alrededor de una única idea: **la IA no debería decidir por sí sola qué significa correcto**. Primero se define el criterio de éxito; después se genera y se verifica. BDD, ODD y AI harness engineering aparecen como nombres técnicos al servicio de esa idea, no como tres temas independientes. La mitad "después de construir" queda reservada para una charla futura.
 
 ---
 
 ## Estructura de tiempos
 
 | Bloque | Contenido | Tiempo |
-|--------|-----------|--------|
-| 1. Apertura | Callback a la 22 + el arnés recibe nombre de industria: AI harness engineering | 3 min |
-| 2. BDD, el concepto | Contar el resultado esperado como historia (Gherkin) | 7 min |
-| 3. Demo BDD | Escenario Gherkin sobre RCA → la IA lo implementa y verifica | 10 min |
-| 4. ODD, el contrapeso | El comportamiento por defecto del agente — protocolo real, no solo "un prompt" — callback a la 16 | 10 min |
-| 5. Cierre + puente | "Verifying beats generating" + promesa de la otra mitad | 4 min |
+|---|---|---:|
+| 1. Apertura | Callback a la 22 y tesis única: definir qué significa correcto | 3 min |
+| 2. Escenarios antes de construir | Ejemplo cotidiano, BDD/Gherkin y ejemplo RCA | 8 min |
+| 3. Demo BDD | Implementación y verificación contra el criterio previo | 10 min |
+| 4. Comportamiento por defecto | Dos peticiones observables, ODD y nombre del arnés | 9 min |
+| 5. Cierre y puente | Verificar vale más que generar | 4 min |
 
-**Total ≈ 34 min** (sigue dejando buen margen para preguntas, más que las charlas con dos demos).
+**Total ≈ 34 min** (con margen para preguntas y desviaciones de la demo).
 
----
+## Bloque 1 — Apertura: definir qué significa correcto — 3 min
 
-## Bloque 1 — Apertura: el arnés recibe nombre — 3 min
+_"La semana pasada montamos un ciclo de seis pasos que vale para cualquier trabajo, con IA o sin ella: Idea, Especificar, Construir, Comprobar, Publicar y Mantener. Y dejamos una parada coja: Comprobar. Hoy vamos a cerrar la mitad que ocurre ANTES de construir. La mitad de después tendrá su propia charla y su propia demo."_
 
-> *"La semana pasada montamos un ciclo de seis pasos que vale para cualquier trabajo, con IA o sin ella: Idea, Especificar, Construir, Comprobar, Publicar, Mantener. Y dejé una parada coja: Comprobar. Hoy empezamos a cerrarla — la primera mitad, la de ANTES de construir. La segunda mitad, la de DESPUÉS, la dejo para otro día, con su propia demo, porque merece tiempo propio."*
+_"La IA genera cada vez más deprisa. Pero generar deprisa no sirve de mucho si nadie ha definido antes qué significa que el resultado esté bien."_
 
-**El nombre del arnés:**
+_"Esa es toda la idea de hoy: no le pedimos a la IA que adivine qué significa correcto. Se lo decimos antes de empezar."_
 
-> *"Y antes de entrar, una cosa que quiero deciros porque le da peso a todo lo que lleváis siete charlas escuchando. Esto que yo llamo 'el arnés' —SDD, skills, MCPs, instrucciones persistentes, memoria— no es una metáfora que me haya inventado yo solo en una charla cualquiera. Tiene nombre en la industria: se llama **AI harness engineering**. Lo usa gente de OpenAI, lo ha escrito Martin Fowler, y lo usa también una comunidad hispanohablante enorme detrás de un proyecto llamado Gentleman Programming."*
+**En pantalla:**
+
+> **La IA no debería decidir por sí sola qué significa correcto.**
 >
-> *"¿Por qué os cuento esto? Porque significa que lo que hacéis aquí cada semana —aprender a poner límites y herramientas alrededor de la IA en vez de confiar en el prompt suelto— no es un capricho nuestro. Es una disciplina con nombre, con gente seria detrás, en varios sitios a la vez."*
+> Primero definimos el criterio. Después generamos y verificamos.
 
-**Frase que debe quedar:**
-> *"El arnés tiene nombre: AI harness engineering. No nos lo hemos inventado nosotros — lo hemos puesto en práctica antes de saber cómo se llamaba."*
+_"Hoy veremos dos niveles. Para lo importante, escribiremos explícitamente el resultado esperado. Para lo pequeño, daremos al agente una disciplina proporcional para no convertir cada cambio en un proceso pesado. Al final pondremos nombre técnico a todo ese sistema."_
 
----
+**Por qué se cambia:** primero se presenta el problema y la tesis. El término «AI harness engineering» se reserva hasta que la audiencia haya visto para qué sirve.
 
-## Bloque 2 — BDD: contar el resultado esperado como historia — 7 min
+## Bloque 2 — Escenarios: contar el resultado esperado antes de construir — 8 min
 
-> *"Empecemos por el antes. ¿Os acordáis de la 16? Vimos SDD — Specification-Driven Development: antes de que la IA construya nada, le describes bien QUÉ quieres. Eso reduce ambigüedad en la entrada."*
->
-> *"BDD —Behavior-Driven Development— es el primo que vigila la salida. En vez de limitarte a describir qué construir, describes cómo sabrás que funciona, contado como una historia."*
+_"Vamos a empezar sin hablar todavía de código. Imaginad una solicitud de vacaciones."_
 
-**El lenguaje de esa historia se llama Gherkin.** Es casi inglés (o español) natural, pero con una estructura fija que tanto una persona como una IA pueden leer sin ambigüedad:
-
-```
-Feature: [nombre de la funcionalidad]
-
-  Scenario: [nombre del caso concreto]
-    Given [situación de partida]
-    When [ocurre una acción]
-    Then [esto es lo que tiene que pasar]
+```gherkin
+Feature: Solicitud de vacaciones
+  Scenario: Solicitar días disponibles
+    Given que tengo días de vacaciones disponibles
+    When solicito tres días
+    Then la solicitud queda registrada para aprobación
 ```
 
-**Las palabras clave (mostrar en pantalla):**
+_"Sin saberlo, acabáis de leer un criterio de éxito. Cualquier persona puede entender la situación, la acción y el resultado esperado. No hemos pedido a la IA que interprete qué sería correcto: se lo hemos contado antes."_
 
-| Palabra | Para qué sirve |
+_"Esta forma de expresar comportamiento tiene un nombre: BDD, Behavior-Driven Development. El lenguaje estructurado se llama Gherkin."_
+
+**En pantalla, solo lo imprescindible:**
+
+| Palabra | Pregunta que responde |
 |---|---|
-| `Feature` | Agrupa varios escenarios bajo una misma funcionalidad |
-| `Scenario` | Un caso concreto, con nombre descriptivo |
-| `Given` | El estado de partida — lo que ya es verdad antes de actuar |
-| `When` | La acción que dispara el comportamiento a probar |
-| `Then` | El resultado esperado — lo que se verifica |
-| `And` / `But` | Encadenan pasos sin repetir Given/When/Then |
+| Feature | ¿Qué capacidad describimos? |
+| Scenario | ¿Qué caso concreto comprobamos? |
+| Given | ¿De qué situación partimos? |
+| When | ¿Qué acción ocurre? |
+| Then | ¿Qué resultado debe cumplirse? |
+| And / But | ¿Qué condiciones adicionales existen? |
 
-**Ejemplo neutro, para que se entienda antes de ir a RCA:**
+_"Lo importante no es memorizar las palabras en inglés. Es el orden mental: situación, acción y resultado observable."_
+
+**Ejemplo sencillo de software:**
 
 ```gherkin
 Feature: Inicio de sesión
-
-  Scenario: Credenciales correctas
-    Given que estoy en la página de login
-    When introduzco un email y contraseña válidos
-    Then accedo a mi panel de usuario
-
   Scenario: Contraseña incorrecta
-    Given que estoy en la página de login
+    Given que estoy en la página de acceso
     When introduzco un email válido y una contraseña incorrecta
     Then veo un mensaje de error
 ```
 
-**Ejemplo sobre RCA (puente hacia la demo del Bloque 3):**
+**Ejemplo sobre RCA, puente hacia la demo:**
 
 ```gherkin
 Feature: Carrito de compra
-
   Scenario: Añadir una pieza al carrito
     Given que estoy viendo la ficha de un anillo de resina
     And el carrito está vacío
@@ -113,49 +108,18 @@ Feature: Carrito de compra
     And el precio del anillo se suma al total
 ```
 
-**(Opcional, si hay tiempo o preguntas) Variante con tabla de datos — `Scenario Outline`:** el mismo caso, repetido con distintos valores, sin copiar el escenario entero:
-
-```gherkin
-Feature: Descuentos
-
-  Scenario Outline: Aplicar código de descuento
-    Given que tengo un pedido de <importe> €
-    When aplico el código "<codigo>"
-    Then el total final es <total> €
-
-    Examples:
-      | importe | codigo   | total |
-      | 100     | DTO10    | 90    |
-      | 100     | DTO20    | 80    |
-```
-
-> *"La diferencia con un prompt suelto tipo 'añade un descuento' es que aquí el criterio de éxito está escrito ANTES, en una frase que cualquiera de vosotros —técnico o no— puede leer y entender. Y eso vale tanto para que la IA lo implemente como para que luego lo verifique sola: le das el mismo escenario y le preguntas '¿se cumple esto o no?'."*
-
-**Dos matices técnicos, por si surge la pregunta (no hace falta explicarlos si nadie pregunta):**
-
-> *"Gherkin no ejecuta nada por sí mismo — necesita algo detrás que conecte cada línea con el código real (herramientas como Cucumber o Behave hacen eso normalmente). En la demo de hoy, ese papel lo hace directamente la IA: lee el escenario, lo entiende, y comprueba si el comportamiento implementado lo cumple, sin que nadie escriba esa conexión a mano."*
->
-> *"Y el `Then` es el contrato: una vez escrito, no se negocia después. Si el resultado no coincide, el escenario falla y ya está — no hay 'más o menos funciona'."*
-
-**Reseñable:**
-> *"No le pides a la IA que adivine qué es 'correcto'. Se lo cuentas tú, como una historia, antes de que toque una línea de código."*
+_"Frente a un prompt como ‘añade un carrito’, aquí el criterio de éxito está escrito ANTES, en un formato que puede leer una persona y que la IA puede usar para implementar y verificar."_
 
 **Frase que debe quedar:**
-> *"BDD es el criterio de éxito escrito antes de empezar — y en un idioma que entiende todo el mundo."*
 
-> ⚠️ *Para la charla en vivo (168 personas, 98% no técnicas): mostrar la tabla de keywords y los dos ejemplos (login + RCA) es suficiente. El Scenario Outline y los dos matices técnicos quedan de reserva — solo si sobra tiempo o alguien pregunta "¿y esto cómo se ejecuta de verdad?".*
+> **No le pedimos a la IA que adivine qué es correcto. Se lo contamos antes de que toque el resultado.**
 
-**❓ Pregunta anticipada: "¿BDD solo sirve para features nuevas, o también para fixes?"**
+**Pregunta anticipada: “¿Solo sirve para funcionalidades nuevas?”**
 
-> *"Las dos. Y en un fix es donde más se nota el valor."*
->
-> *"Para una feature, el escenario describe el comportamiento que quieres que exista, antes de que exista. Para un fix, el escenario describe el bug como comportamiento esperado que ahora mismo falla — se escribe antes de tocar el código, no después."*
-
-Ejemplo de fix sobre RCA, si hace falta aterrizarlo:
+_"No. En una corrección de error puede ser incluso más valioso, porque el escenario describe el comportamiento que hoy falla y que no debe volver a romperse."_
 
 ```gherkin
 Feature: Carrito de compra
-
   Scenario: No permitir comprar con stock a cero
     Given que una pieza de resina tiene 0 unidades en stock
     When intento añadirla al carrito
@@ -163,136 +127,180 @@ Feature: Carrito de compra
     And veo un mensaje de "sin stock"
 ```
 
-> *"Si hoy ese escenario falla porque el bug deja añadir piezas sin stock, el escenario ES el ticket del bug, escrito como criterio de éxito. Y lo importante no es solo arreglarlo una vez: ese escenario se queda para siempre en la batería de pruebas. Si alguien, meses después, reintroduce el mismo bug, el escenario vuelve a fallar y lo pilla antes de llegar a producción. Es la diferencia entre 'lo arreglé' y 'no puede volver a pasar sin que algo salte'."*
+_"La diferencia no es solo ‘lo arreglé’. Es ‘no puede volver a pasar sin que una comprobación salte’."_
 
----
+**Reserva técnica, solo si preguntan:** Gherkin no ejecuta nada por sí mismo. Normalmente se conecta con código mediante herramientas de automatización. En la demo, la IA leerá el escenario y contrastará el comportamiento implementado con ese criterio.
 
-## Bloque 3 — Demo BDD sobre RCA — 10 min
+**Por qué se cambia:** el ejemplo cotidiano reduce la barrera técnica. Los nombres BDD y Gherkin aparecen después de entender el patrón, evitando que las siglas se conviertan en el tema.
 
-**[TODO Juan: caso concreto de RCA — se usan los ejemplos ya escritos arriba (carrito / stock a cero), elegir cuál de los dos se monta en vivo]**
+## Bloque 3 — Demo: primero el criterio, después el código — 10 min
 
-> *"Vamos a verlo sobre RCA, mi proyecto de piezas de resina. Escribo el escenario en vivo: dado que [...], cuando [...], entonces [...]."*
+**Caso:** el carrito de RCA. Se reutiliza el mismo escenario mostrado antes para no introducir un segundo problema durante la demo.
 
-Paso a paso:
-1. Escribir el escenario Gherkin en vivo (o mostrarlo ya escrito, según tiempo)
-2. Pasárselo a la IA junto con el código relevante de RCA
-3. La IA implementa (o ajusta) la funcionalidad
-4. La IA verifica el resultado contra el propio escenario — mostrar que el "entonces" se cumple
-
-**Reseñable — pausa aquí:**
-> *"Fijaos en el orden: primero el criterio, luego el código. Si algo falla, no discutimos sobre si 'funciona más o menos' — el escenario dice sí o no."*
-
-**Frase que debe quedar:**
-> *"El escenario no se negocia después. Se escribe antes."*
-
-> ⚠️ *Con solo una demo en la charla, hay margen de sobra — no hace falta correr. Aprovechar para dejar que la sala haga preguntas sobre la marcha en vez de guardarlas todas para el final.*
-
----
-
-## Bloque 4 — ODD: el contrapeso — 8 min
-
-> *"Todo lo de antes suena genial, pero pensad en vuestro día a día. ¿Escribiríais un escenario Gherkin para cambiar el color de un botón? ¿Para arreglar una errata en un texto? Si la respuesta que os viene a la cabeza es 'eso sería una locura', tenéis razón — y hay un nombre para esa otra forma de trabajar."*
-
-> *"Se llama **ODD — Organic Driven Development**. Y aquí viene lo importante, lo que lo diferencia de 'simplemente escribir un prompt': ODD no es la opción ligera que elegís cuando no os apetece hacer las cosas bien. **Es el comportamiento por defecto — pero no porque la IA ya venga así de fábrica, sino porque alguien le escribió esa disciplina en sus instrucciones.** Sin esa instrucción, un agente normal explora algo antes de cambios grandes, sí — pero no clasifica el trabajo, no crea un documento con tareas antes de tocar código, ni se limita a una sola pregunta. Eso, en concreto, es lo que añade el protocolo de ODD."*
-
-**Lo que hace el agente por dentro, paso a paso (esto es lo nuevo — no es solo 'un prompt'):**
-
-1. **Primero decide si es un cambio real o solo una pregunta.** Si solo le pedís explicar o investigar algo, no toca nada — se queda en modo lectura.
-2. **Explora el proyecto, en proporción a lo que le pedís.** Para cambiar un color no relee todo el código; para algo más gordo, mira más.
-3. **Si hay una duda real que importa de verdad, hace como mucho UNA pregunta concreta.** No os interroga con diez preguntas — y si detecta que estáis dando por hecho algo arriesgado sin comprobarlo, os lo señala una vez.
-4. **Clasifica el trabajo: pequeño o sustancial.** La regla es simple: si explorar el proyecto revela dos o más pasos de implementación reales, es sustancial. Si no, es pequeño.
-5. **Pequeño → lo hace y no deja rastro.** Sustancial → **antes de escribir una sola línea de código**, crea un documento con el objetivo, el alcance, los límites y una lista de tareas con sus criterios de aceptación. Y os dice, en una frase, qué documento creó y cuántas tareas tiene.
-6. **Va tarea por tarea.** Cada tarea se marca como terminada solo con prueba observada de que funciona — nunca porque el agente simplemente "diga" que ya está. Cada tarea cierra con su propio commit, con sus tests y su documentación al lado, no después.
-
-**Reseñable — el matiz que de verdad cambia la percepción:**
-> *"Esto no es 'le pido algo y confío'. El propio agente decide si lo que le pedisteis merece un documento con tareas o no, y si merece prueba antes de dar algo por hecho. La diferencia con un prompt suelto es que aquí hay un protocolo detrás, aunque no se vea."*
-
-**❓ Pregunta anticipada (técnica): "¿Cómo sabe el agente que cambiar un color es un cambio menor? ¿Hace falta un agente especial para eso?"**
-
-> *"No. No hay un agente aparte, ni un clasificador distinto evaluando la petición antes de que el agente principal actúe. Es exactamente el mismo modelo que ya conocéis — el que está detrás de Copilot, de Claude Code, de cualquiera— razonando sobre vuestra petición. Lo que cambia es que tiene una regla escrita que debe aplicar DESPUÉS de explorar el proyecto y ANTES de escribir código: 'si al explorar aparecen dos o más pasos de implementación reales, es sustancial — creo el documento antes de tocar nada. Si no, es pequeño — lo hago directamente.'"*
->
-> *"Dicho de otra forma: no se entrena un modelo nuevo ni se construye un motor de reglas aparte del LLM. Se le escribe al mismo modelo un protocolo que tiene que seguir antes de actuar. Eso es, literalmente, lo que significa 'harness engineering' — no cambias el motor, cambias la disciplina que lo rodea."*
-
-> ⚠️ *Nota para Juan, no para la sala: esta regla de clasificación no viene de fábrica en Copilot CLI ni en Claude Code — es una instrucción que gentle-ai inyecta en la configuración del agente que ya tengas. Sin instalar gentle-ai, tu CLI explorará algo de forma natural antes de un cambio grande (eso sí es comportamiento genérico de cualquier buen agente), pero no va a crear un documento de tareas ni a limitarse a una sola pregunta — esa disciplina concreta no está si nadie se la escribe. La buena noticia: no hace falta el repo de gentle-ai para tenerla. Es una instrucción persistente más, como las que ya vimos en la Charla 8. ✅ Ya está hecho: el protocolo ODD (y la convención BDD de `.feature` por carpeta) está añadido al `CLAUDE.md` y al `.github/copilot-instructions.md` de RCA (rama `develop`) — no había ninguna regla incondicional de SDD con la que chocara. Así que si quieres, el Bloque 4 ya se puede demostrar en vivo de verdad, no solo explicar.*
->
-> **Si ya tienes contenido en esos archivos:** no se sustituye, se añade como sección nueva — al final, o junto a cualquier otra regla de comportamiento que ya tengas. El único punto real de fricción sería si ya existe algo que diga "usa siempre SDD/OpenSpec/speckit para toda tarea" de forma incondicional — eso chocaría con que ODD sea el comportamiento por defecto. Si tienes algo así, mátizalo a "solo cuando se pida explícitamente", para que las dos reglas no se contradigan entre sí.
->
-> **ODD, SDD y BDD no son alternativas que compiten — están anidados.** Tal cual lo dice la fuente: *"SDD is a branch inside ODD, entered only by an explicit request or an accepted proposal."* ODD es el chasis que corre siempre (autorizar → explorar → clasificar); SDD es una rama a la que entras deliberadamente, dentro de ese mismo flujo, cuando el trabajo lo merece — invocarlo no cambia nada de cómo funciona SDD hoy, solo define qué pasa cuando NO lo invocas. Y BDD tampoco compite con ninguno de los dos: un escenario Gherkin puede ser precisamente el criterio de aceptación que va dentro del documento de tareas que ODD crea para trabajo sustancial, o dentro de la verificación de un spec completo de SDD. Se combinan, no se excluyen — aunque en pantalla, para la sala, simplificamos a "por defecto / cuando lo pides" porque la relación exacta de anidación es más detalle del que necesita un público no técnico.
-
-**Callback a la 11 (Wiki LLM):** ese documento de la tarea sustancial, además, se guarda — espejado en una memoria propia del proyecto, el mismo concepto que vimos con la Wiki LLM. No se pierde cuando se cierra la sesión.
-
-**Ejemplos sobre RCA, para ver la clasificación en vivo (pequeño vs sustancial):**
-
-| Petición | Clasificación | Qué pasa |
-|---|---|---|
-| "Cambia el color del botón de Añadir al carrito a un tono más cálido" | Pequeño | Lo hace, lo compruebo con un vistazo, no queda ningún documento |
-| "Añade códigos de descuento al carrito" | Sustancial (validar el código, aplicar el descuento, mostrarlo en el resumen = varios pasos reales) | Antes de tocar código, crea el documento de la feature con sus tareas; avanza tarea por tarea con su propio commit cada una |
-
-> *"Y si esa segunda petición me preocupa de verdad por el riesgo — dinero real, cálculo de precios — ahí es donde pido explícitamente un escenario BDD como el de antes. ODD no me lo impide ni me lo sustituye. Es lo que pasa por defecto hasta que yo decido que esto merece más peso."*
-
-**Callback directo a la Charla 16:**
-
-> *"¿Os acordáis de la 16? Dejamos abierta la pregunta de spec manual vs OpenSpec, SDD sí o SDD no para cada tarea. Esto es la respuesta formal: el tamaño o el riesgo del cambio NUNCA activan el peso completo por sí solos. Lo decidís vosotros, explícitamente, pidiendo 'usa SDD' o 'hazme el escenario'. Todo lo demás, por defecto, ya es ODD."*
-
-**En pantalla — cuándo cada uno:**
-
-```
-Por defecto, en cualquier petición             →  ODD (explorar, clasificar, hacer con prueba)
-Tú pides explícitamente spec o escenario       →  SDD / BDD (documento o escenario por escrito)
+```gherkin
+Feature: Carrito de compra
+  Scenario: Añadir una pieza al carrito
+    Given que estoy viendo la ficha de un anillo de resina
+    And el carrito está vacío
+    When pulso "Añadir al carrito"
+    Then el carrito muestra 1 artículo
+    And el precio del anillo se suma al total
 ```
 
-> ⚠️ *Nota para Juan, no para la sala: ODD nunca activa por sí sola la revisión de código (RDD, lo que vimos que se queda para la charla futura de ai-code-review). Son interruptores separados — uno no enciende al otro. No hace falta mencionar RDD por nombre aquí; solo evitar dar la impresión de que "ya vimos la revisión" cuando no es así.*
+**Secuencia:**
 
-**Reseñable:**
-> *"BDD no sustituye al criterio. Es la herramienta para cuando el criterio dice que esto sí merece pararse a escribirlo."*
+1. Mostrar el escenario ya escrito. Redactarlo entero en vivo añade riesgo y no refuerza la tesis.
+2. Pasarlo a la IA con el contexto necesario de RCA.
+3. Pedir que implemente o ajuste la funcionalidad.
+4. Pedir que verifique el resultado contra el mismo escenario.
+5. Mostrar evidencia observable para cada `Then`.
+
+**Pausa deliberada tras verificar:**
+
+_"Fijaos en lo que NO ha ocurrido."_
+
+_"No hemos discutido si nos gusta. No hemos discutido si ‘parece que funciona’. No hemos permitido interpretaciones distintas sobre el resultado. El criterio estaba escrito antes de empezar y, al terminar, lo hemos contrastado con ese mismo criterio."_
+
+_"Esto no significa que una comprobación garantice toda la calidad. Significa algo más preciso: para este comportamiento concreto sabemos de antemano qué evidencia necesitamos observar."_
+
+**En pantalla:**
+
+> **El escenario no se negocia después. Se escribe antes.**
+
+**Por qué se cambia:** la pausa transforma la demo en aprendizaje. Sin ella, la sala podría recordar únicamente que la IA programó un carrito y perder la idea central.
+
+## Bloque 4 — Un comportamiento proporcional por defecto — 9 min
+
+_"Ahora aparece el problema contrario. ¿Escribiríamos un escenario formal para cambiar el color de un botón o corregir una errata? No. Si cada cambio pequeño activara un proceso completo, añadiríamos más fricción que valor."_
+
+_"Veamos primero dos comportamientos y después les ponemos nombre."_
+
+### Caso 1: cambio pequeño
+
+**Petición:** “Cambia el color del botón de Añadir al carrito a un tono más cálido.”
+
+```text
+Explora lo necesario
+→ determina que es un cambio pequeño
+→ realiza el cambio
+→ muestra una comprobación observable
+→ termina sin documentación innecesaria
+```
+
+### Caso 2: cambio sustancial
+
+**Petición:** “Añade códigos de descuento al carrito.”
+
+```text
+Explora el proyecto
+→ detecta varios pasos reales
+→ crea antes un documento con objetivo, alcance, límites y tareas
+→ trabaja tarea por tarea
+→ cierra cada tarea con evidencia
+```
+
+_"No hay un agente para cambios pequeños y otro para cambios grandes. Es el mismo modelo siguiendo un protocolo persistente: primero explora, después clasifica y solo entonces actúa."_
+
+_"Ese comportamiento por defecto tiene un nombre en el enfoque que estamos usando: ODD, Organic Driven Development. Pero la sigla no es lo importante. Lo importante es que el agente no improvisa el proceso en cada conversación."_
+
+**Reglas que sí merece la pena contar:**
+
+- Si la petición solo pide explicar o investigar, no modifica nada.
+- Explora en proporción al cambio.
+- Solo pregunta cuando existe una duda relevante.
+- Distingue trabajo pequeño de trabajo sustancial.
+- Para trabajo sustancial, deja plan y criterios antes de modificar código.
+- No declara una tarea terminada sin evidencia observada.
+
+_"¿Dónde entra BDD? Cuando el comportamiento importa o el riesgo merece dejar el criterio por escrito. ODD aporta disciplina proporcional por defecto. BDD formaliza qué significa correcto cuando nuestro criterio profesional decide que hace falta."_
+
+_"Esto es, además, la respuesta formal a algo que dejamos abierto en la charla 16: ¿spec manual o SDD con OpenSpec para cada tarea? Ya no lo decide el tamaño ni el riesgo del cambio por sí solos — lo decidís vosotros, explícitamente, pidiendo spec o escenario. Todo lo demás, por defecto, es esto que acabamos de ver."_
+
+```text
+Por defecto
+→ explorar, clasificar, actuar y demostrar
+
+Cuando el comportamiento importa o el riesgo lo exige
+→ escribir el criterio de éxito antes de construir
+```
+
+### Ahora sí: el arnés recibe nombre
+
+_"Todo lo que llevamos varias charlas colocando alrededor de la IA —instrucciones persistentes, memoria, skills, MCPs, especificaciones, criterios, comprobaciones y límites— tiene un nombre en la industria: AI harness engineering."_
+
+_"No consiste en cambiar el motor. Consiste en diseñar la disciplina, las herramientas y las verificaciones que rodean al modelo para que el sistema sea más útil y controlable."_
 
 **Frase que debe quedar:**
-> *"No todo necesita un escenario. Pero lo que de verdad importa, sí — y el agente, bien configurado, ya sabe distinguir uno de otro."*
 
----
+> **El arnés no hace más inteligente al modelo. Hace más disciplinado el sistema.**
 
-## Bloque 5 — Cierre + puente — 4 min
+**Reserva técnica:** no explicar el umbral exacto de clasificación, los commits por tarea ni el árbol completo ODD/SDD/BDD salvo pregunta. Son detalles válidos, pero competirían con la tesis.
 
-> *"Recolocad esto en el ciclo de la semana pasada: hoy cerramos la mitad de 'Comprobar' que va ANTES de construir. BDD para lo que pesa, ODD para el resto — las dos son formas de no dejar que la IA decida sola qué es 'correcto'."*
+**Nota para Juan:** el protocolo ODD y la convención BDD están añadidos a `CLAUDE.md` y `.github/copilot-instructions.md` de RCA en `develop`. La demo ODD solo debe hacerse en vivo si el ensayo reproduce de forma estable ambos comportamientos. Si no, utilizar capturas o una secuencia preparada. La tesis no puede depender de que el modelo clasifique perfectamente una petición en directo.
 
-**Frase de cierre — tomada de la propia industria (Gentleman Programming / Alan Buscaglia):**
+**Nota para Juan (revisión):** ODD nunca activa por sí sola la revisión de código (RDD, reservado para la charla futura de ai-code-review) — son interruptores separados, uno no enciende al otro. No hace falta mencionar RDD por nombre en la sala; solo evitar que, si alguien pregunta por revisión de PRs aquí, suene como si ya se hubiera cubierto.
 
-> *"Y me quedo con una frase que resume todo el espíritu de esta charla, y que no es mía: **'verifying beats generating'** — verificar vale más que generar. No importa lo rápido que la IA escriba. Importa si lo que escribió es lo correcto, y eso solo se sabe comprobando."*
+**Por qué se cambia:** ODD se entiende primero mediante conductas observables. AI harness engineering llega como conclusión que organiza algo que la audiencia ya ha visto, no como una etiqueta abstracta de apertura. Se mantiene en el cierre del bloque (y no al principio de la charla, como en el borrador anterior) porque el resto de la sesión ya está construida como una progresión hacia ese nombre — moverlo a la apertura rompería ese arco sin arreglar nada más.
 
-**Puente a la mitad que falta:**
+## Bloque 5 — Cierre: verificar vale más que generar — 4 min
 
-> *"Queda la otra mitad: comprobar DESPUÉS de construir — lo que ya existe, lo que ya lleva meses en producción. Esa va con su propia charla, su propia demo, y un nombre que hoy no os doy todavía: porque merece el tiempo completo, no un resumen con prisa al final de esta sesión."*
+_"Recolocadlo en el ciclo anterior. Hoy hemos trabajado la mitad de Comprobar que ocurre ANTES de construir: definir el resultado esperado y decidir cuánta formalidad merece cada tarea."_
 
-**Frase final:**
-> *"Hoy aprendisteis a comprobar antes de empezar. La semana que viene —o cuando toque— aprendéis a comprobar lo que ya está hecho."*
+_"Para lo importante, el criterio de éxito se escribe. Para lo pequeño, el agente sigue una disciplina proporcional. En ambos casos evitamos que sea la IA quien decida sin reglas qué significa que algo está bien."_
 
----
+> **Verifying beats generating. Verificar vale más que generar.**
+
+_"La calidad de una solución generada por IA no depende de lo bien que genere. Depende de lo claro que hayamos definido qué significa que esté bien y de la evidencia con la que podamos comprobarlo."_
+
+**Puente:**
+
+_"Hoy hemos comprobado antes de construir. Queda la otra mitad: revisar lo que ya se ha construido, detectar problemas y demostrar que sigue cumpliendo lo esperado. Esa tendrá su propia charla y su propia demo."_
+
+**Última pantalla:**
+
+> **La IA es muy buena generando.**
+>
+> **El trabajo profesional consiste en definir y comprobar qué resultado es el correcto.**
+
+**Por qué se cambia:** se conserva la frase de industria, pero se traduce en una conclusión propia y accionable. La audiencia no necesita recordar las siglas para recordar el criterio profesional.
 
 ## Checklist antes del miércoles
 
-### Pendiente de Juan
-- [x] ~~Revisar si `CLAUDE.md`/`copilot-instructions.md` de RCA ya obliga a usar SDD/OpenSpec siempre~~ — revisado: no había ninguna regla incondicional, no hacía falta matizar nada.
-- [x] ~~Añadir el protocolo ODD y la convención BDD (`.feature` por carpeta) al `CLAUDE.md` y `.github/copilot-instructions.md` de RCA~~ — subido a la rama `develop`.
-- [x] ~~Elegir cuál de los dos ejemplos Gherkin ya escritos (carrito / stock a cero) se monta en vivo en el Bloque 3~~ — confirmado: el ejemplo del carrito ya escrito en el Bloque 2 es el que se usa en el Bloque 3, sin cambios.
-- [x] ~~Revisar si el ejemplo de ODD (color del botón) encaja o prefieres otro~~ — confirmado: se queda el ejemplo de cambiar el color del botón de "Añadir al carrito".
-- [ ] **Decidir si el Bloque 4 se hace solo en explicación o con demo en vivo del protocolo ODD** — pendiente de que Juan pruebe mañana con Copilot sobre RCA (ya con el fragmento subido) si el flujo completo se comporta como se espera antes de arriesgarse a demostrarlo delante de la sala.
+### Contenido
+- [ ] Visual del ciclo de seis pasos de la charla 22.
+- [ ] Pantalla con la tesis: «La IA no debería decidir por sí sola qué significa correcto».
+- [ ] Ejemplo de vacaciones antes de login y RCA.
+- [ ] BDD, ODD y AI harness engineering solo después de explicar la idea que representa cada término.
 
-### Lunes / Martes
-- [ ] Preparar visual del ciclo de 6 pasos (recordatorio de la 22) para el Bloque 1
-- [ ] Preparar visual del formato Gherkin (dado/cuando/entonces) para el Bloque 2
-- [ ] Preparar el esquema "cuándo ODD / cuándo BDD" del Bloque 4
-- [ ] Ensayo cronometrado — con solo una demo, debería sobrar tiempo; aprovechar para dejar hueco a preguntas en vivo
+### Demo BDD
+- [ ] RCA y escenario del carrito abiertos antes de comenzar.
+- [ ] Ruta de recuperación preparada: código o commit previo para continuar si falla la generación.
+- [ ] Evidencia observable para cada `Then`.
+- [ ] Pausa preparada: «Fijaos en lo que NO ha ocurrido».
 
-### El día de la charla
-- [ ] Escenario Gherkin elegido, abierto y listo para mostrar
-- [ ] Frase final preparada para dejar fija en pantalla
+### ODD
+- [ ] Ensayar «cambiar color» y «añadir descuentos».
+- [ ] Demo en vivo solo si el comportamiento es estable.
+- [ ] Si no lo es, usar capturas o una secuencia preparada. No presentar como determinista lo que no lo es.
 
----
+### Ensayo narrativo
+- [ ] Cronometrar 3 + 8 + 10 + 9 + 4 minutos — cronometrar el Bloque 4 por separado: ahora concentra dos momentos clave (los dos casos ODD y el nombre del arnés) en solo 9 min.
+- [ ] Comprobar que ninguna sigla aparece antes de entender su función.
+- [ ] Mantener tres frases principales:
+  1. «No le pedimos a la IA que adivine qué significa correcto».
+  2. «El escenario no se negocia después. Se escribe antes».
+  3. «Verificar vale más que generar».
 
-## Decisiones abiertas (para cerrar contigo)
+## Decisiones aplicadas y motivo
 
-1. **Caso de la demo BDD (Bloque 3):** ✅ cerrado — se usa uno de los ejemplos ya escritos en el Bloque 2 (carrito o stock a cero); falta solo que elijas cuál.
-2. **Estructura general:** ✅ cerrado — la 23 se queda solo con BDD + ODD; ai-code-review (con el framework RDD y su propia demo) se mueve entera a una charla futura.
-3. **Encaje de "AI harness engineering" / "verifying beats generating":** ✅ cerrado — el nombre del arnés se da en la apertura (Bloque 1); la frase "verifying beats generating" cierra la charla (Bloque 5). RDD se reserva íntegro para la charla de ai-code-review, para que llegue con fuerza completa junto a su demo.
-4. **PR/MR de RCA, GitLab Duo, y las dos técnicas de revisión (terminal + reviewer publicado):** ya investigadas en esta sesión, pero no se usan en la 23 — quedan guardadas para cuando se planifique la charla de ai-code-review. No hace falta volver a investigarlas desde cero.
-5. **Nombre/número de la charla futura de ai-code-review + RDD:** por definir.
+- **Tesis central:** una sola idea gobierna la charla: definir y comprobar qué significa correcto. Reduce la carga cognitiva.
+- **AI harness engineering:** se mueve al final del bloque 4, como conclusión tras mostrar ODD en acción — decisión tomada a propósito, no heredada: rompe la apertura original (donde el nombre daba autoridad desde el minuto 1) a cambio de un remate más fuerte.
+- **Ejemplo no técnico:** vacaciones abre BDD. Permite que la audiencia no técnica entienda el patrón antes del código.
+- **BDD/Gherkin:** se reduce a la estructura mínima necesaria. La sintaxis no compite con el aprendizaje.
+- **Demo:** reutiliza el escenario del carrito y añade una pausa narrativa. Se destaca el criterio previo, no la capacidad de generación.
+- **ODD:** se presenta mediante dos comportamientos observables. La teoría se explica después de ver sus efectos.
+- **Siglas:** cada término se retrasa hasta después de explicar su función.
+- **Callback a la 16:** recuperado como una frase dentro del Bloque 4 — la pregunta abierta en esa charla (spec manual vs OpenSpec) tiene ahora respuesta formal y explícita, no solo disponible si alguien pregunta.
+- **Separación ODD/RDD:** recuperada como nota solo para Juan — evita dar la impresión en Q&A de que la revisión de código ya se cubrió.
+- **Cierre:** «verifying beats generating» se acompaña de una conclusión propia y accionable.
+- **Revisión posterior:** continúa fuera de esta sesión para preservar el foco.
