@@ -1,0 +1,28 @@
+name: Trigger biblioteca rebuild
+
+# Cada push a main en este vault dispara un rebuild del sitio de charlas
+# (Juaaaaan/charlas en Vercel), para que la Biblioteca recoja el contenido
+# nuevo sin tener que redesplegar a mano.
+#
+# Requiere un repository secret VERCEL_DEPLOY_HOOK_URL con la URL del
+# Deploy Hook creado en Vercel (Project Settings -> Git -> Deploy Hooks).
+# Si el secreto no está configurado, este workflow no hace nada dañino:
+# el curl falla y el job se marca en rojo, pero no afecta al vault.
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  trigger-vercel-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Llamar al Deploy Hook de Vercel
+        env:
+          DEPLOY_HOOK_URL: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -z "$DEPLOY_HOOK_URL" ]; then
+            echo "VERCEL_DEPLOY_HOOK_URL no está configurado como secret. Nada que disparar."
+            exit 1
+          fi
+          curl -fsS -X POST "$DEPLOY_HOOK_URL"
