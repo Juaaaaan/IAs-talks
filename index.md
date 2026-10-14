@@ -3,7 +3,7 @@ type: Indice
 title: "IAs-talks — Índice del vault"
 description: "Mapa de navegación del vault de conocimiento de la serie de charlas de IA. Punto de entrada para agentes y colaboradores."
 tags: [indice, navegacion, vault, wiki-llm]
-timestamp: "2026-10-07"
+timestamp: "2026-10-14"
 ---
 
 # IAs-talks — Índice del vault
@@ -21,10 +21,10 @@ IAs-talks/
 ├── CLAUDE.md              ← instrucciones para agentes que trabajan en el vault
 ├── Charlas/              ← resumen narrativo de cada charla
 │   └── guiones/          ← scripts completos para el ponente
-├── Conceptos/            ← 53 conceptos, uno por fichero, clasificados por nivel
-│   ├── nivel-1-fundamentos/  ← conceptos de la serie de charlas (10)
-│   ├── nivel-2-intermedios/  ← conceptos técnicos intermedios (15)
-│   ├── nivel-3-avanzados/    ← patrones y arquitecturas (15)
+├── Conceptos/            ← 57 conceptos, uno por fichero, clasificados por nivel
+│   ├── nivel-1-fundamentos/  ← conceptos de la serie de charlas (12)
+│   ├── nivel-2-intermedios/  ← conceptos técnicos intermedios (16)
+│   ├── nivel-3-avanzados/    ← patrones y arquitecturas (16)
 │   └── nivel-4-frontera/     ← tecnologías emergentes 2026-2027 (13)
 ├── Demos/                ← paso a paso de demos en vivo
 ├── Recursos/             ← ficheros de referencia y configuración
@@ -46,30 +46,41 @@ IAs-talks/
 | [[guion-charla-12]]                       | Charla 12 — Guión con frases de J.C. Jover              | ✅ Impartida |
 | [[charla-13-copilot-studio-metricas]]     | Charla 13 — Copilot Studio, agentes y métricas          | ✅ Impartida |
 | [[guion-charla-13]]                       | Charla 13 — Guión, demo handbook corporativo + Teams    | ✅ Impartida |
-| [[material-charla-14-gobernanza]]         | Charla 14 — Gobernanza de la IA (EU AI Act, ISO 42001)  | ✅ Impartida |
+| [[charla-14-gobernanza]]                  | Charla 14 — Gobernanza de la IA: Shadow AI, EU AI Act   | ✅ Impartida |
+| [[material-charla-14-gobernanza]]         | Charla 14 — Material exhaustivo de gobernanza           | ✅ Impartida |
 | [[guion-charla-14]]                       | Charla 14 — Guión gobernanza                            | ✅ Impartida |
-| [[MATERIAL-CHARLA-15-SEGURIDAD]]          | Charla 15 — Seguridad en sistemas con IA                | ✅ Impartida |
+| [[charla-15-seguridad]]                   | Charla 15 — Seguridad en IA: dato e instrucción          | ✅ Impartida |
+| [[MATERIAL-CHARLA-15-SEGURIDAD]]          | Charla 15 — Material, 9 brechas documentadas            | ✅ Impartida |
 | [[guion-charla-15]]                       | Charla 15 — Guión seguridad                             | ✅ Impartida |
-| [[MATERIAL-CHARLA-16-SDD-HERRAMIENTAS]]   | Charla 16 — SDD con herramientas: spec manual vs OpenSpec | ✅ Impartida |
+| [[charla-16-sdd-herramientas]]            | Charla 16 — SDD con herramientas: spec manual vs OpenSpec | ✅ Impartida |
+| [[MATERIAL-CHARLA-16-SDD-HERRAMIENTAS]]   | Charla 16 — Material post-charla (guía exhaustiva)      | ✅ Impartida |
 | [[guion-charla-16]]                       | Charla 16 — Guión, demo OpenSpec + Claude Code          | ✅ Impartida |
+| [[charla-17-elegir-ia]]                   | Charla 17 — Elegir bien la IA: herramienta, modelo, modo | ✅ Impartida |
 | [[guion-charla-17]]                       | Charla 17 — Elegir bien la IA: herramienta, modelo y modo de trabajo | ✅ Impartida |
 | [[MATERIAL-CHARLA-17-ELEGIR-IA]]          | Charla 17 — Material post-charla (guía exhaustiva)      | ✅ Impartida |
+| [[charla-18-como-piensa-la-ia]]           | Charla 18 — Abriendo la caja: cómo piensa la IA por dentro | ✅ Impartida |
 | [[guion-charla-18]]                       | Charla 18 — Abriendo la caja: cómo piensa la IA por dentro | ✅ Impartida |
 | [[MATERIAL-CHARLA-18-COMO-PIENSA-LA-IA]]  | Charla 18 — Material post-charla (cómo piensa la IA por dentro) | ✅ Impartida |
+| [[charla-19-de-responder-a-actuar]]       | Charla 19 — De responder a actuar: equipo de agentes    | ✅ Impartida |
 | [[MATERIAL-CHARLA-19-DE-RESPONDER-A-ACTUAR]] | Charla 19 — De responder a actuar: equipo de agentes y checkpoint humano | ✅ Impartida |
 | [[guion-charla-19]]                       | Charla 19 — Guión, demo Analista de RFP + Excel         | ✅ Impartida |
+| [[charla-20-el-ejecutor-abierto]]         | Charla 20 — El ejecutor abierto: OpenCode vs Claude Code | ✅ Impartida |
 | [[MATERIAL-CHARLA-20-EL-EJECUTOR-ABIERTO]] | Charla 20 — El ejecutor abierto: OpenCode vs Claude Code | ✅ Impartida |
 | [[guion-charla-20]]                       | Charla 20 — Guión, el menú de OpenCode                  | ✅ Impartida |
 | —                                          | Charla 21 — Copilot, WorkIQ y PowerPoints (impartida por un compañero, sin ficha en el vault) | ✅ Impartida |
-| [[guion-charla-22]]                       | Charla 22 — Pregúntale primero: mentalidad IA-first     | ✅ Impartida |
+| [[charla-22-preguntale-primero]]          | Charla 22 — Pregúntale primero: mentalidad IA-first     | ✅ Impartida |
+| [[MATERIAL-CHARLA-22-PREGUNTALE-PRIMERO]] | Charla 22 — Material post-charla (mentalidad IA-first)  | ✅ Impartida |
+| [[guion-charla-22]]                       | Charla 22 — Guión, mentalidad IA-first                  | ✅ Impartida |
+| [[charla-23-comprobar-antes-de-construir]] | Charla 23 — Comprobar antes de construir: BDD, ODD, AI harness engineering | ✅ Impartida |
+| [[guion-charla-23]]                       | Charla 23 — Guión, demo BDD sobre RCA                   | ✅ Impartida |
 
-Serie en curso (**7–22 impartidas**, con la 21 fuera del pipeline del vault por no haberla dado Juan). El arco narrativo del **arnés completo** se cerró en la Charla 13; a partir de la 14 la serie continúa con bloques temáticos: gobernanza, seguridad, herramientas SDD, elección de IA, mecanismos internos de la IA, de responder a actuar (agentes que ejecutan), el ejecutor abierto, y en la 22 la mentalidad IA-first. **Próxima: por definir.**
+Serie en curso (**7–23 impartidas**, con la 21 fuera del pipeline del vault por no haberla dado Juan). El arco narrativo del **arnés completo** se cerró en la Charla 13; a partir de la 14 la serie continúa con bloques temáticos: gobernanza, seguridad, herramientas SDD, elección de IA, mecanismos internos de la IA, de responder a actuar (agentes que ejecutan), el ejecutor abierto, mentalidad IA-first, y en la 23 comprobar antes de construir (BDD, ODD, AI harness engineering — récord de asistencia de la serie con 141 personas). La mitad "después de construir" de Comprobar (ai-code-review + RDD) queda reservada para una charla futura. **Próxima: por definir.**
 
 ---
 
-## Conceptos (53)
+## Conceptos (57)
 
-### nivel-1-fundamentos (10)
+### nivel-1-fundamentos (12)
 
 | Fichero | Descripción |
 |---|---|
@@ -83,8 +94,10 @@ Serie en curso (**7–22 impartidas**, con la 21 fuera del pipeline del vault po
 | [[prediccion-siguiente-token]] | Cómo la IA "entiende": predice el patrón más probable |
 | [[alucinaciones]] | Cuándo la IA se lo inventa (y cómo protegerte) |
 | [[ia-first]] | Mentalidad: preguntar primero a la IA antes de ejecutar tu propia solución |
+| [[ai-harness-engineering]] | El término de industria para el arnés: no hace más inteligente al modelo, hace más disciplinado el sistema |
+| [[odd]] | Organic Driven Development — disciplina proporcional por defecto para cambios sin escenario formal |
 
-### nivel-2-intermedios (15)
+### nivel-2-intermedios (16)
 
 | Fichero | Descripción |
 |---|---|
@@ -103,8 +116,9 @@ Serie en curso (**7–22 impartidas**, con la 21 fuera del pipeline del vault po
 | [[context-window-management]] | Gestión de la ventana de contexto |
 | [[modelos-abiertos-vs-cerrados]] | Las dos familias del panorama IA (y la residencia de datos) |
 | [[bdd]] | Behavior-Driven Development — verificar contando el resultado esperado como historia |
+| [[gherkin]] | El lenguaje estructurado (Given/When/Then) que usa BDD para describir escenarios |
 
-### nivel-3-avanzados (15)
+### nivel-3-avanzados (16)
 
 | Fichero | Descripción |
 |---|---|
@@ -123,6 +137,7 @@ Serie en curso (**7–22 impartidas**, con la 21 fuera del pipeline del vault po
 | [[model-routing]] | Elegir el modelo correcto para cada tarea |
 | [[caching-cost]] | Optimización de costes y latencia |
 | [[ai-code-review]] | IA revisando pull requests — la revisión como nuevo cuello de botella |
+| [[rdd]] | Review Driven Development — framework reservado para la revisión "después de construir" (charla futura) |
 
 ### nivel-4-frontera (13)
 
@@ -152,6 +167,10 @@ Serie en curso (**7–22 impartidas**, con la 21 fuera del pipeline del vault po
 | [[demo-copilot-instrucciones-charla-8]] | Charla 8 — Copilot con instrucciones |
 | [[demo-faq-onboarding]] | Charla 13 — FAQ de onboarding con handbook corporativo |
 | [[demo-politica-teletrabajo]] | Charla 13 — Política de teletrabajo vía agente + Teams |
+| [[demo-openspec-charla-16]] | Charla 16 — OpenSpec + Claude Code sobre RCA (ticket Jira RCA-21) |
+| [[demo-rfp-charla-19]] | Charla 19 — El Analista de RFP: equipo de agentes con checkpoint humano |
+| [[demo-opencode-charla-20]] | Charla 20 — El menú de OpenCode: elegir el motor |
+| [[demo-bdd-charla-23]] | Charla 23 — BDD con Gherkin sobre el carrito de RCA |
 
 ---
 
@@ -170,9 +189,13 @@ Ficheros de referencia del proyecto Resin Craft Art usados en las demos, y recur
 - `task-rca-20.md` — task de la RCA-20
 - `task-rca-28.md` — task de la RCA-28
 - `glosario-ia-nivel-1.md` — glosario general de IA
+- `opencode.md` — nota de recursos técnica de OpenCode (referenciada desde la Charla 20)
+- `gentle-ai.md` — Gentleman Programming / gentle-ai, framework RDD (referenciado desde la Charla 23)
 - [[novedades-ia-semana-21julio2026]] — novedades IA semana del 21 de julio 2026
 - [[ia-al-dia-semana-18-08-24-08-2026]] — IA al día, semana del 18 al 24 de agosto 2026
 - [[ia-al-dia-semana-25-08-31-08-2026]] — IA al día, semana del 25 al 31 de agosto 2026
+
+> Nota de estructura: varios de los ficheros `-rca.md` de esta lista son en rigor artefactos del proyecto RCA (instrucciones, agentes, tasks) más que recursos generales de la serie — ver propuesta de reclasificación en curso.
 
 ---
 
@@ -192,8 +215,11 @@ Las conexiones principales entre conceptos:
 arnes-completo
 ├── sdd
 │   └── bdd
+│       └── gherkin
 ├── skills
 ├── ia-first
+├── odd
+├── ai-harness-engineering
 └── agente-ia
     ├── copilot-studio
     │   ├── mcp
@@ -214,7 +240,10 @@ ai-native-sdlc
 ├── agentic-workflows
 ├── hooks-approval-gates
 └── ai-code-review
+    └── rdd
 ```
+
+> Este árbol se mantiene a mano y es parcial — no se genera desde los campos `related:` reales del vault. De cara a embeber el grafo en la web de charlas, conviene generarlo a partir del frontmatter, normalizando primero el formato de `related:` (ver nota en [[ias-talks]]).
 
 ---
 
