@@ -1,7 +1,7 @@
 ---
 type: Recurso
 title: "IA al día — Semana del 13 al 19 de octubre de 2026"
-description: "Digest semanal de novedades de IA para la serie IAs-talks. Selección accesible (público mayoritariamente no técnico): Google lanza Gemini 4 Argon a nivel mundial, OpenAI encuentra un dispositivo de grabación oculto en sus oficinas, Liquid AI publica un modelo de razonamiento que corre en un portátil, y sube el uso de IA en entrevistas de trabajo en Reino Unido."
+description: "Digest semanal de novedades de IA para la serie IAs-talks. Selección accesible (público mayoritariamente no técnico): Google lanza Gemini 4 Argon a nivel mundial, OpenAI encuentra un dispositivo de grabación oculto en sus oficinas, Liquid AI publica un modelo de razonamiento que corre en un portátil, TypeSafe AI dispara su valoración con Jev (un modelo de decisiones, no de texto), y sube el uso de IA en entrevistas de trabajo en Reino Unido."
 tags: [recurso, ia-al-dia, novedades, digest-semanal, semana-13-10-2026]
 timestamp: "2026-10-16"
 ---
@@ -52,7 +52,17 @@ Fuente: [The Neuron, 13 oct](https://www.theneuron.ai/digest/everything-that-hap
 
 ---
 
-## 5. De fondo: ¿se puede frenar la carrera de la IA, o solo gobernarla?
+## 5. TypeSafe AI dispara su valoración con Jev, un modelo que no genera texto: decide
+
+**Qué ha pasado.** TypeSafe AI — fundada en 2024 por Diogo Almeida, que pasó cuatro años en OpenAI trabajando en RLHF, InstructGPT, ChatGPT y GPT-4 — lanzó el 15 de septiembre su modelo Jev en acceso limitado, junto a una ronda semilla de 40 millones de dólares liderada por DCVC. Jev no es un modelo generativo: es discriminativo. Recibe un estado y una o varias preguntas de opción cerrada (verdadero/falso, elección, puntuación), las responde todas en paralelo, y devuelve valores tipados con probabilidad y confianza — pensado para que lo consuma software, no personas. TypeSafe dice que responde en 70-500 milisegundos, entre 40 y 200 veces más rápido y hasta 400 veces más barato que un LLM de frontera en pruebas propias. Bloomberg informó el 9 de octubre que la compañía ya habría levantado unos 870 millones de dólares a una valoración de 7.500 millones, liderados por Andreessen Horowitz — sin confirmación oficial de cuándo cerró la ronda.
+
+**Por qué te importa.** Encaja con lo que vimos en la Charla 23: ODD depende de clasificar rápido y barato si un cambio es "pequeño" o "sustancial" antes de decidir cuánto proceso merece. Un modelo como Jev es justo esa pieza — no sustituye al LLM que escribe o razona, resuelve la decisión rápida que hoy delegamos, por comodidad, al mismo modelo grande que hace todo lo demás.
+
+Fuente: [RuntimeWire, 9 oct](https://runtimewire.com/article/typesafe-jev-reported-870m-financing)
+
+---
+
+## 6. De fondo: ¿se puede frenar la carrera de la IA, o solo gobernarla?
 
 **Qué ha pasado.** Un artículo de Noema argumenta que frenar la carrera entre laboratorios de IA puede ser, directamente, imposible — y que la vía realista no es esperar que las empresas se autolimiten, sino construir supervisión externa que funcione aunque la carrera siga.
 
@@ -64,7 +74,7 @@ Fuente: [The Neuron, 13 oct](https://www.theneuron.ai/digest/everything-that-hap
 
 ## El hilo de la semana
 
-Un modelo de frontera disponible para todo el mundo (Gemini 4 Argon) y, en paralelo, un modelo abierto que cabe en un portátil (Liquid AI): la carrera de arriba y la alternativa de abajo avanzan a la vez. Y mientras tanto, la IA sigue entrando por la puerta de atrás en sitios que no esperábamos — una entrevista de trabajo, una sala de reuniones — antes de que nadie haya terminado de decidir las reglas. El patrón de la serie se repite: la tecnología no espera a la gobernanza, así que la gobernanza tiene que aprender a correr.
+Un modelo de frontera disponible para todo el mundo (Gemini 4 Argon), un modelo abierto que cabe en un portátil (Liquid AI), y un modelo que ni siquiera genera texto — solo decide, 200 veces más rápido (Jev): la IA se está partiendo en especialidades distintas en vez de converger en una sola. Y mientras tanto, sigue entrando por la puerta de atrás en sitios que no esperábamos — una entrevista de trabajo, una sala de reuniones — antes de que nadie haya terminado de decidir las reglas. El patrón de la serie se repite: la tecnología no espera a la gobernanza, así que la gobernanza tiene que aprender a correr.
 
 ---
 
