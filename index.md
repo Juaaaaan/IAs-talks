@@ -73,8 +73,9 @@ IAs-talks/
 | [[guion-charla-22]]                       | Charla 22 — Guión, mentalidad IA-first                  | ✅ Impartida |
 | [[charla-23-comprobar-antes-de-construir]] | Charla 23 — Comprobar antes de construir: BDD, ODD, AI harness engineering | ✅ Impartida |
 | [[guion-charla-23]]                       | Charla 23 — Guión, demo BDD sobre RCA                   | ✅ Impartida |
+| [[guion-charla-24]]                       | Charla 24 — Comprobar después de construir: ai-code-review y RDD | 📅 Programada — 28 oct 2026 |
 
-Serie en curso (**7–23 impartidas**, con la 21 fuera del pipeline del vault por no haberla dado Juan). El arco narrativo del **arnés completo** se cerró en la Charla 13; a partir de la 14 la serie continúa con bloques temáticos: gobernanza, seguridad, herramientas SDD, elección de IA, mecanismos internos de la IA, de responder a actuar (agentes que ejecutan), el ejecutor abierto, mentalidad IA-first, y en la 23 comprobar antes de construir (BDD, ODD, AI harness engineering — récord de asistencia de la serie con 141 personas). La mitad "después de construir" de Comprobar (ai-code-review + RDD) queda reservada para una charla futura. **Próxima: por definir.**
+Serie en curso (**7–23 impartidas**, con la 21 fuera del pipeline del vault por no haberla dado Juan; **Charla 24 programada para el 28 de octubre de 2026**). El arco narrativo del **arnés completo** se cerró en la Charla 13; a partir de la 14 la serie continúa con bloques temáticos: gobernanza, seguridad, herramientas SDD, elección de IA, mecanismos internos de la IA, de responder a actuar (agentes que ejecutan), el ejecutor abierto, mentalidad IA-first, comprobar antes de construir en la 23 (BDD, ODD, AI harness engineering — récord de asistencia de la serie con 141 personas) y comprobar después de construir en la 24 (ai-code-review, RDD: candidato congelado, receipt, lentes 4R).
 
 ---
 
@@ -137,7 +138,7 @@ Serie en curso (**7–23 impartidas**, con la 21 fuera del pipeline del vault po
 | [[model-routing]] | Elegir el modelo correcto para cada tarea |
 | [[caching-cost]] | Optimización de costes y latencia |
 | [[ai-code-review]] | IA revisando pull requests — la revisión como nuevo cuello de botella |
-| [[rdd]] | Review Driven Development — framework reservado para la revisión "después de construir" (charla futura) |
+| [[rdd]] | Receipt-Driven Development — candidato congelado, receipt y lentes 4R para revisar código ya construido (Charla 24) |
 
 ### nivel-4-frontera (13)
 
@@ -190,7 +191,7 @@ Ficheros de referencia del proyecto Resin Craft Art usados en las demos, y recur
 - `task-rca-28.md` — task de la RCA-28
 - `glosario-ia-nivel-1.md` — glosario general de IA
 - `opencode.md` — nota de recursos técnica de OpenCode (referenciada desde la Charla 20)
-- `gentle-ai.md` — Gentleman Programming / gentle-ai, framework RDD (referenciado desde la Charla 23)
+- `gentle-ai.md` — Gentleman Programming / gentle-ai, origen de ODD y RDD (referenciado desde las charlas 23 y 24)
 - [[novedades-ia-semana-21julio2026]] — novedades IA semana del 21 de julio 2026
 - [[ia-al-dia-semana-18-08-24-08-2026]] — IA al día, semana del 18 al 24 de agosto 2026
 - [[ia-al-dia-semana-25-08-31-08-2026]] — IA al día, semana del 25 al 31 de agosto 2026

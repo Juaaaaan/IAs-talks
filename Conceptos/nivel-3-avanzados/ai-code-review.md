@@ -3,9 +3,9 @@ type: Concepto
 title: "IA en el review de PRs — La revisión como cuello de botella"
 description: "Usar agentes para revisar pull requests: capas de review agéntico + review humano reservado a lo crítico. Cuando la IA escribe el código, revisar es el nuevo tapón."
 tags: [code-review, pull-request, revision, agentes, calidad, ci]
-related: [orchestration-patterns, agentes-multiples, eval-benchmarking, ai-native-sdlc, github-actions]
+related: [orchestration-patterns, agentes-multiples, eval-benchmarking, ai-native-sdlc, github-actions, rdd]
 estado: "✅ Publicado"
-timestamp: "2026-09-17"
+timestamp: "2026-10-27"
 ---
 
 # IA en el review de PRs — La revisión como cuello de botella
@@ -54,6 +54,7 @@ El patrón de coordinación developer/reviewer está en **[[orchestration-patter
 - **[[eval-benchmarking]]** — La capa determinista bajo el review
 - **[[ai-native-sdlc]]** — Es la etapa Deploy (review de PRs) del ciclo
 - **[[github-actions]]** — Donde se enganchan los checks automáticos
+- **[[rdd]]** — El modelo de profundidad y trazabilidad *dentro* de la capa de review agéntico: decide cuánto revisar cada candidato (proporcional al riesgo) y deja constancia en un receipt, sin apropiarse de la autoridad de entrega reservada al review humano (Charla 24)
 
 ---
 
