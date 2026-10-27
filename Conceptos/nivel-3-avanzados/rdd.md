@@ -125,6 +125,10 @@ Deliberadamente **no** se introdujo en la Charla 23 — se reservó junto con la
 |---|---|
 | Charla 24 (28 oct 2026) | Introduce RDD con nombre: candidato congelado, receipt, niveles de profundidad y lentes 4R, demostrados mediante dos PR de contraste |
 
+## Implementación sobre RCA
+
+El reviewer agent de la Charla 8 no clasificaba riesgo ni producía receipt. [[rdd-reviewer-rca]] contiene el contenido preparado para extenderlo — checks deterministas, clasificación de riesgo, disparo de las 4R y plantilla de receipt — más el bloque de protocolo para las instrucciones persistentes de RCA, junto al de ODD y BDD.
+
 ---
 
 ## Referencias

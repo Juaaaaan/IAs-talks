@@ -3,7 +3,7 @@ type: Recurso
 title: "reviewer.agent.md — Agente reviewer para Copilot (RCA)"
 description: "Agente especializado en revisión para GitHub Copilot CLI. Solo lectura. Verifica criterios del task.md y genera informe. Vive en .github/agents/reviewer.agent.md."
 tags: [recurso, agente, reviewer, copilot, rca, revision, calidad]
-related: [agentes-multiples, developer-agent-github-rca, copilot-instructions]
+related: [agentes-multiples, developer-agent-github-rca, copilot-instructions, rdd-reviewer-rca]
 charla: "Charla 8"
 estado: "✅ Publicado"
 timestamp: "2026-07-02"

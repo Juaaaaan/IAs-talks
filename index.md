@@ -185,6 +185,7 @@ Ficheros de referencia del proyecto Resin Craft Art usados en las demos, y recur
 - `components-instructions-rca.md` — instrucciones para componentes
 - `developer-agent-github-rca.md` — agente developer para Copilot
 - `reviewer-agent-github-rca.md` — agente reviewer para Copilot
+- `rdd-reviewer-rca.md` — reviewer extendido con RDD (candidato congelado, checks, riesgo, 4R, receipt) y bloque de protocolo para CLAUDE.md/copilot-instructions.md — preparado para la Charla 24, pendiente de aplicar en RCA
 - `developer-agent-claude-rca.md` — agente developer para Claude
 - `reviewer-agent-claude-rca.md` — agente reviewer para Claude
 - `task-rca-20.md` — task de la RCA-20
