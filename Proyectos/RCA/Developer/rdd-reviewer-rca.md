@@ -1,17 +1,17 @@
 ---
 type: Recurso
 title: "RDD para el reviewer de RCA — reviewer.agent.md extendido + protocolo"
-description: "Contenido preparado para extender el reviewer agent de RCA (Copilot CLI / Claude Code) con RDD: congelar candidato, lanzar deterministas, clasificar riesgo, aplicar 4R si procede, y producir receipt. Incluye el bloque para CLAUDE.md/copilot-instructions.md y los pasos para generar los dos receipts de la demo de la Charla 24. Pendiente de aplicar en Resin-Craft — Claude no tiene permisos de escritura ahí."
+description: "Contenido que extiende el reviewer agent de RCA (Copilot CLI / Claude Code) con RDD: congelar candidato, lanzar deterministas, clasificar riesgo, aplicar 4R si procede, y producir receipt. Incluye el bloque para CLAUDE.md/copilot-instructions.md y los pasos para generar receipts. Aplicado por Juan en RCA y usado para los dos receipts reales de la demo de la Charla 24."
 tags: [recurso, agente, reviewer, rdd, receipt, rca, revision, charla-24]
 related: [reviewer-agent-github-rca, reviewer-agent-claude-rca, developer-agent-github-rca, rdd, ai-code-review, guion-charla-24]
 charla: "Charla 24"
-estado: "preparado — pendiente de aplicar en RCA por Juan"
-timestamp: "2026-10-27"
+estado: "✅ aplicado en RCA y usado en la Charla 24"
+timestamp: "2026-10-28"
 ---
 
 # RDD para el reviewer de RCA
 
-> Preparado como material de apoyo para la Charla 24 (28 oct 2026). El reviewer agent de la Charla 8 verificaba criterios pero no clasificaba riesgo, no diferenciaba un cambio visual de uno sustancial y no dejaba evidencia trazable. Esto lo extiende con RDD. Claude no tiene permisos de escritura en `Juaaaaan/Resin-Craft` — Juan debe aplicar estos dos bloques a mano, en la rama `develop`.
+> Preparado como material de apoyo para la Charla 24 (28 oct 2026, 110 asistentes). El reviewer agent de la Charla 8 verificaba criterios pero no clasificaba riesgo, no diferenciaba un cambio visual de uno sustancial y no dejaba evidencia trazable. Esto lo extiende con RDD. Claude no tiene permisos de escritura en `Juaaaaan/Resin-Craft` — Juan aplicó estos dos bloques a mano, en la rama `develop`, y los usó para generar los dos receipts reales de la demo, cada uno en una sesión separada.
 
 ---
 

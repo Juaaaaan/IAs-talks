@@ -5,8 +5,8 @@ description: "Modelo para revisar código generado con IA: vincula evidencia a u
 tags: [rdd, code-review, revision, receipt, candidato-congelado, gentle-ai, calidad]
 related: [ai-code-review, odd, bdd]
 charla: "Charla 24 — Comprobar después de construir (28 oct 2026)"
-estado: "borrador"
-timestamp: "2026-10-27"
+estado: "✅ Publicado"
+timestamp: "2026-10-28"
 ---
 
 # RDD — Receipt-Driven Development
@@ -117,7 +117,7 @@ RDD organiza la revisión y vincula evidencia al candidato — no se apropia de 
 
 ## Estado en la serie
 
-Deliberadamente **no** se introdujo en la Charla 23 — se reservó junto con la demo de ai-code-review para una charla futura dedicada, para que llegara con tiempo propio en vez de como cierre apresurado. Esa charla es la **Charla 24** (28 de octubre de 2026): guion revisado, demo de contraste con dos PR abiertas (sin fusionar) sobre RCA, cada una con su receipt.
+Deliberadamente **no** se introdujo en la Charla 23 — se reservó junto con la demo de ai-code-review para una charla futura dedicada, para que llegara con tiempo propio en vez de como cierre apresurado. Esa charla fue la **Charla 24** (28 de octubre de 2026, 110 asistentes): demo de contraste con dos PR abiertas (sin fusionar) sobre RCA, revisadas en sesiones separadas, cada una con su receipt.
 
 ## Dónde aparece en la serie
 

@@ -73,9 +73,11 @@ IAs-talks/
 | [[guion-charla-22]]                       | Charla 22 — Guión, mentalidad IA-first                  | ✅ Impartida |
 | [[charla-23-comprobar-antes-de-construir]] | Charla 23 — Comprobar antes de construir: BDD, ODD, AI harness engineering | ✅ Impartida |
 | [[guion-charla-23]]                       | Charla 23 — Guión, demo BDD sobre RCA                   | ✅ Impartida |
-| [[guion-charla-24]]                       | Charla 24 — Comprobar después de construir: ai-code-review y RDD | 📅 Programada — 28 oct 2026 |
+| [[charla-24-comprobar-despues-de-construir]] | Charla 24 — Comprobar después de construir: ai-code-review y RDD | ✅ Impartida |
+| [[MATERIAL-CHARLA-24-COMPROBAR-DESPUES-DE-CONSTRUIR]] | Charla 24 — Material post-charla (ai-code-review, RDD) | ✅ Impartida |
+| [[guion-charla-24]]                       | Charla 24 — Guión, demo de contraste con dos receipts sobre RCA | ✅ Impartida |
 
-Serie en curso (**7–23 impartidas**, con la 21 fuera del pipeline del vault por no haberla dado Juan; **Charla 24 programada para el 28 de octubre de 2026**). El arco narrativo del **arnés completo** se cerró en la Charla 13; a partir de la 14 la serie continúa con bloques temáticos: gobernanza, seguridad, herramientas SDD, elección de IA, mecanismos internos de la IA, de responder a actuar (agentes que ejecutan), el ejecutor abierto, mentalidad IA-first, comprobar antes de construir en la 23 (BDD, ODD, AI harness engineering — récord de asistencia de la serie con 141 personas) y comprobar después de construir en la 24 (ai-code-review, RDD: candidato congelado, receipt, lentes 4R).
+Serie en curso (**7–24 impartidas**, con la 21 fuera del pipeline del vault por no haberla dado Juan). El arco narrativo del **arnés completo** se cerró en la Charla 13; a partir de la 14 la serie continúa con bloques temáticos: gobernanza, seguridad, herramientas SDD, elección de IA, mecanismos internos de la IA, de responder a actuar (agentes que ejecutan), el ejecutor abierto, mentalidad IA-first, comprobar antes de construir en la 23 (BDD, ODD, AI harness engineering — récord de asistencia de la serie con 141 personas) y comprobar después de construir en la 24 (ai-code-review, RDD: candidato congelado, receipt, lentes 4R — 110 asistentes). Con Comprobar cerrado en sus dos mitades, quedan Publicar y Mantener del ciclo de la 22. **Próxima: por definir.**
 
 ---
 
@@ -185,7 +187,7 @@ Ficheros de referencia del proyecto Resin Craft Art usados en las demos, y recur
 - `components-instructions-rca.md` — instrucciones para componentes
 - `developer-agent-github-rca.md` — agente developer para Copilot
 - `reviewer-agent-github-rca.md` — agente reviewer para Copilot
-- `rdd-reviewer-rca.md` — reviewer extendido con RDD (candidato congelado, checks, riesgo, 4R, receipt) y bloque de protocolo para CLAUDE.md/copilot-instructions.md — preparado para la Charla 24, pendiente de aplicar en RCA
+- `rdd-reviewer-rca.md` — reviewer extendido con RDD (candidato congelado, checks, riesgo, 4R, receipt) y bloque de protocolo para CLAUDE.md/copilot-instructions.md — aplicado en RCA y usado en la Charla 24
 - `developer-agent-claude-rca.md` — agente developer para Claude
 - `reviewer-agent-claude-rca.md` — agente reviewer para Claude
 - `task-rca-20.md` — task de la RCA-20

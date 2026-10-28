@@ -5,8 +5,8 @@ description: "Cierra la mitad posterior de Comprobar, abierta en la charla 22 y 
 tags: [charla, guion, ai-code-review, rdd, receipt-driven-development, revision, pull-request, verificacion, comprobar, rca, 4r]
 related: [guion-charla-23, guion-charla-08, guion-charla-22, ai-code-review, rdd, bdd, odd, ai-harness-engineering, arnes-completo]
 charla: 24
-estado: revisado
-timestamp: 2026-10-27
+estado: "✅ Impartida"
+timestamp: 2026-10-28
 ---
 
 # Guión Charla 24 — Comprobar después de construir: ai-code-review y RDD
