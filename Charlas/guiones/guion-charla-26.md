@@ -1,7 +1,7 @@
 ---
 type: guion
 title: "Charla 26 — Retrospectiva: qué hemos visto y para qué sirve cada cosa"
-description: "Repaso para afianzar lo visto en la serie: 38 piezas ordenadas en diez preguntas de trabajo y cuatro tramos. Dinámica de texto difuminado para que la sala responda, consulta al vault con GitHub Copilot Desktop y un vistazo a la Biblioteca web."
+description: "Repaso para afianzar lo visto en la serie: 32 piezas ordenadas en diez preguntas de trabajo y cuatro tramos. Dinámica de texto difuminado para que la sala responda, consulta al vault con GitHub Copilot Desktop y un vistazo a la Biblioteca web."
 tags: [charla, guion, retrospectiva, repaso, arnes, ciclo, biblioteca, dinamica]
 related: [guion-charla-24, guion-charla-23, guion-charla-22, guion-charla-19, guion-charla-13, guion-charla-12, arnes-completo, ai-harness-engineering, ia-first, rdd, odd]
 charla: 26
@@ -13,7 +13,7 @@ timestamp: 2026-11-24
 
 ## 25 de noviembre de 2026
 
-Hoy no se presenta ninguna herramienta nueva. El objetivo es **afianzar**: que cada persona de la sala salga sabiendo, para cada pieza que hemos visto, **qué pregunta responde y para qué sirve**.
+Hoy no se añade otra herramienta a la lista. El objetivo es **afianzar y ordenar**: que cada persona de la sala salga sabiendo, para cada pieza que hemos visto, **qué pregunta responde y para qué sirve**.
 
 La charla se apoya en una dinámica: cada pieza aparece con su descripción **difuminada** y la sala intenta responder en el chat antes de que se revele. Las piezas van de lo más sencillo a lo más avanzado dentro de cada pregunta.
 
@@ -31,14 +31,14 @@ Las partes de pantalla (consulta al vault y Biblioteca) se **ensayan antes** y l
 
 | Bloque | Contenido | Tiempo |
 |---|---|---:|
-| 1. Apertura | Hoy no hay nada nuevo: ponemos orden y jugamos | 3 min |
+| 1. Apertura | No añadimos otra herramienta: ponemos orden y participamos | 3 min |
 | 2. El mapa | Cuatro tramos, diez preguntas | 3 min |
-| 3. Las diez preguntas | 38 piezas, con la dinámica del difuminado | 20 min |
-| 4. Preguntarle al vault | Consulta con GitHub Copilot Desktop, preparada | 5 min |
+| 3. Las diez preguntas | 32 piezas, con 12 intervenciones y revelado ágil del resto | 20 min |
+| 4. Preguntarle al vault | Dos consultas con GitHub Copilot Desktop y fuentes visibles | 5 min |
 | 5. La Biblioteca | Dónde va a vivir todo esto | 2 min |
 | 6. Cierre | La chuleta de preguntas, una acción | 4 min |
 
-**Total aproximado: 37 minutos**, más preguntas.
+**Total aproximado: 37 minutos**, incluidas las intervenciones previstas; las preguntas abiertas quedan para el final.
 
 Si hay que recortar, por este orden: Bloque 5, las preguntas 3 y 6 del Bloque 3 (se revelan sin pedir respuesta), Bloque 4.
 
@@ -46,7 +46,7 @@ Si hay que recortar, por este orden: Bloque 5, las preguntas 3 y 6 del Bloque 3 
 
 # Bloque 1 — Apertura — 3 min
 
-_«Hoy no vengo a enseñaros nada nuevo. Desde el 17 de junio hemos visto muchas piezas. Hoy las ponemos en una mesa, una al lado de otra, para ver para qué sirve cada una.»_
+_«Hoy no vengo a añadir otra herramienta a la lista. Desde el 17 de junio hemos visto muchas piezas. Hoy las ponemos en una mesa, una al lado de otra, para ver para qué sirve cada una.»_
 
 _«Y os pido una cosa: vais a ver cada pieza con su explicación borrosa. Escribid en el chat, con vuestras palabras, para qué creéis que sirve. No hay respuestas malas: leo unas pocas y luego lo aclaramos.»_
 
@@ -59,7 +59,7 @@ Qué hemos visto, qué pregunta responde y para qué sirve
 
 ## Frase que debe quedar
 
-> **Hoy no aprendéis nada nuevo. Hoy ponéis orden a lo que ya sabéis.**
+> **Hoy no añadimos otra herramienta. Hoy ponemos orden a lo que ya sabemos.**
 
 ---
 
@@ -71,10 +71,10 @@ _«Si ponéis las charlas en fila parece una lista de temas. Pero cada una nace 
 
 | Tramo | Preguntas |
 |---|---|
-| **A. Darle contexto** | 1 ¿Cómo le pido las cosas? · 2 ¿Cómo conoce mi trabajo y lo recuerda? · 3 ¿Cómo encuentra lo que necesita en tanta información? |
+| **A. Darle contexto** | 1 ¿Cómo le pido las cosas? · 2 ¿Cómo le doy contexto estable sobre mi trabajo? · 3 ¿Cómo encuentra lo que necesita en tanta información? |
 | **B. Fiarse con cabeza** | 4 ¿Me puedo fiar de lo que dice? · 5 ¿Qué puedo usar y con qué riesgos? · 6 ¿Qué modelo y qué modo uso para cada cosa? |
 | **C. Que haga cosas** | 7 ¿Cómo la conecto con mis herramientas? · 8 ¿Cómo creo un asistente para mi equipo? · 9 ¿Cómo le encargo un trabajo grande sin que se desvíe? |
-| **D. Comprobar** | 10 ¿Cómo sé que está bien? |
+| **D. Comprobar** | 10 ¿Cómo defino y compruebo que está bien? |
 
 _«Cada pieza tiene su nombre y lo que hace. Si no programáis, no pasa nada: las reconoceréis por lo que hacen, no por cómo se llaman.»_
 
@@ -88,21 +88,21 @@ _Las charlas de mi compañero —la 21 sobre Copilot, WorkIQ y PowerPoints, y la
 
 # Bloque 3 — Las diez preguntas — 20 min
 
-## Cómo funciona la dinámica (por pieza, 30–40 segundos)
+## Cómo funciona la dinámica (12 intervenciones, 45–60 segundos cada una)
 
 1. Aparece la **pieza** (nombre y charla donde la vimos). El texto de «para qué sirve» está **difuminado**.
 2. Pregunta a la sala: _«¿Para qué creéis que sirve? Una frase en el chat.»_
-3. Leer **dos o tres** respuestas en voz alta, sin juzgar.
+3. Leer **una o dos** respuestas en voz alta, sin juzgar ni abrir debate en ese momento.
 4. Se revela el texto. Se dice la frase ancla.
 
-Las piezas marcadas con ❓ son las que se **preguntan** a la sala (17 en total). El resto se revela directamente, en unos diez segundos, para no alargar.
+Las piezas marcadas con ❓ son las que se **preguntan** a la sala (12 en total). El resto se revela agrupado y directamente, en unos diez segundos por pieza, para no alargar.
 
 - Si una pieza suena técnica, pregúntala igual con otras palabras: _«Por el nombre, ¿qué creéis que hace?»_ Vale cualquier intuición.
 
-Si la sala tarda en escribir, no esperar: leer lo que haya y seguir.
+Si la sala tarda en escribir: en las primeras tres o cuatro piezas, esperar 20–30 segundos (escribir en el chat lleva su tiempo); después, unos 10. Si nadie escribe, lanzar una intuición propia («yo diría que…») y seguir.
 
 > [!warning] Antes de ponerlo en pantalla
-> Los textos de «para qué sirve» salen de las fichas de `Conceptos/` leídas esta semana. La columna «Charla» solo se rellena donde la ficha o el resumen lo confirma; «—» significa «no confirmado», no «sin charla».
+> Los textos de «para qué sirve» salen de las fichas de `Conceptos/` leídas esta semana. La columna «Charla» solo se rellena donde la ficha o el resumen lo confirma.
 
 ---
 
@@ -114,20 +114,16 @@ Si la sala tarda en escribir, no esperar: leer lo que haya y seguir.
 |---|---|---|---|
 | | Hablar su idioma | 18 | Usar el término correcto («acta de reunión», «resumen ejecutivo») hace que la IA active el patrón adecuado. |
 | ❓ | Dar ejemplos | 18 | Un ejemplo de lo que quieres vale más que tres frases describiéndolo. |
-| | Pídele que piense paso a paso | — | En tareas con varios pasos o lógica mejora el resultado; en tareas simples no hace falta. |
-| ❓ | Pedir la fuente | 17 | Pedirle «cita la frase exacta»: si no puede, desconfía. |
-| | Más que texto: imagen y audio | — | Puede trabajar también con imágenes, audio o vídeo, no solo con texto. |
 
 > **Cómo le pides cambia lo que te devuelve.**
 
-### Pregunta 2 — ¿Cómo hago que conozca mi trabajo y lo recuerde?
+### Pregunta 2 — ¿Cómo le doy contexto estable sobre mi trabajo?
 
 | | Pieza | Charla | Para qué sirve (texto que se difumina) |
 |---|---|---|---|
-| ❓ | Instrucciones persistentes | 8 | Dejar escritas tus reglas para que la IA las siga en cada conversación sin repetírselas. |
+|  | Instrucciones persistentes | 8 | Dejar escritas tus reglas para que la IA las siga en cada conversación sin repetírselas. |
 | ❓ | Skills | 7 | Recetas reutilizables para tareas que repites; se cargan cuando hacen falta. |
 | | Wiki LLM | 11 | Una carpeta de ficheros de texto ordenados que la IA lee y ayuda a mantener, como memoria de largo plazo. |
-| | Memoria de agentes | — | Mecanismos para que un agente recuerde entre sesiones; sin ellos, cada conversación empieza de cero. |
 
 > **Contexto: que no empiece de cero.**
 
@@ -150,8 +146,9 @@ Si la sala tarda en escribir, no esperar: leer lo que haya y seguir.
 
 | | Pieza | Charla | Para qué sirve (texto que se difumina) |
 |---|---|---|---|
-| ❓ | Predicción del siguiente token | 18 | Por dentro solo completa el patrón más probable: predecir no es saber. |
+|  | Predicción del siguiente token | 18 | Por dentro solo completa el patrón más probable: predecir no es saber. |
 | ❓ | Alucinaciones | 18 | Respuestas que suenan seguras y son falsas; con la fuente delante el riesgo baja, sin fuente sigue ahí. |
+|  | Pedir la fuente | 17 | Pedir la fuente o la frase exacta ayuda a comprobar si la respuesta está apoyada o solo suena convincente. |
 | | Verificar según lo que cuesta equivocarse | 17 y 18 | Cuanto más caro es el error, más compruebas: una lectura rápida para un borrador, contraste total y revisión humana para una cifra a cliente. |
 
 > **Que suene seguro no dice nada de si es verdad.**
@@ -160,7 +157,7 @@ Si la sala tarda en escribir, no esperar: leer lo que haya y seguir.
 
 | | Pieza | Charla | Para qué sirve (texto que se difumina) |
 |---|---|---|---|
-| ❓ | Shadow AI | 14 | Usar IA sin reglas claras ni aprobación; casi nunca es rebeldía: aparece cuando faltan reglas claras. |
+|  | Shadow AI | 14 | Usar IA sin reglas claras ni aprobación; casi nunca es rebeldía: aparece cuando faltan reglas claras. |
 | | Gobernanza de IA | 14 | Normas y controles para usarla con responsabilidad: qué datos, qué herramientas aprobadas, quién revisa. |
 | ❓ | Inyección de instrucciones | 15 | Texto externo con órdenes ocultas que manipula a la IA; se defiende por capas, no con una sola barrera. |
 
@@ -172,7 +169,6 @@ Si la sala tarda en escribir, no esperar: leer lo que haya y seguir.
 |---|---|---|---|
 | ❓ | Elegir bien: cuatro decisiones | 17 | «Usar la IA» no es una acción, son cuatro decisiones: herramienta, modelo, modo de trabajo y cuánto verificar. |
 | | Los modos de trabajo | 17 | Preguntar, investigar a fondo, recordar o actuar: elegir el modo según lo que necesitas. |
-| | Modelos abiertos y cerrados | — | Dos familias de modelos; en la empresa pesa también dónde acaban los datos, así que se usa lo aprobado. |
 | | Modelos que razonan (rápido o razonador) | 17 | Piensan antes de responder: más precisos en tareas complejas, más lentos y más caros; para lo simple, el modo rápido. |
 
 > **No os aprendáis los nombres: aprended los criterios.**
@@ -187,7 +183,6 @@ Si la sala tarda en escribir, no esperar: leer lo que haya y seguir.
 |---|---|---|---|
 | ❓ | MCP | 7 | Un enchufe estándar entre la IA y el mundo real (la demo fue con Jira). |
 | | Permisos mínimos | 15 | Darle solo el acceso que necesita: tú decides qué conectas y qué puede hacer. |
-| | Computer use | — | La IA ve la pantalla y maneja una aplicación como lo haría una persona, incluso sin API; es más lento y frágil. |
 
 > **Que pueda leer y actuar en vuestras herramientas, con permiso.**
 
@@ -195,9 +190,9 @@ Si la sala tarda en escribir, no esperar: leer lo que haya y seguir.
 
 | | Pieza | Charla | Para qué sirve (texto que se difumina) |
 |---|---|---|---|
-| ❓ | Agente de IA | 13 | No sigue un guion: razona, y cuando no sabe algo, lo dice. |
-| ❓ | Copilot Studio | 13 | Plataforma de Microsoft para crear agentes propios. |
-| | Métricas de IA | 13 | Datos para saber si el agente funciona: resolución y uso. |
+| ❓ | Agente de IA | 13 | No sigue un guion: razona, usa herramientas y, cuando no sabe algo, lo dice. |
+|  | Copilot Studio | 13 | Plataforma de Microsoft para crear agentes propios. |
+| | Métricas de IA | 13 | Datos para saber si el agente funciona: cuánto se usa, cuánto resuelve y cuánto resuelve sin ayuda de una persona. |
 
 > **Un agente que reconoce lo que no sabe vale más que uno que siempre responde algo.**
 
@@ -206,7 +201,6 @@ Si la sala tarda en escribir, no esperar: leer lo que haya y seguir.
 | | Pieza | Charla | Para qué sirve (texto que se difumina) |
 |---|---|---|---|
 | ❓ | SDD con OpenSpec | 16 | Escribir primero qué quieres y construir después contra eso. |
-| | Planificación y razonamiento | — | Descomponer el trabajo en pasos antes de actuar; con supervisión humana en lo crítico. |
 | | Equipo de agentes | 19 (y 8) | Un orquestador y especialistas, con un punto en el que una persona decide; en la 8, uno construye y otro verifica. |
 | | Ejecutor abierto (OpenCode) | 20 | Un ejecutor que usa el modelo que tú eliges, dentro de tus reglas. |
 
@@ -216,7 +210,7 @@ Si la sala tarda en escribir, no esperar: leer lo que haya y seguir.
 
 ## Tramo D — Comprobar
 
-### Pregunta 10 — ¿Cómo sé que está bien?
+### Pregunta 10 — ¿Cómo defino y compruebo que está bien?
 
 | | Pieza | Charla | Para qué sirve (texto que se difumina) |
 |---|---|---|---|
@@ -247,31 +241,30 @@ _Publicar y Mantener: solo describir que son las dos paradas que hemos rozado. N
 
 _«Todo lo que acabáis de ver no está en mi cabeza: está en una carpeta de ficheros de texto, la Wiki LLM de la charla 11. Vamos a usarla para lo que sirve: hacerle preguntas en lenguaje normal.»_
 
-_«Ya lo preparé ayer, con tres preguntas. Os enseño el resultado paso a paso.»_
+_«Ya lo preparé ayer, con dos preguntas. Os enseño la respuesta, las fichas utilizadas y la frase que permite comprobarla.»_
 
 ## Cómo se hace
 
 - Aplicación: **GitHub Copilot Desktop** abierta sobre una **copia limpia del vault** (ver «Preparación de hoy»).
-- Tres preguntas ya ejecutadas, cada una conectada a una de las diez preguntas del Bloque 3. Enseñar la pregunta, la respuesta y **comprobar la respuesta contra la ficha**.
+- Dos preguntas ya ejecutadas. Para cada una, enseñar: **pregunta → respuesta → fichas utilizadas → frase exacta de respaldo** (unos 2 minutos por pregunta). La conclusión añadida por el modelo, solo si sobra tiempo.
 
 | Pregunta preparada | Debería llevar a |
 |---|---|
 | «Quiero pasar un documento con datos de clientes a una IA. ¿Qué conceptos me aplican y qué debo comprobar antes?» | Pregunta 5: gobernanza, inyección de instrucciones |
 | «Quiero que la IA haga un trabajo repetitivo de varios pasos. ¿Qué piezas necesito y en qué orden?» | Preguntas 9 y 10 |
-| «¿Por qué la IA se inventa cosas con tanta seguridad y qué hago?» | Pregunta 4: predicción del siguiente token, alucinaciones |
 
 > [!important] Regla de seguridad de la demo
-> Ejecutadas hoy martes, revisadas, con capturas de cada paso como plan B. En directo se enseña **la captura**, y solo si va todo bien se hace una pregunta nueva de la sala **al final del bloque**. Si falla o tarda, se dice sin drama («esto es justo la pregunta 4») y se vuelve a la captura.
+> Las dos preguntas se ejecutan hoy martes, se revisan contra las fichas y se guardan con capturas como plan B. En directo se enseña **la captura**, y solo si va todo bien se hace una pregunta nueva de la sala **al final del bloque**. Si falla o tarda, se dice sin drama («esto es justo la pregunta 4») y se vuelve a la captura.
 
 ## Frase que debe quedar
 
-> **La IA no sustituye al vault: lo lee. Lo que no está escrito, no lo sabe.**
+> **Sobre nuestro trabajo, lo que no está escrito no puede conocerlo de forma fiable. Lo que está en el vault puede encontrarlo, citarlo y contrastarlo.**
 
 ---
 
 # Bloque 5 — La Biblioteca — 2 min
 
-_«Y para que todo esto se pueda encontrar cuando haga falta, estoy construyendo una Biblioteca: una web donde se navegan las charlas y los conceptos, con buscador y enlaces entre ellos.»_
+_«El vault guarda el conocimiento estructurado. La Biblioteca es una forma más cómoda de navegarlo: permite localizar charlas y conceptos sin recorrer las carpetas.»_
 
 ## En pantalla
 
@@ -293,16 +286,16 @@ _«Si os lleváis una sola cosa, que sean estas diez preguntas.»_
 
 | Si te preguntas… | Mira… |
 |---|---|
-| 1. ¿Cómo le pido las cosas? | Término correcto, ejemplos, paso a paso, pedir la fuente, imagen y audio |
-| 2. ¿Cómo conoce mi trabajo y lo recuerda? | Instrucciones (8), skills (7), Wiki LLM (11), memoria de agentes |
+| 1. ¿Cómo le pido las cosas? | Hablar su idioma (término correcto) y dar ejemplos (18) |
+| 2. ¿Cómo le doy contexto estable sobre mi trabajo? | Instrucciones (8), skills (7), Wiki LLM (11) |
 | 3. ¿Cómo encuentra lo que necesita? | Fuente delante (18), ventana de contexto (18), RAG (12), metadatos y enlaces (11) |
-| 4. ¿Me puedo fiar? | Predicción de token y alucinaciones (18), verificar según lo que cuesta equivocarse (17) |
+| 4. ¿Me puedo fiar? | Predicción de token y alucinaciones (18), pedir la fuente y verificar según lo que cuesta equivocarse (17) |
 | 5. ¿Qué puedo usar y con qué riesgos? | Shadow AI y gobernanza (14), inyección de instrucciones (15) |
-| 6. ¿Qué modelo uso? | Elegir bien (17), modos de trabajo (17), abiertos y cerrados, rápido o razonador |
-| 7. ¿Cómo la conecto? | MCP (7), permisos mínimos (15), computer use |
-| 8. ¿Cómo creo un asistente? | Agente y Copilot Studio (13), métricas |
-| 9. ¿Cómo le encargo algo grande? | SDD (16), planificación, equipo de agentes (19), ejecutor abierto (20) |
-| 10. ¿Cómo sé que está bien? | Ciclo (22), BDD y ODD (23), revisión y RDD (24) |
+| 6. ¿Qué modelo uso? | Elegir bien (17), modos de trabajo (17), rápido o razonador (17) |
+| 7. ¿Cómo la conecto? | MCP (7), permisos mínimos (15) |
+| 8. ¿Cómo creo un asistente? | Agente y Copilot Studio (13), métricas (13) |
+| 9. ¿Cómo le encargo algo grande? | SDD (16), equipo de agentes (19), ejecutor abierto (20) |
+| 10. ¿Cómo defino y compruebo que está bien? | Ciclo (22), BDD y ODD (23), revisión y RDD (24) |
 
 _«La chuleta la dejo luego en Teams, para que la tengáis a mano.»_ [Hacerlo solo si la subes realmente.]
 
@@ -348,7 +341,7 @@ Comportamiento mínimo:
 
 # Preparación de hoy (martes)
 
-## 1. Las 38 piezas
+## 1. Las 32 piezas
 
 - Revisar cada texto contra su ficha.
 - Decidir si las ❓ son las que propongo o cambiar alguna.
@@ -360,10 +353,11 @@ Comportamiento mínimo:
 - **Fuera**: `Proyectos/` (hay una nota de capacidades con personas con nombre), `Demos/` (la demo de Jira lleva una dirección de Atlassian), `Recursos/` y `Plantillas/`.
 - Comprobar con una búsqueda de texto que no queda ningún nombre propio de compañeros, ningún cliente ni ninguna dirección interna.
 - Comprobar que la licencia de Copilot que uses es la aprobada para este uso (lo que contamos en la 14).
+- Comprobar en el ensayo que Copilot Desktop **muestra de verdad las fichas que ha usado**. Si no lo hace, cambiar ese paso por abrir a mano la ficha que respalda la respuesta.
 
-## 3. Las tres preguntas
+## 3. Las dos preguntas (y una de reserva)
 
-Ejecutarlas, revisar cada respuesta contra la ficha, guardar capturas del paso a paso. Si una respuesta inventa o no encuentra, **no se enseña esa pregunta**: se cambia por otra.
+Ejecutar las dos preguntas principales, revisar cada afirmación contra las fichas y guardar capturas. La pregunta sobre alucinaciones queda como reserva. Si una respuesta inventa o no encuentra, **no se enseña esa pregunta**: se cambia por otra.
 
 ## 4. La Biblioteca en local
 
@@ -373,7 +367,7 @@ Ejecutarlas, revisar cada respuesta contra la ficha, guardar capturas del paso a
 
 ## 5. Aviso en Teams (borrador, a revisar con tu tono)
 
-> ¡Buenas! Mañana, miércoles 25, volvemos a la hora de siempre con la **Charla 26**. Esta vez no hay herramienta nueva ni hace falta saber nada técnico: repasamos todo lo que hemos visto y para qué sirve cada cosa, con una pequeña dinámica en la que podréis participar por el chat. Además os enseño algo en lo que estoy trabajando. ¡Hasta mañana! :)
+> ¡Buenas! Mañana, miércoles 25, volvemos a la hora de siempre con la **Charla 26**. Esta vez no añadimos otra herramienta a la lista ni hace falta saber nada técnico: ordenamos todo lo que hemos visto y para qué sirve cada cosa, con una pequeña dinámica en la que podréis participar por el chat. Además os enseño algo en lo que estoy trabajando. ¡Hasta mañana! :)
 
 ---
 
@@ -402,9 +396,9 @@ Cuatro formas de decir qué es «correcto» o cómo comprobarlo: guiada por espe
 
 - [ ] Pantalla de apertura (Bloque 1).
 - [ ] Mapa de los cuatro tramos y las diez preguntas (Bloque 2).
-- [ ] 38 piezas montadas en web o diapositivas, con texto difuminado y frase ancla (Bloque 3).
+- [ ] 32 piezas montadas en web o diapositivas, con texto difuminado y frase ancla (Bloque 3).
 - [ ] Tabla del ciclo con Publicar y Mantener señaladas (pregunta 10).
-- [ ] Tres preguntas ejecutadas y capturas guardadas (Bloque 4).
+- [ ] Dos preguntas ejecutadas, con fichas y frase de respaldo visibles, y capturas guardadas (Bloque 4).
 - [ ] Copia limpia del vault revisada (sin `guiones/`, `Proyectos/`, `Demos/`).
 - [ ] Biblioteca en local con solo Charlas y Conceptos, y capturas de reserva (Bloque 5).
 - [ ] La chuleta final lista para dejar en Teams (Bloque 6).
@@ -412,7 +406,7 @@ Cuatro formas de decir qué es «correcto» o cómo comprobarlo: guiada por espe
 ## A comprobar antes de decirlo en directo
 
 - [ ] Tema real de la charla 25 y de la 21.
-- [ ] Textos a repasar contra su ficha: elegir bien (17), Copilot Studio (13), métricas (13), ejecutor abierto (20).
+- [ ] Textos a repasar contra su ficha: elegir bien, modos de trabajo y «rápido o razonador» (17), OKF (11), permisos mínimos (15), Copilot Studio y métricas (13), ejecutor abierto (20). Si permisos mínimos no se sostiene, la pregunta 7 queda solo con MCP.
 - [ ] Números de charla de la columna «Charla»: solo los confirmados por ficha o resumen.
 - [ ] Asistencia: las fichas dicen ~168 (14), «récord con 141» (23) y 110 asistentes (24). No citar cifras en directo hasta aclararlo.
 - [ ] Que nada de lo enseñado revela un cliente, una persona concreta o una dirección interna.
@@ -423,9 +417,9 @@ Cuatro formas de decir qué es «correcto» o cómo comprobarlo: guiada por espe
 - [ ] No decir «última del año», «hasta el año que viene», «cierre» ni nada que suene a despedida de la serie.
 - [ ] Una sola tesis: qué pregunta responde cada cosa. Si un bloque se va por otro lado, recortarlo.
 - [ ] Mantener estas frases:
-  - «Hoy no aprendéis nada nuevo. Hoy ponéis orden a lo que ya sabéis.»
+  - «Hoy no añadimos otra herramienta. Hoy ponemos orden a lo que ya sabemos.»
   - «No son temas sueltos: son diez preguntas.»
-  - «Lo que no está escrito, no lo sabe.»
+  - «Sobre nuestro trabajo, lo que no está escrito no puede conocerlo de forma fiable.»
   - «No recordéis herramientas. Recordad preguntas.»
 
 ---
@@ -433,8 +427,8 @@ Cuatro formas de decir qué es «correcto» o cómo comprobarlo: guiada por espe
 # Decisiones aplicadas
 
 - **Retrospectiva para afianzar**: el eje es «pieza → para qué sirve», agrupado en diez preguntas de trabajo.
-- **Catálogo amplio, dinámica corta**: 38 piezas en pantalla, 17 preguntadas a la sala; el resto se revela directo.
-- **Piezas sencillas primero, sin Nivel ni Perfil**: se quitan esas columnas; la pregunta 1 usa consejos concretos en vez de conceptos abstractos; las piezas nuevas de las preguntas 3 a 7 salen de charlas ya dadas (las que llevan «—» no tienen charla confirmada).
+- **Catálogo amplio, dinámica corta**: 32 piezas en pantalla, 12 preguntadas a la sala; el resto se revela directo.
+- **Solo piezas trazables a la serie**: se retiran las piezas sin charla confirmada que introducían contenido nuevo.
 - **Sin encuesta**, sin bloque de «repeticiones» y sin novedades del mes.
 - **Sin demo en directo** (lección de la 23): consulta al vault y Biblioteca se ensayan antes, con capturas.
 - **Privacidad**: copia limpia del vault, sin guiones, proyectos ni demos con datos internos.
@@ -442,7 +436,7 @@ Cuatro formas de decir qué es «correcto» o cómo comprobarlo: guiada por espe
 
 # Decisiones abiertas
 
-1. **¿Diez preguntas en directo?** Si el tiempo aprieta, las preguntas 3 y 6 se revelan sin pedir respuesta.
+1. **¿Diez preguntas en directo?** Se mantienen las diez, pero solo 12 piezas solicitan respuesta. Si el tiempo aprieta, las preguntas 3 y 6 se revelan sin interacción.
 2. **Web o diapositivas.** La dinámica sirve en ambas; la web no es imprescindible para mañana.
 3. **Número de fichas.** El índice del 14 de octubre decía 57; hoy hay 81 en `Conceptos/` (16 + 21 + 27 + 17). Confirmar antes de enseñar cifras.
 4. **Niveles de riesgo.** La ley europea tiene 4 categorías y la política interna de la 14 tiene 5 niveles. Si se menciona, decir de cuál se habla.
@@ -450,4 +444,3 @@ Cuatro formas de decir qué es «correcto» o cómo comprobarlo: guiada por espe
 6. **Charla 25 y 21.** Falta el tema exacto de la 25.
 7. **Fichas sin retrospectiva.** Las fichas de la 14 a la 22 tienen el apartado «Retrospectiva» vacío; se pueden rellenar tras la charla.
 8. **Formato de `related`.** Lista plana como el guion de la 24; las instrucciones del proyecto piden `[[nombre]]`.
-9. **Piezas sin charla confirmada («—»).** Memoria de agentes, planificación, modelos abiertos y cerrados, computer use, «piensa paso a paso» y multimodal vienen de las fichas de `Conceptos/`, no de una charla concreta. Si no se vieron con la sala, quitarlas o sustituirlas.
