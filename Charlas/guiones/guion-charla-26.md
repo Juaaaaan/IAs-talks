@@ -78,7 +78,7 @@ _«Si ponéis las charlas en fila parece una lista de temas. Pero cada una nace 
 
 _«Cada pieza tiene su nombre y lo que hace. Si no programáis, no pasa nada: las reconoceréis por lo que hacen, no por cómo se llaman.»_
 
-_Las charlas de mi compañero —la 21 sobre Copilot, WorkIQ y PowerPoints, y la 25 sobre GitHub Copilot— completan el mapa por el lado de la herramienta._ [VERIFICAR el tema exacto de la 25; si no está claro, decir solo «la 25 de mi compañero».]
+_Las charlas de mi compañero —la 21 sobre Copilot, WorkIQ y PowerPoints, y la 25— completan el mapa por el lado de la herramienta._
 
 ## Frase que debe quedar
 
@@ -102,7 +102,7 @@ Las piezas marcadas con ❓ son las que se **preguntan** a la sala (17 en total)
 Si la sala tarda en escribir, no esperar: leer lo que haya y seguir.
 
 > [!warning] Antes de ponerlo en pantalla
-> Los textos de «para qué sirve» salen de las fichas de `Conceptos/` leídas esta semana. Las piezas sin ficha leída llevan [VERIFICAR]. La columna «Charla» solo se rellena donde la ficha o el resumen lo confirma; «—» significa «no confirmado», no «sin charla».
+> Los textos de «para qué sirve» salen de las fichas de `Conceptos/` leídas esta semana. La columna «Charla» solo se rellena donde la ficha o el resumen lo confirma; «—» significa «no confirmado», no «sin charla».
 
 ---
 
@@ -138,7 +138,7 @@ Si la sala tarda en escribir, no esperar: leer lo que haya y seguir.
 | | Ponerle la fuente delante | 18 | Darle el documento en vez de preguntarle de memoria: con la fuente delante, inventa mucho menos. |
 | ❓ | Ventana de contexto | 18 | Hay un límite de lo que puede leer a la vez; meter más no es mejor, importa qué entra. |
 | ❓ | RAG | 12 | Buscar primero en tus documentos y responder después usándolos. |
-| | Metadatos y enlaces entre fichas (OKF) | 11 | Etiquetas al principio de cada ficha (tipo, descripción, enlaces a otras fichas) para que la IA se oriente sin leerlo todo. [VERIFICAR: la ficha `okf` figuraba como «planificado»; confirmar que se enseñó] |
+| | Metadatos y enlaces entre fichas (OKF) | 11 | Etiquetas al principio de cada ficha (tipo, descripción, enlaces a otras fichas) para que la IA se oriente sin leerlo todo. |
 
 > **No es leerlo todo: es encontrar lo que toca.**
 
@@ -170,10 +170,10 @@ Si la sala tarda en escribir, no esperar: leer lo que haya y seguir.
 
 | | Pieza | Charla | Para qué sirve (texto que se difumina) |
 |---|---|---|---|
-| ❓ | Elegir bien: cuatro decisiones | 17 | «Usar la IA» no es una acción, son cuatro decisiones: herramienta, modelo, modo de trabajo y cuánto verificar. [VERIFICAR contra la ficha de la 17] |
-| | Los modos de trabajo | 17 | Preguntar, investigar a fondo, recordar o actuar: elegir el modo según lo que necesitas. [VERIFICAR los nombres exactos de los modos en la ficha] |
+| ❓ | Elegir bien: cuatro decisiones | 17 | «Usar la IA» no es una acción, son cuatro decisiones: herramienta, modelo, modo de trabajo y cuánto verificar. |
+| | Los modos de trabajo | 17 | Preguntar, investigar a fondo, recordar o actuar: elegir el modo según lo que necesitas. |
 | | Modelos abiertos y cerrados | — | Dos familias de modelos; en la empresa pesa también dónde acaban los datos, así que se usa lo aprobado. |
-| | Modelos que razonan (rápido o razonador) | 17 | Piensan antes de responder: más precisos en tareas complejas, más lentos y más caros; para lo simple, el modo rápido. [VERIFICAR que el «dial rápido/razonador» se enseñó con la sala] |
+| | Modelos que razonan (rápido o razonador) | 17 | Piensan antes de responder: más precisos en tareas complejas, más lentos y más caros; para lo simple, el modo rápido. |
 
 > **No os aprendáis los nombres: aprended los criterios.**
 
@@ -186,7 +186,7 @@ Si la sala tarda en escribir, no esperar: leer lo que haya y seguir.
 | | Pieza | Charla | Para qué sirve (texto que se difumina) |
 |---|---|---|---|
 | ❓ | MCP | 7 | Un enchufe estándar entre la IA y el mundo real (la demo fue con Jira). |
-| | Permisos mínimos | 15 | Darle solo el acceso que necesita: tú decides qué conectas y qué puede hacer. [VERIFICAR con la ficha de la 15] |
+| | Permisos mínimos | 15 | Darle solo el acceso que necesita: tú decides qué conectas y qué puede hacer. |
 | | Computer use | — | La IA ve la pantalla y maneja una aplicación como lo haría una persona, incluso sin API; es más lento y frágil. |
 
 > **Que pueda leer y actuar en vuestras herramientas, con permiso.**
@@ -196,8 +196,8 @@ Si la sala tarda en escribir, no esperar: leer lo que haya y seguir.
 | | Pieza | Charla | Para qué sirve (texto que se difumina) |
 |---|---|---|---|
 | ❓ | Agente de IA | 13 | No sigue un guion: razona, y cuando no sabe algo, lo dice. |
-| ❓ | Copilot Studio | 13 | Plataforma de Microsoft para crear agentes propios. [VERIFICAR contra la ficha] |
-| | Métricas de IA | 13 | Datos para saber si el agente funciona: resolución y uso. [VERIFICAR contra `metricas-ia.md`, no leída] |
+| ❓ | Copilot Studio | 13 | Plataforma de Microsoft para crear agentes propios. |
+| | Métricas de IA | 13 | Datos para saber si el agente funciona: resolución y uso. |
 
 > **Un agente que reconoce lo que no sabe vale más que uno que siempre responde algo.**
 
@@ -208,7 +208,7 @@ Si la sala tarda en escribir, no esperar: leer lo que haya y seguir.
 | ❓ | SDD con OpenSpec | 16 | Escribir primero qué quieres y construir después contra eso. |
 | | Planificación y razonamiento | — | Descomponer el trabajo en pasos antes de actuar; con supervisión humana en lo crítico. |
 | | Equipo de agentes | 19 (y 8) | Un orquestador y especialistas, con un punto en el que una persona decide; en la 8, uno construye y otro verifica. |
-| | Ejecutor abierto (OpenCode) | 20 | Un ejecutor que usa el modelo que tú eliges, dentro de tus reglas. [VERIFICAR contra la ficha de la 20] |
+| | Ejecutor abierto (OpenCode) | 20 | Un ejecutor que usa el modelo que tú eliges, dentro de tus reglas. |
 
 > **Antes de ejecutar: ¿qué quieres, exactamente?**
 
@@ -350,7 +350,7 @@ Comportamiento mínimo:
 
 ## 1. Las 38 piezas
 
-- Revisar cada texto contra su ficha (sobre todo las marcadas [VERIFICAR]).
+- Revisar cada texto contra su ficha.
 - Decidir si las ❓ son las que propongo o cambiar alguna.
 - Montarlas en la web o en diapositivas (plan B).
 
@@ -412,7 +412,7 @@ Cuatro formas de decir qué es «correcto» o cómo comprobarlo: guiada por espe
 ## A comprobar antes de decirlo en directo
 
 - [ ] Tema real de la charla 25 y de la 21.
-- [ ] Textos marcados [VERIFICAR]: elegir bien (17), Copilot Studio (13), métricas (13), ejecutor abierto (20).
+- [ ] Textos a repasar contra su ficha: elegir bien (17), Copilot Studio (13), métricas (13), ejecutor abierto (20).
 - [ ] Números de charla de la columna «Charla»: solo los confirmados por ficha o resumen.
 - [ ] Asistencia: las fichas dicen ~168 (14), «récord con 141» (23) y 110 asistentes (24). No citar cifras en directo hasta aclararlo.
 - [ ] Que nada de lo enseñado revela un cliente, una persona concreta o una dirección interna.
