@@ -12,7 +12,7 @@ timestamp: "2026-11-27"
 
 # Charla 26 — Retrospectiva: qué hemos visto y para qué sirve cada cosa
 
-**Fecha:** 25 de noviembre de 2026 **Estado:** ✅ Impartida
+**Fecha:** 25 de noviembre de 2026 **Estado:** ✅ Impartida **Asistencia:** 111 personas
 
 ---
 
@@ -26,7 +26,7 @@ No se presentó ninguna herramienta nueva: la sesión sirvió para poner orden y
 
 ## Resultado
 
-Buena acogida. Gustó la retrospectiva y ver cómo funcionaba la dinámica del texto difuminado. También gustó la idea de la Biblioteca; queda pendiente hablar con la persona de despliegue para ver cómo ponerla a disposición de la audiencia.
+Asistieron 111 personas. Buena acogida: gustó la retrospectiva y ver cómo funcionaba la dinámica del texto difuminado. También gustó la idea de la Biblioteca; queda pendiente hablar con la persona de despliegue para ver cómo ponerla a disposición de la audiencia.
 
 ## Estructura
 
