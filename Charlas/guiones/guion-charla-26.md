@@ -403,14 +403,6 @@ Cuatro formas de decir qué es «correcto» o cómo comprobarlo: guiada por espe
 - [ ] Biblioteca en local con solo Charlas y Conceptos, y capturas de reserva (Bloque 5).
 - [ ] La chuleta final lista para dejar en Teams (Bloque 6).
 
-## A comprobar antes de decirlo en directo
-
-- [ ] Tema real de la charla 25 y de la 21.
-- [ ] Textos a repasar contra su ficha: elegir bien, modos de trabajo y «rápido o razonador» (17), OKF (11), permisos mínimos (15), Copilot Studio y métricas (13), ejecutor abierto (20). Si permisos mínimos no se sostiene, la pregunta 7 queda solo con MCP.
-- [ ] Números de charla de la columna «Charla»: solo los confirmados por ficha o resumen.
-- [ ] Asistencia: las fichas dicen ~168 (14), «récord con 141» (23) y 110 asistentes (24). No citar cifras en directo hasta aclararlo.
-- [ ] Que nada de lo enseñado revela un cliente, una persona concreta o una dirección interna.
-
 ## Ensayo narrativo
 
 - [ ] Cronometrar 3 + 3 + 20 + 5 + 2 + 4 minutos, con la dinámica incluida.
@@ -438,9 +430,9 @@ Cuatro formas de decir qué es «correcto» o cómo comprobarlo: guiada por espe
 
 1. **¿Diez preguntas en directo?** Se mantienen las diez, pero solo 12 piezas solicitan respuesta. Si el tiempo aprieta, las preguntas 3 y 6 se revelan sin interacción.
 2. **Web o diapositivas.** La dinámica sirve en ambas; la web no es imprescindible para mañana.
-3. **Número de fichas.** El índice del 14 de octubre decía 57; hoy hay 81 en `Conceptos/` (16 + 21 + 27 + 17). Confirmar antes de enseñar cifras.
+3. **Número de fichas.** Resuelta el 27 de noviembre de 2026: el índice se corrigió a 81 conceptos (16 + 21 + 27 + 17) y ahora lista todas las fichas de `Conceptos/`.
 4. **Niveles de riesgo.** La ley europea tiene 4 categorías y la política interna de la 14 tiene 5 niveles. Si se menciona, decir de cuál se habla.
-5. **Piezas que han quedado fuera.** El vocabulario interno de la «AI SDLC Foundation» (prompt como comando, workflow, runtime, station, tier, pack…) y piezas como canonical, graphify, caching-cost o github-actions. No se han leído todas; valorar si alguna debe entrar.
+5. **Piezas que han quedado fuera.** El vocabulario interno de la «AI SDLC Foundation» (prompt como comando, workflow, runtime, station, tier, pack…) y piezas como graphify, caching-cost o github-actions. Quedaron fuera por no estar confirmadas en ninguna charla; las fichas de Foundation figuran ya en el índice, con estado Planificado.
 6. **Charla 25 y 21.** Falta el tema exacto de la 25.
 7. **Fichas sin retrospectiva.** Las fichas de la 14 a la 22 tienen el apartado «Retrospectiva» vacío; se pueden rellenar tras la charla.
 8. **Formato de `related`.** Lista plana como el guion de la 24; las instrucciones del proyecto piden `[[nombre]]`.
