@@ -22,7 +22,7 @@ Un **jailbreak** es un intento de que un modelo **ignore sus protecciones de seg
 
 ## Jailbreak vs prompt injection
 
-Los términos se mezclan a menudo. Una distinción útil, defendida por Simon Willison, es esta:
+Los términos se mezclan a menudo, y Simon Willison insiste en distinguirlos. Una forma útil de verlo:
 
 | | Jailbreak | Prompt injection |
 |---|---|---|
