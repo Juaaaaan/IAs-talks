@@ -5,7 +5,7 @@ description: "Modelos y arquitecturas que reducen la dependencia de un único pr
 tags: [federado, descentralizado, local, edge, open-source, soberania, privacidad]
 related: [model-routing, ai-governance, caching-cost, reasoning-models]
 estado: "✅ Publicado"
-timestamp: "2026-07-13"
+timestamp: "2026-11-27"
 ---
 
 # Federated & Decentralized AI — IA sin depender de un solo proveedor
@@ -29,8 +29,10 @@ Incluye modelos locales, edge computing, estrategias multi-cloud y modelos open-
 | El proveedor cambia precios | Modelos alternativos / locales |
 | Caída del servicio | Fallback a otro proveedor |
 | Datos confidenciales en la nube | Modelo local que no sale de tu red |
-| Regulación (EU AI Act) exige control | Ejecución on-premise |
+| Normativa, contrato o política que limitan dónde tratar los datos | Ejecución on-premise |
 | Latencia de red | Edge AI (procesamiento local) |
+
+> El [[ai-act]] no obliga a ejecutar la IA on-premise. Ejecutarla en local tampoco exime de cumplirlo.
 
 ---
 

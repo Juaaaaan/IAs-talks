@@ -3,7 +3,7 @@ type: Indice
 title: "IAs-talks — Base de conocimiento"
 description: "Vault de conocimiento de la serie de charlas de IA. Wiki LLM en formato OKF navegable por agentes y humanos. 100+ ficheros markdown interconectados."
 tags: [indice, vault, wiki-llm, okf, ia, charlas, conocimiento]
-timestamp: "2026-10-14"
+timestamp: "2026-11-27"
 ---
 
 # 🧠 IA Talks — Base de conocimiento
@@ -24,11 +24,11 @@ IAs-talks/
 │
 ├── Charlas/              ← Resumen narrativo de cada sesión impartida
 │   └── guiones/          ← Scripts completos para el ponente
-├── Conceptos/            ← 57 conceptos, todos clasificados por nivel, sin ficheros sueltos
-│   ├── nivel-1-fundamentos/  ← Conceptos de la serie de charlas (12)
-│   ├── nivel-2-intermedios/  ← Conceptos técnicos intermedios (16)
-│   ├── nivel-3-avanzados/    ← Patrones y arquitecturas (16)
-│   └── nivel-4-frontera/     ← Tecnologías emergentes 2026-2027 (13)
+├── Conceptos/            ← 126 conceptos, todos clasificados por nivel, sin ficheros sueltos
+│   ├── nivel-1-fundamentos/  ← Conceptos de la serie de charlas (31)
+│   ├── nivel-2-intermedios/  ← Conceptos técnicos intermedios (36)
+│   ├── nivel-3-avanzados/    ← Patrones y arquitecturas (41)
+│   └── nivel-4-frontera/     ← Tecnologías emergentes 2026-2027 (18)
 ├── Demos/                ← Paso a paso de demos en vivo (8)
 ├── Recursos/             ← Ficheros de referencia — configs, agentes, tasks, novedades
 ├── Proyectos/            ← Wikis LLM de proyectos reales (ej. RCA)
@@ -84,76 +84,16 @@ Las cinco juntas = el arnés completo = AI harness engineering
 
 ---
 
-## Conceptos del vault (57)
+## Conceptos del vault (126)
 
-### nivel-1-fundamentos (12)
+| Nivel | Fichas |
+|---|---|
+| nivel-1-fundamentos | 31 |
+| nivel-2-intermedios | 36 |
+| nivel-3-avanzados | 41 |
+| nivel-4-frontera | 18 |
 
-- [[arnes-completo]] — La metáfora central de la serie
-- [[sdd]] — Specification-Driven Development
-- [[skills]] — El arnés de comportamiento
-- [[frontmatter]] — Metadatos YAML en ficheros markdown
-- [[okf]] — Open Knowledge Format — estándar para Wiki LLM
-- [[wiki-llm]] — Base de conocimiento para agentes (patrón Karpathy)
-- [[agente-ia]] — Chatbot clásico vs agente que razona
-- [[prediccion-siguiente-token]] — Cómo la IA "entiende": predice el patrón más probable
-- [[alucinaciones]] — Cuándo la IA se lo inventa (y cómo protegerte)
-- [[ia-first]] — Mentalidad: preguntar primero a la IA antes de ejecutar tu propia solución
-- [[ai-harness-engineering]] — El término de industria para el arnés completo
-- [[odd]] — Organic Driven Development — disciplina proporcional por defecto
-
-### nivel-2-intermedios (16)
-
-- [[mcp]] — Model Context Protocol
-- [[copilot-instructions]] — Instrucciones persistentes para Copilot
-- [[copilot-studio]] — Plataforma no-code de Microsoft para agentes corporativos
-- [[rag]] — Retrieval-Augmented Generation
-- [[context-engineering]] — Diseño del contexto completo para IA
-- [[embeddings]] — Representación semántica — búsqueda por significado
-- [[function-calling]] — La IA que invoca herramientas externas
-- [[chain-of-thought]] — Razonamiento paso a paso (CoT)
-- [[system-prompt]] — System prompt vs user prompt
-- [[temperature]] — Control de creatividad del modelo
-- [[structured-output]] — Salida en formatos parseables (JSON, YAML)
-- [[multimodal]] — LLMs que ven, oyen y leen
-- [[context-window-management]] — Gestión de la ventana de contexto
-- [[modelos-abiertos-vs-cerrados]] — Las dos familias del panorama IA (y la residencia de datos)
-- [[bdd]] — Behavior-Driven Development — verificar contando el resultado esperado como historia
-- [[gherkin]] — El lenguaje Given/When/Then que usa BDD para describir escenarios
-
-### nivel-3-avanzados (16)
-
-- [[agentes-multiples]] — Patrón developer/reviewer
-- [[github-actions]] — Automatización con IA
-- [[graphify]] — Grafo de conocimiento del codebase
-- [[agentic-workflows]] — Flujos de trabajo autónomos con agentes
-- [[memory]] — Memoria a corto y largo plazo de los agentes
-- [[planning-reasoning]] — Planificación y razonamiento en IA
-- [[code-generation-patterns]] — Patrones de generación de código con IA
-- [[eval-benchmarking]] — Medir si la IA funciona bien
-- [[metricas-ia]] — Métricas de agentes conversacionales, DORA y el AI Productivity Paradox
-- [[prompt-injection]] — Ataques y seguridad en sistemas con IA
-- [[orchestration-patterns]] — Pipeline, fan-out, supervisor, swarm
-- [[knowledge-graphs]] — GraphRAG — grafos de conocimiento + LLMs
-- [[model-routing]] — Elegir el modelo correcto para cada tarea
-- [[caching-cost]] — Optimización de costes y latencia
-- [[ai-code-review]] — IA revisando pull requests — la revisión como nuevo cuello de botella
-- [[rdd]] — Review Driven Development — reservado para la charla futura de revisión "después de construir"
-
-### nivel-4-frontera (13)
-
-- [[reasoning-models]] — Modelos que piensan antes de responder
-- [[computer-use]] — Agentes que controlan la pantalla
-- [[mcp-ecosystem]] — El ecosistema de servidores MCP
-- [[ai-ide-patterns]] — Patrones de integración IA en el IDE
-- [[sdd-variations]] — Variantes de SDD: Design Docs, RFC, ADR
-- [[synthetic-data]] — Datos sintéticos y auto-entrenamiento
-- [[constitutional-ai]] — Cómo se alinean los modelos (RLHF, CAI)
-- [[ai-governance]] — Gobernanza: EU AI Act, ISO 42001
-- [[federated-ai]] — IA sin depender de un solo proveedor
-- [[autonomous-coding-agents]] — Agentes que programan solos
-- [[ai-native-sdlc]] — El ciclo de vida del desarrollo rediseñado para cuando la IA escribe el código
-- [[hooks-approval-gates]] — Hooks como puertas de aprobación dentro del pipeline de IA
-- [[intent-md]] — Fichero corto y versionado que captura la intención antes de planificar
+La lista completa, con una descripción de cada concepto, está en **[[index]]**. Aquí no se repite para que no se quede desactualizada.
 
 ---
 

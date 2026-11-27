@@ -67,7 +67,9 @@ La noticia de seguridad más importante del mes, con desarrollo esta semana. Dur
 
 ### Entra en vigor el etiquetado obligatorio de contenido generado por IA (EU AI Act)
 
-**Desde el 2 de agosto de 2026**, el Artículo 50 del EU AI Act obliga a que cualquier chatbot deje claro que es una IA, y que cualquier imagen, audio o texto generado o manipulado por IA (deepfakes incluidos) lleve una etiqueta clara y accesible — mediante marcas de agua u otros mecanismos de detección. Las empresas que no cumplan se enfrentan a multas elevadas. La Comisión Europea también publicó un Código de Prácticas voluntario sobre marcado y etiquetado de contenido generado por IA, que las empresas pueden usar para demostrar cumplimiento. Es exactamente la categoría de "riesgo limitado" que vimos en la Charla 14 — los chatbots como los que construimos en Copilot Studio ya están sujetos a esta obligación de transparencia desde esta semana.
+**Desde el 2 de agosto de 2026** se aplica el Artículo 50 del EU AI Act. Reparte las obligaciones: los proveedores deben avisar a las personas de que interactúan con una IA (salvo que sea evidente) y marcar de forma legible por máquina el contenido generado o manipulado; quienes despliegan los sistemas deben avisar de los deepfakes y etiquetar ciertos textos publicados sobre asuntos de interés público. Hay excepciones, y los sistemas generativos comercializados antes de esa fecha tienen hasta el 2 de diciembre de 2026 para el marcado. El incumplimiento puede sancionarse con multas. La Comisión Europea también publicó un Código de Prácticas voluntario sobre marcado y etiquetado. La transparencia de los chatbots conecta con la categoría de "riesgo limitado" que vimos en la Charla 14. Ver [[deepfakes-y-etiquetado]].
+
+> **Corregido el 27 de noviembre de 2026** para precisar a quién corresponde cada obligación.
 
 🔗 [La UE obliga a etiquetar el contenido generado por IA — Euronews](https://www.euronews.com/my-europe/2026/07/28/the-eu-is-forcing-tech-companies-to-label-deepfakes-will-it-work)
 🔗 [Texto del Artículo 50 y contexto — Stephenson Harwood](https://www.stephensonharwood.com/insights/neural-network-july-2026/)

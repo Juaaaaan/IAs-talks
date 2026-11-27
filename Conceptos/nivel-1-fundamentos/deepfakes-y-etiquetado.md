@@ -20,16 +20,21 @@ Un **deepfake** es contenido (imagen, audio o vídeo) generado o manipulado con 
 
 ---
 
-## Dos medidas distintas de transparencia
+## Qué pide el AI Act
 
-El **artículo 50 del AI Act**, aplicable desde el 2 de agosto de 2026, distingue:
+El **artículo 50 del AI Act**, aplicable desde el 2 de agosto de 2026, reparte las obligaciones:
 
-| Medida | A quién corresponde |
+| Obligación | A quién corresponde |
 |---|---|
-| **Marca legible por máquina** en el contenido generado o manipulado | Proveedores del sistema generativo |
-| **Avisar de que es un deepfake**, de forma comprensible para las personas | Quien usa el sistema para publicarlo (responsable del despliegue) |
+| **Avisar de que se está hablando con una IA** (chatbots, agentes), salvo que sea evidente | Proveedor |
+| **Marca legible por máquina** en audio, imagen, vídeo o texto generado o manipulado | Proveedor del sistema generativo |
+| **Informar** de que se usa reconocimiento de emociones o categorización biométrica, cuando ese uso está permitido | Responsable del despliegue |
+| **Avisar de que es un deepfake**, de forma clara, como tarde en la primera exposición. La marca del proveedor no basta | Responsable del despliegue |
+| **Etiquetar el texto de IA publicado para informar sobre asuntos de interés público**, salvo que haya revisión humana o control editorial y una persona asuma la responsabilidad editorial | Responsable del despliegue |
 
-Hay excepciones y matices. Los sistemas generativos comercializados antes del 2 de agosto de 2026 tienen hasta el **2 de diciembre de 2026** para el marcado.
+Hay excepciones y matices. Por ejemplo, en obras claramente artísticas, satíricas o de ficción el aviso puede hacerse sin estropear la obra, y el código fuente o la ayuda de edición estándar quedan fuera del marcado.
+
+Los sistemas generativos comercializados antes del 2 de agosto de 2026 tienen hasta el **2 de diciembre de 2026** para el marcado. Ese plazo no alcanza a las demás obligaciones.
 
 **Que un contenido no lleve marca no prueba que sea auténtico.**
 

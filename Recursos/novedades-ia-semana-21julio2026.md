@@ -105,6 +105,8 @@ Tendencia de fondo: los modelos open source están llegando a la élite en capac
 
 **EU AI Act** — A partir de agosto de 2026 entran en vigor nuevas obligaciones para sistemas de IA de alto riesgo. Relevante para empresas en banca, seguros y RRHH automatizado.
 
+> **Corrección (27 de noviembre de 2026):** el [Reglamento (UE) 2026/1744](https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng), publicado el 24 de julio de 2026, aplazó las obligaciones de alto riesgo al 2 de diciembre de 2027 (Anexo III) y al 2 de agosto de 2028 (Anexo I). Ver [[ai-act]].
+
 **Midjourney v7** — Introduce consistencia de personajes y estilos entre generaciones. Las empresas pueden mantener coherencia visual de marca entre imágenes generadas por IA.
 
 ---

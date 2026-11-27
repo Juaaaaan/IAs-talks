@@ -27,16 +27,33 @@ El **AI Act** es el Reglamento (UE) 2024/1689. Regula la IA con un **enfoque bas
 | 1 ago 2024 | Entrada en vigor |
 | 2 feb 2025 | Primeras prácticas prohibidas y alfabetización en IA (art. 4) |
 | 2 ago 2025 | Obligaciones para modelos de IA de uso general |
-| 2 ago 2026 | Transparencia (art. 50) |
+| 2 ago 2026 | Aplicación general del reglamento, incluida la transparencia (art. 50); empieza la supervisión de lo que ya es aplicable |
 | **2 dic 2026** | Dos nuevas prohibiciones (contenido íntimo no consentido y material de abuso sexual infantil) y fin del plazo extra de marcado legible por máquina para sistemas generativos comercializados antes del 2 de agosto de 2026 |
 | **2 dic 2027** | Alto riesgo del Anexo III (antes: 2 ago 2026) |
 | **2 ago 2028** | Alto riesgo del Anexo I, IA integrada en productos regulados (antes: 2 ago 2027) |
 
 ---
 
+## Qué está prohibido (art. 5), en resumen
+
+- Manipular o engañar para alterar decisiones de forma dañina, o explotar vulnerabilidades como la edad, la discapacidad o la situación económica
+- La puntuación social que lleve a un trato perjudicial injustificado o desproporcionado (no solo la hecha por gobiernos)
+- Predecir delitos basándose solo en perfiles o rasgos de personalidad
+- Crear bases de reconocimiento facial recopilando imágenes de forma indiscriminada de internet o cámaras
+- Inferir emociones en el trabajo o en centros educativos, salvo motivos médicos o de seguridad
+- Categorizar a personas por biometría para deducir datos sensibles
+- La identificación biométrica remota en tiempo real en espacios públicos con fines policiales, salvo excepciones tasadas
+- **Desde el 2 de diciembre de 2026:** generar o manipular contenido íntimo de personas identificables sin su consentimiento, o material de abuso sexual infantil. Las condiciones son distintas para proveedores y responsables del despliegue
+
+Cada prohibición tiene matices y excepciones que están en el artículo 5.
+
+---
+
 ## Por qué importa en seguros
 
-El Anexo III incluye usos en empleo y en el acceso a ciertos servicios esenciales, entre ellos la evaluación de riesgos y la fijación de precios en seguros de **vida y salud**. Que un caso concreto entre o no, lo tiene que determinar el equipo de cumplimiento.
+El Anexo III incluye usos en empleo y en el acceso a ciertos servicios esenciales, entre ellos la evaluación de riesgos y la fijación de precios en seguros de **vida y salud**. También incluye la evaluación de la solvencia o la puntuación crediticia de personas.
+
+Las [orientaciones del AI Act Service Desk](https://ai-act-service-desk.ec.europa.eu/en/essential-services) sitúan la gestión de siniestros fuera del uso de seguros del Anexo III (conviene comprobar si ese texto es definitivo). Además, un sistema del Anexo III puede no ser de alto riesgo si no plantea un riesgo significativo (art. 6.3), pero **siempre lo es si elabora perfiles de personas**. Que un caso concreto entre o no, lo tiene que determinar el equipo de cumplimiento. El RGPD se aplica aparte.
 
 ---
 
@@ -50,7 +67,7 @@ El Anexo III incluye usos en empleo y en el acceso a ciertos servicios esenciale
 
 ## Relación con otras piezas
 
-- **[[ai-governance]]** — El marco general de gobernanza (su calendario es anterior a la modificación de 2026)
+- **[[ai-governance]]** — El marco general de gobernanza
 - **[[alfabetizacion-ia]]** — La obligación de apoyar la formación del personal
 - **[[deepfakes-y-etiquetado]]** — La parte de transparencia
 - **[[human-in-the-loop]]** — La supervisión humana
@@ -59,7 +76,8 @@ El Anexo III incluye usos en empleo y en el acceso a ciertos servicios esenciale
 
 ## Referencias
 
-- [Reglamento (UE) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)
+- [Reglamento (UE) 2024/1689 — texto consolidado a 27 de julio de 2026](https://eur-lex.europa.eu/eli/reg/2024/1689/2026-07-27/eng)
+- [Reglamento (UE) 2026/1744 — modificación de 2026](https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng)
+- [EUR-Lex — Resumen oficial del AI Act](https://eur-lex.europa.eu/EN/legal-content/summary/rules-for-trustworthy-artificial-intelligence-in-the-eu.html)
+- [AI Act Service Desk — Calendario de aplicación](https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act)
 - [Comisión Europea — Preguntas sobre las obligaciones de transparencia del artículo 50](https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act)
-- [EY — Resumen del Reglamento (UE) 2026/1744](https://www.ey.com/content/dam/ey-unified-site/ey-com/en-gr/technical/tax/tax-alerts/2026/regulation-eu-2026-1744-digital-omnibus-on-ai.pdf)
-- [ActuIA — Obligaciones en vigor y aplazamientos](https://www.actuia.com/en/news/ai-act-obligations-in-force-and-delays-under-omnibus-2026-1744/)

@@ -59,7 +59,7 @@ timestamp: "2026-08-24"
 ## 4. Regulación (nos toca de cerca)
 
 - **Revisión de seguridad nacional en EE. UU.** — el Departamento de Comercio ha establecido "puertas" de revisión para modelos frontera que superen ciertos umbrales de capacidad. Lanzamientos como GPT-5.6 y Claude Fable 5 han pasado por revisión gubernamental antes de su publicación. (De hecho, Fable 5 tuvo una suspensión temporal y volvió el 1 de julio.)
-- **Unión Europea — Digital Omnibus on AI (Reglamento 2026/1744)** — en vigor desde finales de julio. Sumado a la obligación de alfabetización en IA del EU AI Act (que ya comentamos en la Charla 14 de Gobernanza), refuerza que la formación interna en IA es también cumplimiento normativo.
+- **Unión Europea — Digital Omnibus on AI (Reglamento 2026/1744)** — en vigor desde finales de julio. Entre otros cambios, aplaza las obligaciones de alto riesgo y suaviza la redacción sobre alfabetización en IA: proveedores y responsables del despliegue deben adoptar medidas que la apoyen. La formación interna puede ser una de esas medidas. Ver [[alfabetizacion-ia]].
 
 **Enlace:** roundup mensual con foco regulatorio (https://www.aiapps.com/blog/ai-news-august-breakthroughs-launches-trends-cant-miss/)
 

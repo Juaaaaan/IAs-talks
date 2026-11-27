@@ -312,7 +312,7 @@ El patrón developer/reviewer que vimos en embrión en la Charla 8 es precisamen
 
 ### AI Governance — EU AI Act
 
-El **Reglamento europeo de Inteligencia Artificial (EU AI Act)** entró en vigor en 2024 y se aplica de forma progresiva hasta 2027. Clasifica los sistemas de IA por nivel de riesgo (inaceptable, alto, limitado, mínimo) e impone obligaciones distintas según esa clasificación. Cualquier empresa que desarrolle o despliegue sistemas de IA dentro de la Unión Europea está afectada, con requisitos que van desde la simple transparencia hasta auditorías y evaluaciones de conformidad para los sistemas de mayor riesgo.
+El **Reglamento europeo de Inteligencia Artificial (EU AI Act)** entró en vigor en 2024 y se aplica por fases hasta 2028 (el Reglamento (UE) 2026/1744 aplazó las obligaciones de alto riesgo; ver [[ai-act]]). Clasifica los sistemas de IA por nivel de riesgo (inaceptable, alto, limitado, mínimo) e impone obligaciones distintas según esa clasificación. Cualquier empresa que desarrolle o despliegue sistemas de IA dentro de la Unión Europea está afectada, con requisitos que van desde la simple transparencia hasta requisitos estrictos y evaluaciones de conformidad para los sistemas de alto riesgo.
 
 **Por qué importa esto en términos prácticos:** la IA puede decidir, pero no puede ser responsable de esa decisión. No firma contratos, no asume riesgo legal, no responde ante un cliente o un regulador. Alguien tiene que hacerlo, y ese alguien somos nosotros o nuestra empresa. El AI Act no existe porque la IA sea intrínsecamente peligrosa — existe porque, cuando el resultado de un sistema de IA no es correcto o causa un daño, tiene que haber alguien identificable que responda por ello.
 
@@ -345,6 +345,6 @@ Cuatro ideas para llevarnos de la charla:
 
 - Guión completo de la charla, con tiempos y prompts de demo: [[guion-charla-12]]
 - Material de la Charla 11 (Wiki LLM), referenciado varias veces en este documento: [[material-charla-11-wiki-llm]]
-- Reglamento europeo de IA (EU AI Act) — texto oficial y cronograma de aplicación: [artificialintelligenceact.eu](https://artificialintelligenceact.eu)
+- Reglamento europeo de IA (EU AI Act) — [texto oficial consolidado](https://eur-lex.europa.eu/eli/reg/2024/1689/2026-07-27/eng) y [calendario de aplicación](https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act)
 - GitHub Copilot Desktop: disponible a través de nuestra licencia corporativa de GitHub Copilot
 - Copilot 365: disponible a través de nuestra licencia corporativa de Microsoft 365
