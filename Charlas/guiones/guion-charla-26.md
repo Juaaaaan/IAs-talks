@@ -3,10 +3,10 @@ type: guion
 title: "Charla 26 — Retrospectiva: qué hemos visto y para qué sirve cada cosa"
 description: "Repaso para afianzar lo visto en la serie: 32 piezas ordenadas en diez preguntas de trabajo y cuatro tramos. Dinámica de texto difuminado para que la sala responda, consulta al vault con GitHub Copilot Desktop y un vistazo a la Biblioteca web."
 tags: [charla, guion, retrospectiva, repaso, arnes, ciclo, biblioteca, dinamica]
-related: [guion-charla-24, guion-charla-23, guion-charla-22, guion-charla-19, guion-charla-13, guion-charla-12, arnes-completo, ai-harness-engineering, ia-first, rdd, odd]
+related: [charla-26-retrospectiva, guion-charla-24, guion-charla-23, guion-charla-22, guion-charla-19, guion-charla-13, guion-charla-12, arnes-completo, ai-harness-engineering, ia-first, rdd, odd]
 charla: 26
-estado: borrador
-timestamp: 2026-11-24
+estado: impartida
+timestamp: 2026-11-27
 ---
 
 # Guión Charla 26 — Retrospectiva: qué hemos visto y para qué sirve cada cosa
