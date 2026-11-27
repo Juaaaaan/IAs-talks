@@ -3,7 +3,7 @@ type: Indice
 title: "IAs-talks — Índice del vault"
 description: "Mapa de navegación del vault de conocimiento de la serie de charlas de IA. Punto de entrada para agentes y colaboradores."
 tags: [indice, navegacion, vault, wiki-llm]
-timestamp: "2026-10-14"
+timestamp: "2026-11-27"
 ---
 
 # IAs-talks — Índice del vault
@@ -76,8 +76,11 @@ IAs-talks/
 | [[charla-24-comprobar-despues-de-construir]] | Charla 24 — Comprobar después de construir: ai-code-review y RDD | ✅ Impartida |
 | [[MATERIAL-CHARLA-24-COMPROBAR-DESPUES-DE-CONSTRUIR]] | Charla 24 — Material post-charla (ai-code-review, RDD) | ✅ Impartida |
 | [[guion-charla-24]]                       | Charla 24 — Guión, demo de contraste con dos receipts sobre RCA | ✅ Impartida |
+| —                                          | Charla 25 — impartida por un compañero, sin ficha en el vault | ✅ Impartida |
+| [[charla-26-retrospectiva]]               | Charla 26 — Retrospectiva: qué hemos visto y para qué sirve cada cosa | ✅ Impartida |
+| [[guion-charla-26]]                       | Charla 26 — Guión, 32 piezas en diez preguntas con texto difuminado | ✅ Impartida |
 
-Serie en curso (**7–24 impartidas**, con la 21 fuera del pipeline del vault por no haberla dado Juan). El arco narrativo del **arnés completo** se cerró en la Charla 13; a partir de la 14 la serie continúa con bloques temáticos: gobernanza, seguridad, herramientas SDD, elección de IA, mecanismos internos de la IA, de responder a actuar (agentes que ejecutan), el ejecutor abierto, mentalidad IA-first, comprobar antes de construir en la 23 (BDD, ODD, AI harness engineering — récord de asistencia de la serie con 141 personas) y comprobar después de construir en la 24 (ai-code-review, RDD: candidato congelado, receipt, lentes 4R — 110 asistentes). Con Comprobar cerrado en sus dos mitades, quedan Publicar y Mantener del ciclo de la 22. **Próxima: por definir.**
+Serie en curso (**7–26 impartidas**, con la 21 y la 25 a cargo de un compañero, fuera del pipeline del vault). El arco narrativo del **arnés completo** se cerró en la Charla 13; a partir de la 14 la serie continúa con bloques temáticos: gobernanza, seguridad, herramientas SDD, elección de IA, mecanismos internos de la IA, de responder a actuar (agentes que ejecutan), el ejecutor abierto, mentalidad IA-first, comprobar antes de construir en la 23 (BDD, ODD, AI harness engineering — récord de asistencia de la serie con 141 personas) y comprobar después de construir en la 24 (ai-code-review, RDD: candidato congelado, receipt, lentes 4R — 110 asistentes). La **26 fue una retrospectiva**: 32 piezas de la serie ordenadas en diez preguntas de trabajo y cuatro tramos, con la descripción de cada pieza difuminada para que la sala respondiera por el chat. Con Comprobar cerrado en sus dos mitades, quedan Publicar y Mantener del ciclo de la 22. **Próxima: la 27, a cargo de un compañero (2 de diciembre).**
 
 ---
 
