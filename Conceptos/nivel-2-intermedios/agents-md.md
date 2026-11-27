@@ -36,7 +36,7 @@ El soporte y la forma de leerlo dependen de cada herramienta: compruébalo en su
 | | AGENTS.md | [[copilot-instructions]] |
 |---|---|---|
 | **Enfoque** | Convención compartida entre herramientas | Mecanismo propio de GitHub Copilot |
-| **Ubicación habitual** | Raíz del repositorio (y a veces subcarpetas) | Carpeta \`.github/\` |
+| **Ubicación habitual** | Raíz del repositorio (y a veces subcarpetas) | Carpeta `.github/` |
 
 ---
 
