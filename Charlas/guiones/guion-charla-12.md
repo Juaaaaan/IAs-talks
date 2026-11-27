@@ -317,7 +317,7 @@ Ir concepto a concepto señalando en el mapa:
 > *"Y aquí una cosa que importa: hay una creencia muy extendida de que la IA va a reducir el trabajo. Pero históricamente, cada vez que una tecnología ha hecho algo más barato, no se ha hecho menos — se ha hecho más. Cuando el correo electrónico fue gratis, no mandamos menos mensajes. Mandamos cientos al día. Con la IA pasa lo mismo: no vais a tener menos trabajo. Vais a poder hacer cosas que antes ni os planteabais porque eran demasiado caras o lentas."*
 
 **AI Governance — EU AI Act:**
-> *"Para los que gestionáis proyectos o tomáis decisiones: el AI Act europeo entró en vigor en 2024 y se aplica progresivamente hasta 2027. Clasifica los sistemas de IA por riesgo. Si vuestra empresa desarrolla o despliega IA, esto os afecta."*
+> *"Para los que gestionáis proyectos o tomáis decisiones: el AI Act europeo entró en vigor en 2024 y se aplica por fases, con las últimas obligaciones en 2028. Clasifica los sistemas de IA por riesgo. Si vuestra empresa desarrolla o despliega IA, esto os afecta."*
 
 📌 **AÑADIDO — aterrizaje del AI Act para audiencia no técnica:**
 

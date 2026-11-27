@@ -13,6 +13,8 @@ timestamp: "2026-07-26"
 
 > ⚠️ **Pendiente antes de cerrar el guion:** revisar los ficheros internos de la empresa sobre gobernanza de IA (políticas ya existentes, herramientas aprobadas, canales de escalado) y sustituir los bloques marcados con 🔲 TODO por el contenido real de Sopra Steria. Todo lo marcado así en este borrador es genérico o de ejemplo — no son datos reales de la empresa.
 
+> **Actualización (27 de noviembre de 2026):** la tabla del EU AI Act y la fila de RRHH se han revisado después de la charla. Si se reutiliza el guion, comprobar antes el calendario en [[ai-act]].
+
 ---
 
 ## Estructura de tiempos
@@ -78,12 +80,12 @@ timestamp: "2026-07-26"
 
 > _"Existe una regulación europea, el EU AI Act, que clasifica cualquier sistema de IA según su nivel de riesgo. No os voy a leer el reglamento — os lo voy a traducir a ejemplos de vuestro día a día."_
 
-| Nivel de riesgo     | Ejemplo genérico (EU AI Act)                                  | Ejemplo aplicado a nuestro contexto                               |
-| ------------------- | ------------------------------------------------------------- | ----------------------------------------------------------------- |
-| **Inaceptable**     | Scoring social, vigilancia masiva                             | Prohibido por definición — no debería aparecer en nuestro trabajo |
-| **Alto riesgo**     | Selección de personal, diagnóstico médico, scoring crediticio | Ver detalle abajo en la política interna                          |
-| **Riesgo limitado** | Chatbots (deben avisar que son IA)                            | Agentes de Copilot Studio como el de la Charla 13                 |
-| **Riesgo mínimo**   | Autocompletado, filtros de spam                               | Uso de Copilot para autocompletar código                          |
+| Nivel de riesgo     | Ejemplo genérico (EU AI Act)                                                        | Ejemplo aplicado a nuestro contexto                                          |
+| ------------------- | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| **Inaceptable**     | Puntuación social, inferir emociones en el trabajo (salvo motivos médicos o de seguridad) | Prohibido — no debería aparecer en nuestro trabajo                     |
+| **Alto riesgo**     | Selección de personal, solvencia de personas, riesgo y precios en seguros de vida y salud | Ver detalle abajo en la política interna                               |
+| **Riesgo limitado** | Chatbots (la persona debe saber que habla con una IA, salvo que sea evidente)       | Agentes de Copilot Studio como el de la Charla 13                            |
+| **Riesgo mínimo**   | Filtros de spam                                                                     | Uso de Copilot para autocompletar código                                     |
 
 > _"La regla general es simple: cuanto más impacto tiene la decisión sobre una persona real — un cliente, un candidato, un empleado — más control necesita. Y en banca y seguros, muchas de nuestras decisiones tienen justo ese impacto."_
 
@@ -117,7 +119,7 @@ timestamp: "2026-07-26"
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Developer**                   | Código y datos técnicos en herramientas de IA — conecta con la Dim. 2 y 5 del framework de madurez (desarrollo, configuración)              |
 | **Comercial / cara al cliente** | Nunca compartir datos de cliente en herramientas no aprobadas; cualquier propuesta o comunicación generada con IA, revisión antes de enviar |
-| **RRHH**                        | Especial cuidado si se usa IA en procesos de selección o evaluación de personas — es zona de "alto riesgo" por definición del EU AI Act     |
+| **RRHH**                        | Especial cuidado si se usa IA en procesos de selección o evaluación de personas — el Anexo III del EU AI Act lo incluye como alto riesgo (con excepciones tasadas; obligaciones desde diciembre de 2027)     |
 | **Management / PM**             | Responsabilidad de que el equipo conozca la política, no solo de aplicarla personalmente — la Dim. 8 (Cultura y Adopción) empieza aquí      |
 
 **Frase que debe quedar:**

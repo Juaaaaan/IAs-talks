@@ -14,6 +14,8 @@ asistentes: 168
 
 > Este documento amplía y complementa lo visto en la charla del 29 de julio de 2026. No sustituye al guion ([`guion-charla-14.md`](guiones/guion-charla-14.md)) — lo desarrolla con más contexto, referencias externas y detalle práctico. Léelo con tranquilidad. Los enlaces externos están al final de cada sección.
 
+> **Actualización (27 de noviembre de 2026):** las referencias al EU AI Act se han revisado para reflejar el Reglamento (UE) 2026/1744 y precisar algunos puntos. En esas partes, el texto ya no coincide con la versión anterior. Es divulgación, no asesoramiento legal.
+
 ---
 
 ## Índice
@@ -128,52 +130,60 @@ Los tres casos que vimos en la charla son reales, verificables y documentados. A
 
 ## El marco legal: EU AI Act
 
-El **Reglamento (UE) 2024/1689 del Parlamento Europeo y del Consejo, de 13 de junio de 2024, por el que se establecen normas armonizadas en materia de inteligencia artificial** — conocido como **EU AI Act** — es la primera regulación integral de la IA a nivel de bloque económico. Entró en vigor el 1 de agosto de 2024, con una aplicación escalonada:
+El **Reglamento (UE) 2024/1689 del Parlamento Europeo y del Consejo, de 13 de junio de 2024, por el que se establecen normas armonizadas en materia de inteligencia artificial** — conocido como **EU AI Act** — es la primera regulación integral de la IA a nivel de bloque económico. Entró en vigor el 1 de agosto de 2024 y en julio de 2026 lo modificó el **Reglamento (UE) 2026/1744**. Se aplica por fases:
 
-- **2 de febrero de 2025:** prohibiciones de sistemas de riesgo inaceptable (efectivas).
-- **2 de agosto de 2025:** obligaciones para modelos fundacionales (GPAI).
-- **2 de agosto de 2026:** obligaciones de transparencia (Artículo 50) y obligaciones plenas para sistemas de alto riesgo — justo esta semana, ver el documento de novedades de esta semana.
-- **2 de agosto de 2027:** aplicación plena, incluyendo sistemas de alto riesgo integrados en productos regulados.
+- **2 de febrero de 2025:** primeras prácticas prohibidas y alfabetización en IA (art. 4).
+- **2 de agosto de 2025:** obligaciones para los modelos de IA de uso general.
+- **2 de agosto de 2026:** aplicación general del reglamento, incluida la transparencia (art. 50).
+- **2 de diciembre de 2026:** dos nuevas prohibiciones y fin del plazo extra de marcado para sistemas generativos comercializados antes del 2 de agosto de 2026.
+- **2 de diciembre de 2027:** obligaciones de alto riesgo del Anexo III (antes, 2 de agosto de 2026).
+- **2 de agosto de 2028:** obligaciones de alto riesgo del Anexo I, IA ligada a productos regulados (antes, 2 de agosto de 2027).
 
 ### Las 4 categorías de riesgo
 
 El reglamento clasifica los sistemas de IA en cuatro niveles según el impacto potencial sobre los derechos fundamentales, la seguridad y el bienestar de las personas:
 
 **1. Riesgo inaceptable (prohibidos)**
-Sistemas que suponen una amenaza clara para la seguridad, los medios de vida o los derechos fundamentales. Están **prohibidos por completo** dentro del territorio de la UE. Incluyen:
-- Manipulación cognitivo-conductual de personas o grupos vulnerables.
-- Puntuación social por parte de gobiernos.
-- Identificación biométrica en tiempo real en espacios públicos (con excepciones muy tasadas para fuerzas de seguridad).
-- Categorización biométrica basada en datos sensibles (raza, orientación sexual, opiniones políticas).
-- Predicción policial individualizada basada únicamente en perfiles.
-- Scraping masivo no dirigido de imágenes faciales para bases de datos de reconocimiento.
-- Reconocimiento de emociones en el lugar de trabajo y en instituciones educativas.
+Prácticas que el reglamento **prohíbe**, con los matices y excepciones del artículo 5. En resumen:
+- Manipular o engañar para alterar decisiones de forma dañina, o explotar vulnerabilidades como la edad, la discapacidad o la situación económica.
+- Puntuación social que lleve a un trato perjudicial injustificado o desproporcionado (no solo la hecha por gobiernos).
+- Identificación biométrica remota en tiempo real en espacios públicos con fines policiales (con excepciones muy tasadas).
+- Categorización biométrica para deducir datos sensibles (raza, orientación sexual, opiniones políticas).
+- Predicción de delitos basada únicamente en perfiles o rasgos de personalidad.
+- Scraping no dirigido de imágenes faciales para bases de datos de reconocimiento.
+- Inferir emociones en el lugar de trabajo y en centros educativos, salvo motivos médicos o de seguridad.
+- **Desde el 2 de diciembre de 2026:** generar o manipular contenido íntimo de personas identificables sin su consentimiento, o material de abuso sexual infantil (con condiciones distintas para proveedores y responsables del despliegue).
 
 **2. Alto riesgo**
-Sistemas que pueden afectar significativamente a la seguridad o a los derechos fundamentales de las personas. **Permitidos, pero con obligaciones estrictas** de evaluación de conformidad, transparencia, supervisión humana y trazabilidad. Ejemplos relevantes para nosotros:
-- IA usada en selección o gestión de personal (contratación, evaluaciones, promociones).
-- IA en scoring crediticio o determinación de acceso a servicios financieros.
-- IA en evaluación de riesgos de seguros.
+Sistemas que pueden afectar significativamente a la seguridad o a los derechos fundamentales de las personas. **Permitidos, pero con requisitos estrictos**: gestión de riesgos, documentación, registro de actividad, supervisión humana y evaluación de conformidad, repartidos según el rol. Ejemplos relevantes para nosotros:
+- IA usada en selección o gestión de personal (contratación, promociones, despidos, asignación de tareas, evaluación del desempeño).
+- IA para evaluar la solvencia de personas o su puntuación crediticia.
+- IA para evaluar riesgos y fijar precios a personas en seguros **de vida y salud**.
 - IA en la administración de justicia y procesos democráticos.
 - IA como componente de seguridad en infraestructuras críticas.
 
+Un sistema del Anexo III puede no ser de alto riesgo si no plantea un riesgo significativo (art. 6.3), pero siempre lo es si elabora perfiles de personas. Lo tiene que determinar el equipo de cumplimiento. Las obligaciones del Anexo III se aplican desde el **2 de diciembre de 2027**.
+
 **3. Riesgo limitado**
-Sistemas con obligaciones específicas de transparencia. Los usuarios deben saber que están interactuando con una IA. Se aplica principalmente a:
-- Chatbots y asistentes conversacionales.
-- Deepfakes y contenido generado o manipulado.
-- Sistemas de reconocimiento de emociones (fuera del ámbito de alto riesgo).
+Es el nombre habitual para los casos con obligaciones de transparencia (art. 50), aplicable desde el 2 de agosto de 2026. Cada obligación tiene sus excepciones:
+- Chatbots y asistentes: la persona debe saber que habla con una IA, salvo que sea evidente (proveedor).
+- Contenido generado o manipulado: marca legible por máquina (proveedor del sistema generativo).
+- Deepfakes y ciertos textos publicados sobre asuntos de interés público: aviso o etiqueta (responsable del despliegue).
+- Reconocimiento de emociones y categorización biométrica, cuando estén permitidos: informar a las personas expuestas (responsable del despliegue). Según el caso, además pueden ser de alto riesgo.
 
 **4. Riesgo mínimo**
 Todo lo demás. Sin obligaciones específicas más allá del cumplimiento general del resto de normativa (GDPR, ciber, etc.). Incluye la inmensa mayoría de usos productivos: autocompletado, filtros de spam, videojuegos, recomendaciones de contenido no crítico.
 
 ### Un detalle importante: dónde está la responsabilidad
 
-El EU AI Act distingue entre **proveedor** (quien desarrolla o comercializa el sistema) y **usuario profesional** (quien lo despliega en su actividad). Ambos tienen obligaciones — no basta con "yo solo estoy usando ChatGPT, la responsabilidad es de OpenAI". Si desplegamos un agente de Copilot Studio para atender a clientes, somos usuarios profesionales de un sistema de IA y asumimos las obligaciones asociadas a esa figura.
+El EU AI Act distingue, entre otros roles, el de **proveedor** (quien desarrolla un sistema y lo comercializa o pone en servicio con su nombre) y el de **responsable del despliegue** (quien lo usa bajo su propia autoridad en una actividad profesional). Las obligaciones dependen del rol y del caso, así que no basta con "yo solo estoy usando ChatGPT, la responsabilidad es de OpenAI". Si creamos un agente en Copilot Studio para atender a clientes, podemos ser responsables del despliegue o incluso proveedores: lo tiene que determinar el equipo de cumplimiento.
 
 **Referencias oficiales:**
 
 - [Reglamento (UE) 2024/1689 — Texto oficial en EUR-Lex](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)
-- [AI Act Explorer — Herramienta oficial de la Comisión Europea](https://artificialintelligenceact.eu/)
+- [Texto consolidado a 27 de julio de 2026](https://eur-lex.europa.eu/eli/reg/2024/1689/2026-07-27/eng)
+- [Reglamento (UE) 2026/1744 — modificación de 2026](https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng)
+- [AI Act Service Desk — Calendario de aplicación](https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act)
 - [Preguntas y respuestas oficiales sobre el AI Act](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)
 
 ---
@@ -212,7 +222,7 @@ Aunque el NIST es una institución estadounidense, el marco tiene alcance intern
 ### Cómo se relacionan entre sí
 
 - **EU AI Act:** dice **qué** cumplir. Obligatorio en la UE.
-- **ISO 42001:** dice **cómo** gestionarlo internamente. Certificable. Ayuda a demostrar cumplimiento.
+- **ISO 42001:** dice **cómo** gestionarlo internamente. Certificable. Ayuda a organizar la gestión, pero certificarse no acredita por sí solo el cumplimiento del AI Act.
 - **NIST AI RMF:** dice **cómo** analizar y tratar los riesgos técnicos. Referencia global no certificable.
 
 Los tres son complementarios y no compiten. Nuestra política interna se apoya conceptualmente en los tres.
@@ -364,7 +374,7 @@ La gobernanza no pesa igual para todos los perfiles de la sala. Aquí van las tr
 ### RRHH
 
 **Lo que te toca vigilar especialmente:**
-- **Especial cuidado si se usa IA en procesos de selección, evaluación o promoción de personas.** Es zona de "alto riesgo" por definición explícita del EU AI Act. Aunque la herramienta parezca inocente ("solo me resume los CVs"), estás en zona regulada.
+- **Especial cuidado si se usa IA en procesos de selección, evaluación o promoción de personas.** El Anexo III del EU AI Act incluye estos usos como de alto riesgo (obligaciones desde el 2 de diciembre de 2027). Hay excepciones tasadas (art. 6.3), así que aunque la herramienta parezca inocente ("solo me resume los CVs"), que lo valore cumplimiento antes de usarla. Inferir emociones en el trabajo ya está prohibido, salvo motivos médicos o de seguridad. Y la protección de datos se aplica desde el primer día.
 - Nunca pegar datos personales identificables de empleados o candidatos en herramientas no aprobadas.
 - La IA no toma la decisión — la persona lo hace. Los outputs de IA son insumo, no veredicto.
 
@@ -438,7 +448,7 @@ Por defecto, no. La ausencia de mención explícita no equivale a autorización.
 La política se aplica al **uso profesional** — cualquier cosa relacionada con la empresa, sus clientes, sus datos o su propiedad intelectual. En tu vida personal usas lo que quieras. Pero el momento en el que abres un documento del trabajo, entra en juego la política.
 
 **"¿Qué pasa si un cliente nos pide desarrollar una IA que caería en 'alto riesgo' del EU AI Act?"**
-Se puede — pero con las obligaciones asociadas. Evaluación de conformidad, documentación técnica, sistema de gestión de riesgos, transparencia, supervisión humana. Escalar al Departamento de IA y Legal antes de aceptar el alcance del proyecto.
+Se puede — pero con las obligaciones asociadas, que dependen de nuestro rol: evaluación de conformidad, documentación técnica, sistema de gestión de riesgos, transparencia, supervisión humana. Se aplican desde el 2 de diciembre de 2027 (Anexo III) o el 2 de agosto de 2028 (Anexo I), y conviene diseñar el sistema contando con ellas desde el principio. Escalar al Departamento de IA y Legal antes de aceptar el alcance del proyecto.
 
 **"¿Cómo sé si mi caso concreto es 'Alto' o 'Medio'?"**
 Ante la duda, súbelo un nivel y pregunta. Es más barato aprobar algo que resultó no necesitarlo que ejecutar sin aprobación algo que sí la necesitaba.
@@ -449,7 +459,7 @@ Ante la duda, súbelo un nivel y pregunta. Es más barato aprobar algo que resul
 
 **Agente de IA** — sistema que razona sobre una entrada, consulta su base de conocimiento y construye una respuesta adaptada, en lugar de seguir flujos predefinidos. Ver [[agente-ia]].
 
-**AI Act / EU AI Act** — Reglamento (UE) 2024/1689. Marco legal europeo de la IA. Entrada en vigor escalonada 2024-2027.
+**AI Act / EU AI Act** — Reglamento (UE) 2024/1689. Marco legal europeo de la IA. Modificado por el Reglamento (UE) 2026/1744. En vigor desde 2024, con aplicación por fases hasta 2028.
 
 **Copilot Studio** — plataforma de Microsoft para crear agentes de IA sin código dentro del ecosistema corporativo. Ver [[copilot-studio]].
 
@@ -459,7 +469,7 @@ Ante la duda, súbelo un nivel y pregunta. Es más barato aprobar algo que resul
 
 **Evidencia (en contexto de gobernanza)** — prueba documental de que una acción, aprobación o revisión ocurrió, apta para auditoría.
 
-**GPAI (General Purpose AI)** — sistemas de IA de propósito general, como los grandes modelos de lenguaje fundacionales. Categoría específica en el EU AI Act.
+**GPAI (General Purpose AI)** — IA de uso general. El reglamento fija obligaciones propias para los **modelos** de IA de uso general, como los grandes modelos de lenguaje. Categoría específica en el EU AI Act.
 
 **ISO 42001** — Norma internacional certificable de sistemas de gestión de IA publicada en diciembre de 2023.
 
@@ -478,7 +488,10 @@ Ante la duda, súbelo un nivel y pregunta. Es más barato aprobar algo que resul
 ### Legislación y marcos oficiales
 
 - [Reglamento (UE) 2024/1689 — EU AI Act (texto oficial EUR-Lex)](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)
-- [AI Act Explorer — Comisión Europea](https://artificialintelligenceact.eu/)
+- [Texto consolidado a 27 de julio de 2026](https://eur-lex.europa.eu/eli/reg/2024/1689/2026-07-27/eng)
+- [Reglamento (UE) 2026/1744 — modificación de 2026](https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng)
+- [AI Act Service Desk — Comisión Europea](https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act)
+- [AI Act Explorer](https://artificialintelligenceact.eu/) — web no oficial, mantenida por el Future of Life Institute
 - [ISO/IEC 42001:2023](https://www.iso.org/standard/81230.html)
 - [NIST AI Risk Management Framework 1.0](https://www.nist.gov/itl/ai-risk-management-framework)
 - [OECD AI Principles](https://oecd.ai/en/ai-principles)
