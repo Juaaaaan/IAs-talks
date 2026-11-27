@@ -21,11 +21,11 @@ IAs-talks/
 ├── CLAUDE.md              ← instrucciones para agentes que trabajan en el vault
 ├── Charlas/              ← resumen narrativo de cada charla
 │   └── guiones/          ← scripts completos para el ponente
-├── Conceptos/            ← 81 conceptos, uno por fichero, clasificados por nivel
-│   ├── nivel-1-fundamentos/  ← conceptos de la serie de charlas (16)
-│   ├── nivel-2-intermedios/  ← conceptos técnicos intermedios (21)
-│   ├── nivel-3-avanzados/    ← patrones y arquitecturas (27)
-│   └── nivel-4-frontera/     ← tecnologías emergentes 2026-2027 (17)
+├── Conceptos/            ← 126 conceptos, uno por fichero, clasificados por nivel
+│   ├── nivel-1-fundamentos/  ← conceptos de la serie de charlas (31)
+│   ├── nivel-2-intermedios/  ← conceptos técnicos intermedios (36)
+│   ├── nivel-3-avanzados/    ← patrones y arquitecturas (41)
+│   └── nivel-4-frontera/     ← tecnologías emergentes 2026-2027 (18)
 ├── Demos/                ← paso a paso de demos en vivo
 ├── Recursos/             ← ficheros de referencia y configuración
 ├── Proyectos/            ← proyectos demo de la serie (RCA)
@@ -84,11 +84,11 @@ Serie en curso (**7–26 impartidas**, con la 21 y la 25 a cargo de un compañer
 
 ---
 
-## Conceptos (81)
+## Conceptos (126)
 
 > Las piezas marcadas con **(Foundation)** forman el vocabulario de [[ai-sdlc-foundation]]; en sus fichas figuran con estado 📋 Planificado.
 
-### nivel-1-fundamentos (16)
+### nivel-1-fundamentos (31)
 
 | Fichero | Descripción |
 |---|---|
@@ -108,8 +108,23 @@ Serie en curso (**7–26 impartidas**, con la 21 y la 25 a cargo de un compañer
 | [[canonical]] | (Foundation) Fuente de verdad agnóstica en `.apm/`, entrada de la proyección y no runtime ejecutable |
 | [[knowledge]] | (Foundation) Biblioteca de principios, políticas y playbooks que informa el trabajo del agente |
 | [[skill-foundation]] | (Foundation) Paquete reutilizable de conocimiento experto que se adjunta a un agente |
+| [[ia-generativa]] | La IA que crea contenido nuevo |
+| [[llm]] | Modelo de lenguaje grande: el motor detrás de los asistentes |
+| [[token]] | La unidad en la que el modelo lee y escribe |
+| [[entrenamiento-vs-inferencia]] | Las dos fases de un modelo: aprender y responder |
+| [[fecha-de-corte]] | Hasta dónde llega lo que el modelo aprendió |
+| [[sesgo]] | Desequilibrios que la IA hereda y repite |
+| [[sycophancy]] | La tendencia de la IA a darte la razón |
+| [[machine-learning]] | Aprender de ejemplos: machine learning, redes neuronales y deep learning |
+| [[modelo-fundacional]] | El modelo general sobre el que se construyen muchos productos |
+| [[privacidad-y-anonimizacion]] | Qué datos pueden entrar en una IA; anonimizar no es seudonimizar |
+| [[shadow-ai]] | IA usada en el trabajo sin aprobación ni control de la empresa |
+| [[ai-act]] | El reglamento europeo de IA y su calendario actualizado |
+| [[alfabetizacion-ia]] | Saber usar la IA con criterio (artículo 4 del AI Act) |
+| [[deepfakes-y-etiquetado]] | Contenido sintético que parece real, transparencia y verificación |
+| [[ai-slop]] | Contenido de relleno generado sin criterio |
 
-### nivel-2-intermedios (21)
+### nivel-2-intermedios (36)
 
 | Fichero | Descripción |
 |---|---|
@@ -134,8 +149,23 @@ Serie en curso (**7–26 impartidas**, con la 21 y la 25 a cargo de un compañer
 | [[mcp-foundation]] | (Foundation) Uso de Model Context Protocol para conectar agentes con herramientas y servicios externos |
 | [[prompt]] | (Foundation) Punto de entrada ejecutable, normalmente un slash command, que inicia un workflow |
 | [[template]] | (Foundation) Documento preformateado que el agente completa al producir un entregable |
+| [[few-shot]] | Enseñar con ejemplos dentro de la petición |
+| [[human-in-the-loop]] | Una persona decide en los puntos que importan |
+| [[guardrails]] | Controles que limitan lo que un sistema de IA recibe, responde o hace |
+| [[grounding]] | Respuestas apoyadas en fuentes concretas |
+| [[busqueda-semantica]] | Buscar por significado, no solo por palabras |
+| [[deep-research]] | La IA que investiga en varios pasos y entrega un informe |
+| [[bucle-agentico]] | Actuar, observar y volver a decidir |
+| [[context-rot]] | Degradación del rendimiento cuando el contexto crece o se ensucia |
+| [[agents-md]] | AGENTS.md: convención abierta para instruir a agentes de código |
+| [[vibe-coding-vs-agentic-engineering]] | Dos formas de programar con IA |
+| [[transformer-atencion]] | La arquitectura detrás de los LLM más conocidos |
+| [[fine-tuning]] | Ajustar un modelo con ejemplos propios |
+| [[modelos-pequenos-slm]] | SLM: modelos compactos para tareas concretas |
+| [[ia-local]] | Ejecutar el modelo en equipos propios |
+| [[modelos-difusion]] | Del ruido a la imagen |
 
-### nivel-3-avanzados (27)
+### nivel-3-avanzados (41)
 
 | Fichero | Descripción |
 |---|---|
@@ -166,8 +196,22 @@ Serie en curso (**7–26 impartidas**, con la 21 y la 25 a cargo de un compañer
 | [[station]] | (Foundation) Paso especializado de un workflow, delegado a un agente |
 | [[tier]] | (Foundation) Nivel abstracto de capacidad del modelo, sin atarse a un proveedor |
 | [[workflow]] | (Foundation) Flujo de varias estaciones que coordina agentes y checkpoints para entregar un resultado |
+| [[jailbreak]] | Intentos de saltarse las protecciones del modelo |
+| [[trifecta-letal]] | Datos privados, contenido no fiable y salida al exterior: la combinación peligrosa |
+| [[chunking]] | Trocear documentos sin romper su sentido |
+| [[base-de-datos-vectorial]] | El almacén de los embeddings |
+| [[reranking]] | Segunda ordenación de los resultados de una búsqueda |
+| [[rag-agentico]] | RAG agéntico y GraphRAG: cuando buscar una vez no basta |
+| [[compactacion]] | Resumir el contexto para poder seguir |
+| [[subagentes]] | Delegar subtareas con contexto propio |
+| [[a2a]] | Agent2Agent: protocolo para que agentes distintos se comuniquen |
+| [[sandbox]] | Entorno aislado para limitar lo que puede hacer un agente |
+| [[rlhf]] | Ajuste del modelo a partir de preferencias humanas |
+| [[cuantizacion]] | El mismo modelo ocupando menos memoria |
+| [[destilacion]] | Un modelo pequeño aprende de otro |
+| [[mixture-of-experts]] | Arquitectura que activa solo parte del modelo para cada token |
 
-### nivel-4-frontera (17)
+### nivel-4-frontera (18)
 
 | Fichero | Descripción |
 |---|---|
@@ -188,6 +232,7 @@ Serie en curso (**7–26 impartidas**, con la 21 y la 25 a cargo de un compañer
 | [[hook]] | (Foundation) Comprobación automática que se ejecuta antes o después de una estación |
 | [[provider]] | (Foundation) Plataforma de IA que descubre runtimes y ejecuta agentes y workflows |
 | [[trace]] | (Foundation) Registro estructurado de cada estación para trazabilidad y auditoría |
+| [[loop-engineering]] | Diseñar los ciclos que invocan a los agentes de forma repetida |
 
 ---
 
