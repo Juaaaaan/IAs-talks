@@ -21,11 +21,11 @@ IAs-talks/
 ├── CLAUDE.md              ← instrucciones para agentes que trabajan en el vault
 ├── Charlas/              ← resumen narrativo de cada charla
 │   └── guiones/          ← scripts completos para el ponente
-├── Conceptos/            ← 57 conceptos, uno por fichero, clasificados por nivel
-│   ├── nivel-1-fundamentos/  ← conceptos de la serie de charlas (12)
-│   ├── nivel-2-intermedios/  ← conceptos técnicos intermedios (16)
-│   ├── nivel-3-avanzados/    ← patrones y arquitecturas (16)
-│   └── nivel-4-frontera/     ← tecnologías emergentes 2026-2027 (13)
+├── Conceptos/            ← 81 conceptos, uno por fichero, clasificados por nivel
+│   ├── nivel-1-fundamentos/  ← conceptos de la serie de charlas (16)
+│   ├── nivel-2-intermedios/  ← conceptos técnicos intermedios (21)
+│   ├── nivel-3-avanzados/    ← patrones y arquitecturas (27)
+│   └── nivel-4-frontera/     ← tecnologías emergentes 2026-2027 (17)
 ├── Demos/                ← paso a paso de demos en vivo
 ├── Recursos/             ← ficheros de referencia y configuración
 ├── Proyectos/            ← proyectos demo de la serie (RCA)
@@ -84,9 +84,11 @@ Serie en curso (**7–26 impartidas**, con la 21 y la 25 a cargo de un compañer
 
 ---
 
-## Conceptos (57)
+## Conceptos (81)
 
-### nivel-1-fundamentos (12)
+> Las piezas marcadas con **(Foundation)** forman el vocabulario de [[ai-sdlc-foundation]]; en sus fichas figuran con estado 📋 Planificado.
+
+### nivel-1-fundamentos (16)
 
 | Fichero | Descripción |
 |---|---|
@@ -102,8 +104,12 @@ Serie en curso (**7–26 impartidas**, con la 21 y la 25 a cargo de un compañer
 | [[ia-first]] | Mentalidad: preguntar primero a la IA antes de ejecutar tu propia solución |
 | [[ai-harness-engineering]] | El término de industria para el arnés: no hace más inteligente al modelo, hace más disciplinado el sistema |
 | [[odd]] | Organic Driven Development — disciplina proporcional por defecto para cambios sin escenario formal |
+| [[ai-sdlc-foundation]] | (Foundation) Dominio modular de agentes, conocimiento, workflows y controles que se define una vez y se proyecta a distintos providers |
+| [[canonical]] | (Foundation) Fuente de verdad agnóstica en `.apm/`, entrada de la proyección y no runtime ejecutable |
+| [[knowledge]] | (Foundation) Biblioteca de principios, políticas y playbooks que informa el trabajo del agente |
+| [[skill-foundation]] | (Foundation) Paquete reutilizable de conocimiento experto que se adjunta a un agente |
 
-### nivel-2-intermedios (16)
+### nivel-2-intermedios (21)
 
 | Fichero | Descripción |
 |---|---|
@@ -123,8 +129,13 @@ Serie en curso (**7–26 impartidas**, con la 21 y la 25 a cargo de un compañer
 | [[modelos-abiertos-vs-cerrados]] | Las dos familias del panorama IA (y la residencia de datos) |
 | [[bdd]] | Behavior-Driven Development — verificar contando el resultado esperado como historia |
 | [[gherkin]] | El lenguaje estructurado (Given/When/Then) que usa BDD para describir escenarios |
+| [[context]] | (Foundation) Catálogo YAML de los activos disponibles en runtime; no es la ventana de contexto del modelo |
+| [[instruction]] | (Foundation) Regla de comportamiento que se aplica automáticamente según patrones de ruta |
+| [[mcp-foundation]] | (Foundation) Uso de Model Context Protocol para conectar agentes con herramientas y servicios externos |
+| [[prompt]] | (Foundation) Punto de entrada ejecutable, normalmente un slash command, que inicia un workflow |
+| [[template]] | (Foundation) Documento preformateado que el agente completa al producir un entregable |
 
-### nivel-3-avanzados (16)
+### nivel-3-avanzados (27)
 
 | Fichero | Descripción |
 |---|---|
@@ -144,8 +155,19 @@ Serie en curso (**7–26 impartidas**, con la 21 y la 25 a cargo de un compañer
 | [[caching-cost]] | Optimización de costes y latencia |
 | [[ai-code-review]] | IA revisando pull requests — la revisión como nuevo cuello de botella |
 | [[rdd]] | Receipt-Driven Development — candidato congelado, receipt y lentes 4R para revisar código ya construido (Charla 24) |
+| [[agent]] | (Foundation) Rol autónomo de IA con responsabilidad específica, skills y acceso controlado a herramientas |
+| [[apm]] | (Foundation) Agent Package Manager — sistema de distribución de bundles reutilizables |
+| [[hub-orchestrator]] | (Foundation) Agente central que clasifica la intención y despacha al workflow adecuado |
+| [[model-policy]] | (Foundation) Reglas que asignan tiers abstractos de capacidad según el tipo de tarea |
+| [[pack]] | (Foundation) Subconjunto modular e instalable de capacidades |
+| [[projection]] | (Foundation) Transformación de las definiciones canónicas a los ficheros de cada provider |
+| [[runtime]] | (Foundation) Ficheros generados que cada provider descubre al iniciar |
+| [[script]] | (Foundation) Tooling interno para construir, validar y distribuir los activos del sistema |
+| [[station]] | (Foundation) Paso especializado de un workflow, delegado a un agente |
+| [[tier]] | (Foundation) Nivel abstracto de capacidad del modelo, sin atarse a un proveedor |
+| [[workflow]] | (Foundation) Flujo de varias estaciones que coordina agentes y checkpoints para entregar un resultado |
 
-### nivel-4-frontera (13)
+### nivel-4-frontera (17)
 
 | Fichero | Descripción |
 |---|---|
@@ -162,6 +184,10 @@ Serie en curso (**7–26 impartidas**, con la 21 y la 25 a cargo de un compañer
 | [[ai-native-sdlc]] | El ciclo de vida del desarrollo rediseñado para cuando la IA escribe el código |
 | [[hooks-approval-gates]] | Hooks como puertas de aprobación dentro del pipeline de IA |
 | [[intent-md]] | Fichero corto y versionado que captura la intención antes de planificar |
+| [[gate]] | (Foundation) Checkpoint de calidad al final de una estación: pass, warn o block |
+| [[hook]] | (Foundation) Comprobación automática que se ejecuta antes o después de una estación |
+| [[provider]] | (Foundation) Plataforma de IA que descubre runtimes y ejecuta agentes y workflows |
+| [[trace]] | (Foundation) Registro estructurado de cada estación para trazabilidad y auditoría |
 
 ---
 
