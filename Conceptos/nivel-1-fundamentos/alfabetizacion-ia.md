@@ -24,7 +24,15 @@ La **alfabetización en IA** (*AI literacy*) es lo que una persona necesita sabe
 
 El **artículo 4** se aplica desde el **2 de febrero de 2025**. El Reglamento (UE) 2026/1744 cambió su redacción en 2026: antes pedía garantizar un nivel suficiente; ahora pide a proveedores y responsables del despliegue **adoptar medidas que apoyen** el desarrollo de la alfabetización en IA de su personal y de quienes manejan esos sistemas en su nombre. No fija un nivel ni una estructura concretos.
 
-Una formación interna puede formar parte de esas medidas, pero **por sí sola no demuestra el cumplimiento**. Esa valoración corresponde al equipo de cumplimiento.
+Según las [preguntas y respuestas de la Comisión](https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers):
+
+- **No se exige un certificado** ni un formato concreto de formación. Depende del papel de la organización, del riesgo de sus sistemas y de lo que ya sepa el personal
+- Limitarse a dar las instrucciones de uso, o pedir que se lean, puede no ser eficaz
+- Se recomienda **llevar un registro interno** de las formaciones y demás iniciativas
+- La supervisión empezó el **2 de agosto de 2026** y corresponde a las autoridades nacionales
+- Quien despliega sistemas de **alto riesgo** tiene además deberes propios de formación para la supervisión humana (art. 26)
+
+Una formación interna puede formar parte de esas medidas, pero no hay que dar por hecho que **por sí sola** baste para cumplir. Esa valoración corresponde al equipo de cumplimiento.
 
 ---
 
