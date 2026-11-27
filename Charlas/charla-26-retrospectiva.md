@@ -69,4 +69,4 @@ Cada pieza aparecía con su explicación **difuminada**; 12 de las 32 se pregunt
 
 ## Siguiente
 
-La charla 27 (2 de diciembre) corre a cargo de un compañero. Pendiente de la Biblioteca: acordar con despliegue cómo y dónde alojarla (ver `areas/biblioteca-vault-web`). Del ciclo de la 22 siguen sin trabajar a fondo **Publicar** y **Mantener**.
+La charla 27 (2 de diciembre) corre a cargo de un compañero. Pendiente de la Biblioteca: acordar con despliegue cómo y dónde alojarla. Del ciclo de la 22 siguen sin trabajar a fondo **Publicar** y **Mantener**.
